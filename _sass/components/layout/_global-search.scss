@@ -1,0 +1,80 @@
+.search {
+
+    &__button {
+        color: $alt-font-color-2;
+        float: $right;
+        margin: side-values(8px 0 0 0);
+        padding: 5px 2px;
+
+        @include bp-medium {
+            display: none;
+        }
+
+        &:hover {
+            color: $alt-font-color-3;
+        }
+    }
+
+    &__container {
+        clear: both;
+        display: none;
+        cursor: text;
+        background: #fff;
+        padding: side-values(2px 0 2px 8px);
+        margin: side-values(0 0 8px 0);
+        width: auto;
+        border-radius: 4px;
+        box-sizing: border-box;
+
+        @include bp-medium {
+            float: $right;
+            display: block;
+            width: 35%;
+            clear: none;
+            margin-top: 10px;
+        }
+    }
+
+    &__label {
+        cursor: text;
+    }
+
+    .search__field {    // nesting required
+        border: 0;
+        padding: 0;
+        margin: 0;
+        width: 74%;
+        font-size: 0.9em;
+        outline: 0;
+    }
+
+    &__controls {
+        width: 24%;
+        text-align: $right;
+        float: $right;
+        padding-#{$right}: 8px;
+        box-sizing: border-box;
+    }
+
+    &__submit,
+    &__advanced {
+        height: 24px;
+        margin: 0;
+        padding: 0;
+        border: 0;
+        cursor: pointer;
+        background: none;
+        font-size: 14px;
+        color: $alt-font-color-2;
+
+        &:link,
+        &:visited {
+            color: $alt-font-color-2;
+        }
+
+        &:hover,
+        &:active {
+            color: $alt-font-color-1;
+        }
+    }
+}

@@ -1,0 +1,84 @@
+.section-menu {
+
+    @include bp-medium {
+        float: $left;
+        width: 19%;
+        margin-#{$right}: 3%;
+    }
+
+    &__links {
+        @include clearfix();
+        margin: side-values(0 0 15px 0);
+        padding: 0;
+        list-style: none;
+
+        @include bp-medium {
+            margin: 0;
+        }
+    }
+
+    &__item {
+        float: $left;
+        width: 48%;
+        margin-bottom: 4px;
+
+        &:nth-child(odd) {
+            margin-#{$right}: 2%;
+        }
+
+        &:nth-child(even) {
+            margin-#{$left}: 2%;
+        }
+
+        @include bp-medium {
+
+            &,
+            &:nth-child(odd),
+            &:nth-child(even) {
+                float: none;
+                width: 100%;
+                margin-#{$left}: 0;
+                margin-#{$right}: 0;
+            }
+        }
+
+        &--active {
+
+            .section-menu__link {
+                background-color: $primary-color;
+                border-color: $primary-color;
+                color: $invert-font-color;
+            }
+        }
+    }
+
+    &__link {
+        background: $background-1;
+        display: block;
+        padding: 2px 8px;
+        border-radius: 3px;
+        display: flex;
+        align-items: center;
+        justify-content: flex-start;
+
+        &:link,
+        &:visited {
+            text-decoration: none;
+        }
+
+        &:hover,
+        &:active {
+            background-color: $secondary-color;
+            border-color: $secondary-color;
+            color: $invert-font-color;
+        }
+    }
+
+    &__icon {
+        margin-#{$right}: 8px;
+    }
+
+    &__text {
+
+    }
+}

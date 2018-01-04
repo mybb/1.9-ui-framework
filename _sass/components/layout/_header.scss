@@ -1,0 +1,39 @@
+.header {
+
+    .board-name {
+        float: $left;
+        margin: side-values(20px 2% 15px 0);
+
+        svg {
+    		height: 40px;
+    		width: 50px;
+            display: inline-block;
+            vertical-align: middle;
+            margin-top: -5px;
+    		* {
+    			fill: $alt-font-color-2;
+    		}
+    	}
+
+        &:hover,
+        &:active {
+
+            svg * {
+                    fill: $secondary-color;
+            }
+        }
+
+        &__name {
+            font-size: 1.2em;
+            font-weight: 600;
+            color: $font-color;
+            font-family: $alt-font-stack;
+            font-style: italic;
+        }
+
+        #logo {
+            text-decoration: none;
+            display: block;
+        }
+    }
+}

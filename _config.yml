@@ -1,0 +1,6 @@
+name: MyBB 1.9 UI Framework
+baseurl: /1.9-ui-framework
+
+sass:
+  sass_dir: _sass
+  style: expanded

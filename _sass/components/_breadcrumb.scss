@@ -1,0 +1,28 @@
+.breadcrumb {
+    display: block;
+    font-size: 0.8em;
+    color: $alt-font-color-3;
+    padding: 0;
+    margin: side-values(0 0 10px 0);
+
+    &__link {
+
+        &:link,
+        &:visited {
+            color: $alt-font-color-1;
+            text-decoration: none;
+        }
+
+        &:hover,
+        &:active {
+
+            .breadcrumb__text {
+                text-decoration: underline;
+            }
+        }
+    }
+
+    &__icon {
+        margin: side-values(0 8px 0 8px);
+    }
+}
