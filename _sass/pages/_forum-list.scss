@@ -1,10 +1,17 @@
 .forum-list {
 
     .forum {
-        @include clearfix();
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: column;
         padding: 12px;
-        border-bottom: 1px solid $border-2;
         line-height: 1.4;
+        border-bottom: 1px solid $border-2;
+
+        @include bp-medium {
+            flex-direction: row;
+        }
 
         &__title {
             margin: side-values(0 0 4px 0);
@@ -20,25 +27,32 @@
 
         &__subforums {
             list-style: none;
-            margin: side-values(2px 0 4px 20px);
+            margin: side-values(2px 0 0 0);
             padding: 0;
             font-size: 0.8em;
+        }
 
-            &__subforum {
-                display: inline-block;
-                margin: side-values(0 12px 4px 0);
-            }
+        &__subforum {
+            display: inline-block;
+            margin: side-values(0 15px 0 0);
 
-            .fa-level-up {
-                margin: side-values(1px 0 0 -16px);
-                color: $alt-font-color-2;
-                float: $left;
-                font-size: 14px;
-                @include transform(rotate(90deg));
+            &__status {
+                color: $alt-font-color-3;
+                font-size: 10px;
+                margin-#{$right}: 3px;
+
+                &.subforum_minion {
+                    color: $dark-background-2;
+                }
             }
         }
 
+        &__info {
+            width: 100%;
+        }
+
         &__topic {
+            width: 100%;
             margin-top: 6px;
             padding: side-values(10px 0 0 48px);
             border-top: 1px dotted $border-1;
@@ -82,13 +96,11 @@
             .forum {
 
                 &__info {
-                    float: $left;
                     width: 60%;
                     margin-right: 2%;
                 }
 
                 &__topic {
-                    float: $right;
                     width: 38%;
                     border: none;
                     margin: 0;
