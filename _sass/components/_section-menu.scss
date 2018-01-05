@@ -7,10 +7,13 @@
     }
 
     &__links {
-        @include clearfix();
         margin: side-values(0 0 15px 0);
         padding: 0;
         list-style: none;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-between;
 
         @include bp-medium {
             margin: 0;
@@ -18,28 +21,12 @@
     }
 
     &__item {
-        float: $left;
-        width: 48%;
-        margin-bottom: 4px;
-
-        &:nth-child(odd) {
-            margin-#{$right}: 2%;
-        }
-
-        &:nth-child(even) {
-            margin-#{$left}: 2%;
-        }
+        width: 49%;
+        margin-bottom: 8px;
 
         @include bp-medium {
-
-            &,
-            &:nth-child(odd),
-            &:nth-child(even) {
-                float: none;
-                width: 100%;
-                margin-#{$left}: 0;
-                margin-#{$right}: 0;
-            }
+            width: 100%;
+            margin-bottom: 4px;
         }
 
         &--active {

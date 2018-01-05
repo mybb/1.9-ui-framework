@@ -78,12 +78,14 @@
         }
     }
 
+    // should probably be renamed to something more generalized
     &__checkbox {
         font-size: 0.9em;
         margin: 5px 0;
         padding: side-values(0 0 0 30px);
 
-        input[type="checkbox"] {
+        input[type="checkbox"],
+        input[type="radio"] {
             float: $left;
             margin: side-values(6px 0 0 -26px);
         }
@@ -93,11 +95,13 @@
         }
     }
 
+    // should probably be renamed to something more generalized
     &__radio {
         padding: side-values(0 0 0 30px);
         margin-bottom: 20px;
 
-        input[type="radio"] {
+        input[type="radio"],
+        input[type="checkbox"] {
             float: $left;
             margin: side-values(6px 0 0 -26px);
         }

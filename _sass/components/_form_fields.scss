@@ -51,6 +51,12 @@ textarea {
     box-sizing: border-box;
 }
 
+.file-wrapper {
+    background: $background-1;
+    padding: 12px;
+    border-radius: $radius;
+}
+
 .segmented-control {
     margin: side-values(5px 0 0 0);
     border: 1px solid $border-2;
