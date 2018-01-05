@@ -1,6 +1,6 @@
 .user-bar {
     clear: both;
-    height: 52px;
+    min-height: 50px;
     background: $background-2;
 
     .wrapper {
@@ -18,6 +18,11 @@
         margin: 0;
         padding: 12px 4px;
         position: relative;
+
+        &--active-user {
+            border-left: 1px solid transparent;
+            border-right: 1px solid transparent;
+        }
     }
 
     &__link {
@@ -43,16 +48,16 @@
     &__icon {
         margin-#{$right}: 4px;
 
-        @include bp-medium-max {
+        // @include bp-medium-max {
             font-size: 1.2em;
             margin-bottom: -2px;
-        }
+        // }
     }
 
     &__text {
         display: none;
 
-        @include bp-medium {
+        @include bp-large {
             display: inline-block;
         }
     }
@@ -84,14 +89,14 @@
 
     &__dropdown {
         display: none;
-        background: $background-2;
+        background: $background-1;
         border-radius: corner-values(0 0 4px 4px);
-        padding: side-values(0 12px 6px 12px);
+        padding: side-values(6px 12px 6px 12px);
         border: 1px solid $border-1;
         border-top: none;
         font-size: 0.9em;
-        top: 52px;
-        #{$left}: -8px;
+        top: 50px;
+        #{$left}: -1px;
         width: 220px;
         position: absolute;
 
@@ -103,11 +108,14 @@
     }
 }
 
-#show-user-dropdown:checked ~ .user-bar__dropdown {
-    display: block;
-}
+#show-user-dropdown:checked ~ .user-bar__item--active-user {
+    background: $background-1;
+    border-left: 1px solid $border-1;
+    border-right: 1px solid $border-1;
 
-#show-user-dropdown:checked ~ .user-bar__link--dropdown {
+    .user-bar__dropdown {
+        display: block;
+    }
 
     .user-bar__caret {
 
