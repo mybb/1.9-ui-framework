@@ -94,6 +94,12 @@
         @include button-theme($theme-success...);
     }
 
+    &--inline {
+        padding: 0 10px;
+        font-size: 0.8em;
+        margin: side-values(0 0 0 5px);
+    }
+
     @include bp-medium-max {
 
         &--full-width {

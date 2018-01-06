@@ -1,32 +1,22 @@
 .footer {
 
+    .wrapper {
+        position: relative;
+    }
+
+    &__debug {
+        margin-top: 20px;
+        font-size: 0.75em;
+        line-height: 1.4;
+        color: $alt-font-color-1;
+    }
+
     &__navigation {
-        border-top: 1px solid $border-1;
-        background: $background-1;
-        border-bottom: 1px solid $border-1;
-        margin-bottom: 20px;
-
-        @include bp-medium {
-            padding: side-values(20px 0 20px 0);
-        }
-
-        .board-name {
-            float: none;
-            font-size: 0.9em;
-            text-align: center;
-            display: block;
-
-            @include bp-medium {
-                margin: 0;
-                float: $left;
-                padding: side-values(5px 12px 3px 0);
-            }
-        }
-
-        .menu-bar__links__item__link {
-            padding: 5px 12px;
-            font-size: 0.9em;
-        }
+        clear: both;
+        background: $background-2;
+        margin-top: 10px;
+        margin-bottom: 10px;
+        padding: 10px 0;
     }
 
     &__copyright {
@@ -36,7 +26,7 @@
             clear: both;
             font-size: 0.8em;
             color: $alt-font-color-2;
-            padding: 0 0 20px 0;
+            padding: 0 0 10px 0;
             margin: 0;
 
             &__link:link,
@@ -44,5 +34,45 @@
                 color: $alt-font-color-1;
             }
         }
+    }
+}
+
+.footer-menu {
+    font-size: 0.9em;
+
+    &__links {
+        list-style: none;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-content: center;
+
+        @include bp-large {
+            justify-content: space-between;
+        }
+    }
+
+    &__item {
+        padding: 5px 15px;
+    }
+
+    &__link {
+
+        &:link,
+        &:visited {
+            color: $alt-font-color-1;
+        }
+
+        &:hover,
+        &:active {
+            color: $secondary-color;
+            text-decoration: none;
+        }
+    }
+
+    &__icon {
+        margin-#{$right}: 4px;
     }
 }
