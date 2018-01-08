@@ -6,6 +6,8 @@
     $color-text-hover: $invert-font-color, // hover text color
     $color-border-hover: $color-hover) { // hover border color
 
+    @content;
+
     &,
     &:link,
     &:visited {
@@ -92,6 +94,20 @@
 
     &--success {
         @include button-theme($theme-success...);
+    }
+
+    $theme-basic: (
+        'color': $background-default,
+        'color-text': $alt-font-color-1,
+        'color-border': $background-default,
+        'color-hover': $background-default,
+        'color-text-hover': $secondary-color
+    );
+
+    &--basic {
+        @include button-theme($theme-basic...) {
+            padding: 4px 4px;
+        }
     }
 
     &--inline {

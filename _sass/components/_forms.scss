@@ -120,6 +120,13 @@
         }
     }
 
+    &__field {
+
+        &--spacing {
+            margin-top: 5px;
+        }
+    }
+
     &__data {
         margin: 0;
         font-size: 0.9em;

@@ -86,3 +86,9 @@
         height: #{$size}px;
     }
 }
+
+@mixin container {
+    background: $background-1;
+    padding: 8px 12px;
+    border-radius: $radius;
+}

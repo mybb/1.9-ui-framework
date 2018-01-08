@@ -62,9 +62,24 @@
         }
     }
 
+    &__ip-address {
+        float: $right;
+        margin: side-values(6px 0 0 0);
+
+        &:link,
+        &:visited {
+            color: $alt-font-color-2;
+        }
+
+        &:hover,
+        &:active {
+            color: $secondary-color;
+        }
+    }
+
     &__inline-mod {
         float: $right;
-        margin: side-values(-20px 0 0 7px);
+        margin: side-values(-20px 0 0 10px);
 
         @include bp-small {
             margin-top: 7px;
@@ -168,7 +183,7 @@
             font-size: 0.8em;
 
             &__link {
-                color: $alt-font-color-1;
+                color: $alt-font-color-2;
                 padding: 0 5px;
                 background-color: transparent;
                 border: none;
@@ -176,7 +191,7 @@
 
                 &:link,
                 &:visited {
-                    color: $alt-font-color-1;
+                    color: $alt-font-color-2;
                 }
 
                 &:hover,
@@ -212,8 +227,9 @@
         }
 
         .text {
-            display: none;
+            // display: none;
             font-size: 0.9em;
+            margin-#{$left}: 6px;
         }
     }
 
@@ -231,6 +247,12 @@
         a {
             color: $alt-font-color-1;
         }
+    }
+
+    &__options {
+        @include container;
+        margin: 5px;
+        font-size: 0.9em;
     }
 
     &--highlight {
@@ -379,4 +401,36 @@
         border-top: 1px solid $border-1;
         text-align: center;
     }
+}
+
+.user-status {
+    display: inline-block;
+    font-size: 10px;
+    vertical-align: middle;
+    margin-#{$left}: 2px;
+
+    &--offline {
+        color: $alt-font-color-3;
+    }
+
+    &--online {
+
+        .user-status__link {
+            color: $success-color;
+        }
+    }
+
+    &--away {
+
+        .user-status__link {
+            color: $danger-color;
+        }
+    }
+}
+
+.editor_control_bar {
+    display: none;
+    @include container;
+    font-size: 0.9em;
+    margin: 5px;
 }

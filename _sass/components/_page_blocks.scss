@@ -33,6 +33,13 @@
             margin-bottom: 0;
             border-radius: 4px;
 
+            a:link,
+            a:visited,
+            a:hover,
+            a:active {
+                color: $invert-font-color;
+            }
+
             &.block__heading--linked {
                 padding: 0;
 
@@ -56,11 +63,16 @@
     &--container {
         border: 1px solid $border-1;
         border-radius: 4px;
+        padding: 12px;
 
         .sort-results {
             border-width: 0;
             border-top-width: 2px;
         }
+    }
+
+    &__body {
+        padding: 12px;
     }
 
     &:last-child {
@@ -96,8 +108,6 @@
     border-radius: 4px;
     background: $background-1;
     padding: side-values(8px 8px 0 8px);
-    // border-top: 1px solid $border-1;
-    // border-bottom: 1px solid $border-1;
 
     &__item {
         display: inline-block;
@@ -127,6 +137,10 @@
             color: $invert-font-color;
         }
     }
+
+    &__icon {
+        margin-#{$right}: 4px;
+    }
 }
 
 dl.stats {
@@ -152,35 +166,6 @@ dl.stats {
     }
 }
 
-.alert {
-    background-color: $background-1;
-    padding: side-values(10px 12px 10px 40px);
-    margin-top: 10px;
-    margin-bottom: 20px;
-    font-size: 0.9em;
-    border-radius: 4px;
-
-    &__message {
-        margin: 0;
-        padding: 0;
-
-        &.icon:before {
-            float: $left;
-            margin-#{$left}: -25px;
-        }
-    }
-
-    &--danger {
-        background-color: $danger-color;
-        color: $invert-font-color;
-    }
-
-    &--success {
-        background-color: $success-color;
-        color: $invert-font-color;
-    }
-}
-
 .error-no-results {
     text-align: center;
     padding: 30px 0;
@@ -196,54 +181,6 @@ dl.stats {
     @include bp-medium {
         float: $right;
         margin: side-values(-45px -5px 8px 0);
-    }
-}
-
-.pagination {
-    list-style: none;
-    margin: side-values(0 0 25px -5px);
-    padding: 0;
-    font-size: 0.9em;
-    text-align: center;
-
-    @include bp-medium {
-        text-align: $right;
-        margin: side-values(0 -5px 25px -5px);
-    }
-
-    li {
-        display: inline-block;
-        margin: 0 5px;
-
-        a {
-            background: $background-1;
-            padding: 1px 8px;
-            display: inline-block;
-            border-radius: 4px;
-
-            &:hover {
-                background: $secondary-color;
-                color: $invert-font-color;
-                text-decoration: none;
-            }
-        }
-
-        &.active {
-            padding: 1px 8px;
-            background: $primary-color;
-            color: $invert-font-color;
-            border-radius: 4px;
-        }
-
-        &.disabled {
-            display: none;
-        }
-    }
-
-    @include bp-medium {
-        float: $left;
-        text-align: $left;
-        margin: side-values(10px -5px 0 -5px);
     }
 }
 

@@ -13,6 +13,23 @@
             flex-direction: row;
         }
 
+        &__info {
+            padding-#{$left}: 26px;
+            width: 100%;
+            box-sizing: border-box;
+        }
+
+        &__status {
+            float: $left;
+            margin-top: 3px;
+            margin-#{$left}: -26px;
+            color: $alt-font-color-3;
+
+            &.forum__status--on {
+                color: $dark-background-2;
+            }
+        }
+
         &__title {
             margin: side-values(0 0 4px 0);
             font-size: 1em;
@@ -21,13 +38,13 @@
         &__description {
             font-size: 0.8em;
             margin: 0;
-            padding: side-values(2px 0 4px 0);
+            padding: side-values(2px 0 0 0);
             color: $alt-font-color-4;
         }
 
         &__subforums {
             list-style: none;
-            margin: side-values(2px 0 0 0);
+            margin: side-values(6px 0 0 0);
             padding: 0;
             font-size: 0.8em;
         }
@@ -47,15 +64,12 @@
             }
         }
 
-        &__info {
-            width: 100%;
-        }
-
         &__topic {
             width: 100%;
             margin-top: 6px;
             padding: side-values(10px 0 0 48px);
             border-top: 1px dotted $border-1;
+            box-sizing: border-box;
 
             .avatar-profile-link {
                 float: $left;
@@ -97,11 +111,10 @@
 
                 &__info {
                     width: 60%;
-                    margin-right: 2%;
                 }
 
                 &__topic {
-                    width: 38%;
+                    width: 35%;
                     border: none;
                     margin: 0;
                     padding: side-values(4px 0 0 48px);

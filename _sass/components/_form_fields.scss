@@ -1,8 +1,9 @@
-input[type="text"],
-input[type="url"],
-input[type="number"],
-input[type="email"],
-input[type="password"] {
+// input[type="text"],
+// input[type="url"],
+// input[type="number"],
+// input[type="email"],
+// input[type="password"]
+.textbox {
     border: 1px solid $border-2;
     padding: 6px;
     width: 100%;
@@ -39,6 +40,21 @@ input {
         margin-#{$left}: 6px;
         margin-#{$right}: 6px;
     }
+
+    &.error {
+        border-color: $danger-color;
+    }
+
+    &.valid {
+        border-color: $success-color;
+    }
+}
+
+label.error {
+	color: $danger-color;
+	font-size: 0.8em;
+	padding: 3px 0 0 0;
+	display: block;
 }
 
 textarea {
@@ -57,12 +73,34 @@ textarea {
     border-radius: $radius;
 }
 
+.confirm-field {
+
+    @include bp-medium {
+        display: flex;
+        justify-content: space-between;
+        flex-direction: row;
+    }
+
+    &__field {
+        margin-bottom: 8px;
+
+        @include bp-medium {
+            width: 49%;
+            margin-bottom: 0;
+        }
+    }
+}
+
 .segmented-control {
     margin: side-values(5px 0 0 0);
     border: 1px solid $border-2;
     font-size: 0.8em;
     display: inline-block;
     border-radius: 4px;
+
+    &--block:before {
+        content: "\A";
+    }
 
     &__option {
         display: inline-block;

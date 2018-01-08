@@ -1,0 +1,42 @@
+.alert {
+    background-color: $background-1;
+    padding: side-values(10px 12px);
+    margin-top: 10px;
+    margin-bottom: 20px;
+    font-size: 0.9em;
+    border-radius: 4px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: row;
+
+    &__message {
+        margin: 0;
+        padding: 0;
+    }
+
+    &__icon {
+        margin-top: 5px;
+        margin-#{$right}: 12px;
+    }
+
+    &--danger {
+        background-color: $danger-color;
+        color: $invert-font-color;
+
+        :link,
+        :visited {
+            color: $invert-font-color;
+        }
+    }
+
+    &--success {
+        background-color: $success-color;
+        color: $invert-font-color;
+
+        :link,
+        :visited {
+            color: $invert-font-color;
+        }
+    }
+}
