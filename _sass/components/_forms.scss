@@ -3,6 +3,28 @@
     margin-bottom: 10px;
     border-radius: 4px;
 
+    &--alt {
+        border: none;
+        background-color: $background-2;
+    }
+
+    &--delete {
+        padding: 16px 12px;
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        margin-bottom: 30px;
+
+        .form__row {
+            border: none;
+            padding: 0;
+        }
+
+        .form__submit {
+            background: none;
+        }
+    }
+
     .heading--major {
         margin: -1px;
         border-radius: corner-values(4px 4px 0 0);
@@ -11,7 +33,7 @@
     &__section {
         @include clearfix();
         padding: 16px 12px;
-        border-bottom: 2px solid $border-1;
+        border-bottom: 1px solid $border-1;
 
         &__title {
             margin: side-values(0 0 12px 0);
@@ -108,7 +130,7 @@
 
         &__title {
             font-size: 1em;
-            margin: side-values(10px 0 5px 0);
+            margin: side-values(0 0 5px 0);
         }
 
         &__description {
@@ -145,12 +167,9 @@
     }
 
     &__submit {
+        border-radius: corner-values(0 0 $radius $radius);
+        background: $background-1;
         text-align: center;
         padding: 10px 0;
-
-        .button {
-            font-size: 1em;
-            padding: 6px 12px;
-        }
     }
 }

@@ -142,4 +142,14 @@
             }
         }
     }
+
+    &--medium {
+        font-size: 1em;
+		padding: 6px 12px;
+    }
+
+    &--big {
+        font-size: 1.1em;
+		padding: 8px 18px;
+    }
 }

@@ -16,6 +16,7 @@
     }
 
     &__icon {
+        color: $alt-font-color-1;
         margin-top: 5px;
         margin-#{$right}: 12px;
     }
@@ -25,7 +26,8 @@
         color: $invert-font-color;
 
         :link,
-        :visited {
+        :visited,
+        .alert__icon {
             color: $invert-font-color;
         }
     }
@@ -35,7 +37,8 @@
         color: $invert-font-color;
 
         :link,
-        :visited {
+        :visited,
+        .alert__icon {
             color: $invert-font-color;
         }
     }

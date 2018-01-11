@@ -7,16 +7,32 @@
     border: 1px solid $border-2;
     padding: 6px;
     width: 100%;
-    font-size: 0.9em;
+    // font-size: 0.9em;
+    font-size: 16px;
     outline: 0;
     border-radius: 4px;
     box-sizing: border-box;
+
+    &--short {
+        width: 60px;
+        font: 12px $font-stack;
+    }
+
+    &--small {
+        width: 60px;
+        margin-#{$right}: 6px;
+    }
+
+    &--subject {
+        font-size: 1.4em;
+    }
 }
 
 select {
     border: 1px solid $border-2;
     padding: 4px;
-    font-size: 0.9em;
+    // font-size: 0.9em;
+    font-size: 16px;
     outline: none;
     max-width: 100%;
     border-radius: 4px;
@@ -28,18 +44,8 @@ select {
     }
 }
 
+// registration error/success colors
 input {
-
-    &.short {
-        width: 50px;
-        font: 12px $font-stack;
-    }
-
-    &.small {
-        width: 50px;
-        margin-#{$left}: 6px;
-        margin-#{$right}: 6px;
-    }
 
     &.error {
         border-color: $danger-color;
@@ -50,6 +56,7 @@ input {
     }
 }
 
+// registration form error message
 label.error {
 	color: $danger-color;
 	font-size: 0.8em;
@@ -61,7 +68,8 @@ textarea {
     border: 1px solid $border-2;
     padding: 6px;
     width: 100%;
-    font-size: 0.9em;
+    // font-size: 0.9em;
+    font-size: 16px;
     outline: 0;
     border-radius: 4px;
     box-sizing: border-box;
@@ -134,11 +142,40 @@ textarea {
 
     :first-child .segmented-control__button {
         border-#{$left}: 1px solid transparent;
-        border-radius: corner-values(4px 0 0 4px);
+        border-radius: corner-values($radius 0 0 $radius);
     }
 
     :last-child .segmented-control__button {
-        border-radius: corner-values(0 4px 4px 0);
+        border-radius: corner-values(0 $radius $radius 0);
+    }
+
+    &--buttons {
+        border: none;
+        margin-bottom: -4px;
+
+        .segmented-control__button {
+            background: $background-1;
+        }
+
+        .segmented-control__button,
+        .segmented-control__input:checked + .segmented-control__button,
+        :first-child .segmented-control__button,
+        :last-child .segmented-control__button
+        {
+            border: none;
+            border-radius: $radius;
+            padding: 3px 8px;
+            margin: side-values(0 4px 4px 0);
+        }
+    }
+
+    &--alt {
+
+        .segmented-control__input:checked + .segmented-control__button {
+            background-color: $background-4;
+            border-color: $background-4;
+            color: $font-color;
+        }
     }
 }
 
