@@ -10,7 +10,7 @@
         color: $alt-font-color-1;
         font-size: 1.2em;
         display: none;
-        padding: 16px 8px;
+        padding: 12px 8px;
         margin-#{$right}: 0px;
 
         &:hover,
@@ -23,7 +23,7 @@
     &__mobile-search-button {
 
         @include bp-medium-max {
-                display: inline-block;
+            display: inline-block;
         }
     }
 
@@ -33,7 +33,7 @@
         cursor: text;
         background: #fff;
         padding: side-values(2px 0 2px 8px);
-        margin: side-values(0 0 8px 0);
+        margin: side-values(0 0 10px 0);
         border: 1px solid $border-1;
         width: auto;
         border-radius: 4px;
@@ -44,42 +44,47 @@
             display: block;
             width: 35%;
             clear: none;
-            margin-top: 9px;
+            margin-top: 6px;
+            margin-bottom: 6px;
         }
     }
 
     &__label {
         cursor: text;
+        display: flex;
+        justify-content: space-between;
+        overflow: hidden;
     }
 
     .global-search__field {    // nesting required
         border: 0;
         padding: 4px;
         margin: 0;
-        width: 74%;
-        font-size: 0.9em;
+        font-size: 16px;
         outline: 0;
         box-sizing: border-box;
+        flex-grow: 1;
+        min-width: 0;
     }
 
     &__controls {
-        width: 24%;
         text-align: $right;
-        float: $right;
         padding-#{$right}: 8px;
         box-sizing: border-box;
+        flex-shrink: 0;
     }
 
     &__submit,
     &__advanced {
         height: 24px;
         margin: side-values(0 0 0 6px);
-        padding: 0;
+        padding: 2px 0;
         border: 0;
         cursor: pointer;
         background: none;
-        font-size: 14px;
+        font-size: 16px;
         color: $alt-font-color-2;
+        display: inline-block;
 
         &:link,
         &:visited {

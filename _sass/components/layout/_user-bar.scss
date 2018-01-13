@@ -16,7 +16,6 @@
     &__item {
         float: $left;
         margin: 0;
-        padding: 12px 4px;
         position: relative;
 
         &--active-user {
@@ -31,9 +30,8 @@
         &:link,
         &:visited {
             color: $alt-font-color-1;
-            padding: 2px 8px;
+            padding: 12px 12px;
             display: inline-block;
-            margin: side-values(-3px 0 -2px 0);
             border-radius: 4px;
         }
 
@@ -47,11 +45,8 @@
 
     &__icon {
         margin-#{$right}: 4px;
-
-        // @include bp-medium-max {
-            font-size: 1.2em;
-            margin-bottom: -2px;
-        // }
+        font-size: 1.2em;
+        margin-bottom: -2px;
     }
 
     &__text {
@@ -59,6 +54,13 @@
 
         @include bp-large {
             display: inline-block;
+        }
+
+        &--username {
+
+            @include bp-small {
+                display: inline-block;
+            }
         }
     }
 
@@ -104,6 +106,18 @@
             float: $right;
             margin: side-values(6px 0 0 0);
             @include avatar(80);
+        }
+    }
+
+    &__username {
+        font-weight: bold;
+        margin: 0;
+        font-size: 1.1em;
+        border-bottom: 1px solid $border-1;
+        padding: 8px 4px;
+
+        @include bp-small {
+            display: none;
         }
     }
 }

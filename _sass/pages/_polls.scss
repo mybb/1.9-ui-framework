@@ -12,94 +12,93 @@
 }
 
 .poll {
-    border: 1px solid $border-2;
-    padding: 12px;
-    border-radius: 4px;
-    margin-bottom: 20px;
+    margin-bottom: 30px;
 
-    &__title {
-        font-size: 1.2em;
-        font-weight: bold;
-        padding: 8px 12px;
-        border-bottom: 1px solid $border-2;
+    &__question {
+
+    }
+
+    &__tag {
+        float: $right;
+        margin-#{$right}: -4px;
+        font-size: 0.6em;
+        font-weight: normal;
+        text-transform: uppercase;
+        border: 1px solid $background-default;
+        padding: 0 6px;
+        display: inline-block;
+        border-radius: $radius;
     }
 
     &__options {
         padding: 0;
     }
 
-    &__option {
-        border-bottom: 1px solid $border-1;
+    &__row {
+        border-bottom: 1px solid $border-3;
         padding: 10px 12px;
-        @include clearfix();
 
-        &.poll__option--voted {
+        &--cast-vote {
+            padding: 0;
 
-            .poll__option__name {
-                color: $primary-color;
-                font-weight: bold;
+            .poll__input {
+                float: $left;
+                margin: side-values(6px 0 0 -26px);
+            }
+
+            label {
+                padding: side-values(10px 12px 12px 40px);
+                cursor: pointer;
+                display: block;
             }
         }
 
-        &__name {
-            margin-bottom: 8px;
-
-            @include bp-medium {
-                width: 50%;
-                float: $left;
-                margin-bottom: 0;
-            }
-        }
-
-        &__votes {
-            width: 80%;
-            float: $left;
-            position: relative;
-            border: 1px solid $border-3;
-            background: $background-default;
-            height: 24px;
-            box-sizing: border-box;
-            border-radius: 4px;
-
-            @include bp-medium {
-                width: 40%;
-                float: $left;
-            }
-
-            &--result {
-                font-size: 14px;
-            }
-
-            &__bar {
-                position: absolute;
-                top: 0;
-                #{$left}: 0;
-                bottom: 0;
-                background: $primary-color;
-                z-index: 1;
-                border-radius: 3px;
-            }
-        }
-
-        &__count {
-            float: $left;
-            width: 18%;
-            margin-#{$left}: 2%;
-            font-size: 0.9em;
-
-            @include bp-medium {
-                width: 8%;
-                float: $left;
-            }
+        &:last-child {
+            border-bottom: none;
         }
     }
 
-    &__vote {
-        padding: 12px 0 0 0;
+    &__option {
+        float: $left;
+        margin-bottom: 8px;
+    }
 
-        .poll__buttons {
-            float: $right;
-        }
+    &__votes {
+        clear: both;
+        position: relative;
+        border: 1px solid $border-3;
+        background: $background-default;
+        height: 24px;
+        box-sizing: border-box;
+        border-radius: 4px;
+        margin: 8px 0;
+    }
+
+    &__bar {
+        position: absolute;
+        top: 0;
+        #{$left}: 0;
+        bottom: 0;
+        background: $primary-color;
+        z-index: 1;
+        border-radius: 3px;
+        box-sizing: border-box;
+    }
+
+    &__count {
+        float: $right;
+        font-size: 0.9em;
+    }
+
+    &__vote {
+        padding: 6px 12px;
+        background: $background-2;
+        border-radius: $radius;
+        @include clearfix();
+    }
+
+    &__total {
+        float: $right;
     }
 
     &__end-date {

@@ -188,7 +188,6 @@ dl.stats {
 
     @include bp-medium {
         @include clearfix();
-        margin-top: -20px;
 
         .page-buttons {
             margin-top: 0;
@@ -208,4 +207,10 @@ header + .page-controls {
             margin-top: -30px;
         }
     }
+}
+
+.users-browsing {
+    @include container;
+    margin-bottom: 10px;
+    font-size: 0.9em;
 }
