@@ -86,3 +86,67 @@
 #show-attachments:checked ~ .compose__primary-section .compose__option-button--attachments {
     color: $secondary-color;
 }
+
+.quick-reply {
+
+    &__options {
+        display: none;
+        @include container;
+        margin: 5px;
+        font-size: 0.9em;
+    }
+
+    &__option {
+        cursor: pointer;
+        margin-#{$right}: 12px;
+    }
+
+    &__checkbox {
+        margin-#{$right}: 4px;
+    }
+
+    textarea {
+        border: none;
+        padding: 0;
+    }
+}
+
+#show-quick-reply-options:checked ~ .quick-reply__options {
+    display: block;
+}
+
+.attachment {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 8px 12px;
+
+    @include bp-medium {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    &__details {
+        padding-#{$left}: 30px;
+        font-size: 0.9em;
+        line-height: 1.4;
+    }
+
+    &__icon {
+        float: $left;
+        margin-#{$left}: -26px;
+    }
+
+    &__file-name {
+        display: block;
+    }
+
+    &__file-size {
+        font-size: 0.9em;
+        color: $alt-font-color-2;
+    }
+
+    &__buttons {
+
+    }
+}

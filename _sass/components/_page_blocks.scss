@@ -82,11 +82,15 @@
 
 .sort-results {
     text-align: center;
-    border: 1px solid $border-2;
-    border-top: 2px solid $border-1;
-    padding: 6px 0;
+    padding: 8px 12px;
     clear: both;
-    border-radius: corner-values(0 0 4px 4px);
+    background-color: $background-2;
+    border-radius: $radius;
+
+    .select-field,
+    .button {
+        margin: 3px;
+    }
 
     &__title {
         display: inline-block;
@@ -168,7 +172,7 @@ dl.stats {
 
 .error-no-results {
     text-align: center;
-    padding: 30px 0;
+    padding: 30px;
     font-size: 1.2em;
     color: $alt-font-color-1;
 }
@@ -211,6 +215,6 @@ header + .page-controls {
 
 .users-browsing {
     @include container;
-    margin-bottom: 10px;
+    margin-bottom: 20px;
     font-size: 0.9em;
 }

@@ -13,12 +13,40 @@
     &__message {
         margin: 0;
         padding: 0;
+        flex-grow: 1;
     }
 
     &__icon {
         color: $alt-font-color-1;
         margin-top: 5px;
         margin-#{$right}: 12px;
+    }
+
+    &__dismiss {
+        float: $right;
+        font-size: 16px;
+
+        &__link {
+
+            &:link,
+            &:visited {
+                color: $danger-color;
+            }
+
+            &:hover,
+            &:active {
+                color: $alt-font-color-1;
+            }
+        }
+    }
+
+    &__title {
+        font-size: 1em;
+        margin: 0;
+    }
+
+    &__list {
+        margin: 10px 0;
     }
 
     &--danger {

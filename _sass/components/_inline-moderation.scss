@@ -6,6 +6,10 @@
     padding: 10px 12px;
     font-size: 0.9em;
     text-align: center;
+
+    &__title {
+        display: inline-block;
+    }
 }
 
 html.js .inline-moderation {

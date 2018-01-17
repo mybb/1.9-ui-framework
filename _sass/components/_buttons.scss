@@ -34,6 +34,9 @@
     line-height: 26px;
     border: 1px solid;
     border-radius: 4px;
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
 
     &:hover,
     &:active {
@@ -111,9 +114,10 @@
     }
 
     &--inline {
-        padding: 0 10px;
-        font-size: 0.8em;
+        padding: 3px 10px;
+        font-size: 0.9em;
         margin: side-values(0 0 0 5px);
+        vertical-align: top;
     }
 
     @include bp-medium-max {

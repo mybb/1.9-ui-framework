@@ -1,3 +1,7 @@
+.thread {
+    clear: both;
+}
+
 .post {
     background-color: $background-default;
     border: 1px solid $border-1;
@@ -204,6 +208,12 @@
                 &.icon:before {
                     margin-#{$right}: 0;
                 }
+
+                &.postbit_multiquote_on {
+                    color: $secondary-color;
+                    // background: $background-1;
+                    // border-radius: $radius;
+                }
             }
 
             &.post__controls__item--like,
@@ -247,12 +257,6 @@
         a {
             color: $alt-font-color-1;
         }
-    }
-
-    &__options {
-        @include container;
-        margin: 5px;
-        font-size: 0.9em;
     }
 
     &--highlight {
@@ -301,45 +305,19 @@
             }
         }
     }
-
-    &--reply {
-
-        .full-reply {
-            float: $right;
-
-            .text {
-                display: none;
-            }
-        }
-
-        textarea {
-            border: none;
-            padding: 0;
-        }
-
-        &--quick-reply .post__foot {
-            margin: 5px 0;
-        }
-    }
 }
 
-.topic--create, .topic--reply {
+.thread-pagination {
 
-    .page-title {
-        display: none;
-    }
+    &--bottom {
+        margin: side-values(0 0 25px 0);
 
-    .topic__title {
-        font-size: 1.8em;
-        padding: 10px;
-    }
+        @include bp-medium {
+            padding-#{$left}: 110px;
+        }
 
-    .post__controls {
-        text-align: $left;
-
-        .text {
-            display: inline;
-            margin-#{$left}: 6px;
+        .pagination {
+            float: none;
         }
     }
 }

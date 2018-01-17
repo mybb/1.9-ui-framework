@@ -2,7 +2,7 @@
 
     &__announcements,
     &__sticky-threads {
-        border-bottom: 2px solid $border-1;
+        border-bottom: 3px solid $border-1;
     }
 
     &__select-all {
@@ -127,6 +127,10 @@
         border-bottom: 1px solid $border-1;
         flex-direction: column;
         position: relative;
+
+        &:last-child {
+            border-bottom: none;
+        }
 
         @include bp-small {
             flex-direction: row;
