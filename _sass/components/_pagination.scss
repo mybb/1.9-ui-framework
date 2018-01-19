@@ -18,8 +18,7 @@
         background: $background-1;
         border-radius: $radius;
 
-        &:hover,
-        &:active {
+        &:hover {
             background: $secondary-color;
             color: $invert-font-color;
             text-decoration: none;
@@ -29,8 +28,7 @@
             background: $primary-color;
             color: $invert-font-color;
 
-            &:hover,
-            &:active {
+            &:hover {
                 background: $primary-color;
             }
         }
@@ -41,8 +39,8 @@
     }
 
     @include bp-medium {
-        float: $left;
+        // float: $left;
         text-align: $left;
-        margin: 10px 0;
+        margin: side-values(10px 0 20px 0);
     }
 }

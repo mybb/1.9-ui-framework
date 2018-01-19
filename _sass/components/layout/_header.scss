@@ -103,8 +103,7 @@
 
             .main-menu__link {
 
-                &:hover,
-                &:active {
+                &:hover {
                     background: $primary-color;
                 }
             }
@@ -137,8 +136,7 @@
             text-decoration: none;
         }
 
-        &:hover,
-        &:active {
+        &:hover {
             background: rgba($dark-background-3, 0.6);
         }
     }

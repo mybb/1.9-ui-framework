@@ -13,8 +13,7 @@
             text-decoration: none;
         }
 
-        &:hover,
-        &:active {
+        &:hover {
 
             .breadcrumb__text {
                 color: $secondary-color;

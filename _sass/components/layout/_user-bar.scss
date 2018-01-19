@@ -35,8 +35,7 @@
             border-radius: 4px;
         }
 
-        &:hover,
-        &:active {
+        &:hover {
             color: $secondary-color;
             text-decoration: none;
             cursor: pointer;
@@ -169,8 +168,7 @@
         text-align: $left;
         background: transparent;
 
-        &:hover,
-        &:active {
+        &:hover {
             text-decoration: none;
         }
     }

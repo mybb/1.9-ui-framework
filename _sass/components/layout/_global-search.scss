@@ -13,8 +13,7 @@
         padding: 12px 8px;
         margin-#{$right}: 0px;
 
-        &:hover,
-        &:active {
+        &:hover {
             color: $secondary-color;
             cursor: pointer;
         }
@@ -91,8 +90,7 @@
             color: $alt-font-color-2;
         }
 
-        &:hover,
-        &:active {
+        &:hover {
             color: $alt-font-color-1;
         }
     }

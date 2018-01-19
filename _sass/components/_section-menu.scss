@@ -53,8 +53,7 @@
             text-decoration: none;
         }
 
-        &:hover,
-        &:active {
+        &:hover {
             background-color: $secondary-color;
             border-color: $secondary-color;
             color: $invert-font-color;

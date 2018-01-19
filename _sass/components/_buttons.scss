@@ -16,8 +16,7 @@
         border-color: $color-border;
     }
 
-    &:hover,
-    &:active {
+    &:hover {
         color: $color-text-hover;
         background-color: $color-hover;
         border-color: $color-border-hover;
@@ -38,8 +37,7 @@
        -moz-appearance: none;
             appearance: none;
 
-    &:hover,
-    &:active {
+    &:hover {
         text-decoration: none;
         outline: none;
         cursor: pointer;

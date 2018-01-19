@@ -134,8 +134,7 @@
         background: $background-1;
         border-radius: 3px;
 
-        &:hover,
-        &:active {
+        &:hover {
             text-decoration: none;
             background: $secondary-color;
             color: $invert-font-color;
