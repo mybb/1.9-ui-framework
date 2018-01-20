@@ -4,17 +4,18 @@
 @import "layout/page";
 @import "layout/global-search";
 @import "layout/user-bar";
+@import "layout/logo";
 
-@import "logo";
 @import "alerts";
-@import "forms";
-@import "form_fields";
-@import "buttons";
-@import "modals";
-@import "tables";
-@import "inline-moderation";
-@import "page_blocks";
 @import "breadcrumb";
-@import "section-menu";
+@import "buttons";
+@import "form-fields";
+@import "forms";
+@import "inline-moderation";
+@import "modals";
+@import "page-blocks";
+@import "page-tabs";
 @import "pagination";
+@import "section-menu";
 @import "spinners";
+@import "tables";

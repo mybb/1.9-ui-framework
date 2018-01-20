@@ -103,7 +103,9 @@ textarea {
     }
 
     .page-header {
-        margin-bottom: 20px;
+        margin-bottom: 30px;
+        border-bottom: 1px solid $border-3;
+        padding-bottom: 10px;
 
         .page-title {
             font-size: 2.2em;
@@ -119,16 +121,6 @@ textarea {
             margin: side-values(0 0 10px 0);
         }
 
-    }
-
-    .page-content--menu {
-
-        .page-header {
-
-            .page-title {
-                font-size: 1.8em;
-            }
-        }
     }
 
     .page-sidebar {

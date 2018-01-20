@@ -142,11 +142,12 @@ textarea {
 }
 
 .segmented-control {
-    margin: side-values(5px 0 0 0);
+    // margin: side-values(5px 0 0 0);
     border: 1px solid $border-2;
     font-size: 0.8em;
     display: inline-block;
     border-radius: 4px;
+    vertical-align: top;
 
     &--block:before {
         content: "\A";
