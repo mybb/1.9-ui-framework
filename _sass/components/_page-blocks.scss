@@ -67,6 +67,7 @@
     clear: both;
     background-color: $background-2;
     border-radius: $radius;
+    margin-bottom: 20px;
 
     .select-field,
     .button {
@@ -117,34 +118,33 @@ dl.stats {
     color: $alt-font-color-1;
 }
 
-.page-buttons {
-    @include clearfix();
-    margin: side-values(-10px 0 15px 0);
-    text-align: center;
-
-    @include bp-medium {
-        float: $right;
-        margin: side-values(-45px -5px 8px 0);
-    }
-}
-
 .page-controls {
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    margin-bottom: 10px;
+    flex-direction: column;
+
+    &--top {
+        margin-top: -10px;
+
+        .pagination {
+            margin-bottom: 0;
+        }
+    }
+
+    .page-buttons {
+        margin-#{$left}: -5px;
+        margin-#{$right}: -5px;
+    }
 
     @include bp-medium {
-        @include clearfix();
+        flex-direction: row;
 
         .page-buttons {
-            margin-top: 0;
-        }
-
-        .pagination + .page-buttons {
-            margin-top: 0;
+            order: 2;
+            margin-#{$left}: auto;
+            margin-#{$right}: -5px;
         }
     }
-}
-
-.users-browsing {
-    @include container;
-    margin-bottom: 20px;
-    font-size: 0.9em;
 }

@@ -98,10 +98,10 @@
     }
 
     $theme-basic: (
-        'color': $background-default,
+        'color': transparent,
         'color-text': $alt-font-color-1,
-        'color-border': $background-default,
-        'color-hover': $background-default,
+        'color-border': transparent,
+        'color-hover': transparent,
         'color-text-hover': $secondary-color
     );
 

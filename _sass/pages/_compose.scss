@@ -96,7 +96,7 @@
     &__options {
         display: none;
         @include container;
-        margin: 5px;
+        margin: side-values(5px 12px 12px 12px);
         font-size: 0.9em;
     }
 

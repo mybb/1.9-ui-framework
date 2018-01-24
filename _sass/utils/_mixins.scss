@@ -89,6 +89,19 @@
 
 @mixin container {
     background: $background-1;
-    padding: 8px 12px;
+    padding: 12px;
     border-radius: $radius;
+    margin-bottom: 20px;
+
+    &--small {
+        padding: 8px 12px;
+        font-size: 0.9em;
+    }
+
+    &__title {
+        margin-top: 0;
+        margin-bottom: 10px;
+        padding-bottom: 5px;
+        border-bottom: 1px solid $border-1;
+    }
 }
