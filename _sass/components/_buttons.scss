@@ -152,6 +152,10 @@
 
     &--big {
         font-size: 1.1em;
-		padding: 8px 18px;
+		padding: 8px 16px;
+
+        .button__icon {
+            margin-#{$right}: 12px;
+        }
     }
 }
