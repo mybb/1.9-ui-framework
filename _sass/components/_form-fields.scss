@@ -1,3 +1,79 @@
+.field {
+
+    &__name {
+        margin: side-values(0 0 5px 0);
+        padding: 0;
+        font-size: 1em;
+    }
+
+    &__description {
+        font-size: 0.8em;
+        line-height: 1.4;
+        color: $alt-font-color-1;
+        margin: side-values(-4px 0 4px 0);
+    }
+
+    &__value {
+        margin: 0;
+        font-size: 0.9em;
+    }
+
+    &__block {
+        margin-top: 5px;
+    }
+
+    label {
+        cursor: pointer;
+    }
+}
+
+.option-field {
+    padding: side-values(0 0 0 30px);
+    margin-bottom: 20px;
+
+    &:last-child,
+    &--single {
+        margin-bottom: 0;
+    }
+
+    &__input,
+    input[type="radio"],
+    input[type="checkbox"] {
+        float: $left;
+        margin: side-values(6px 0 0 -26px);
+    }
+
+    &__name {
+        font-size: 1em;
+        margin: side-values(0 0 5px 0);
+    }
+
+    &__description {
+        @extend .field__description;
+    }
+
+    label {
+        cursor: pointer;
+    }
+
+    &--compact {
+        font-size: 0.9em;
+        margin: 8px 0;
+        padding: side-values(0 0 0 30px);
+
+        .option-field__input,
+        input[type="checkbox"],
+        input[type="radio"] {
+            float: $left;
+            margin: side-values(4px 0 0 -26px);
+        }
+
+        &:last-child {
+            margin-bottom: 0;
+        }
+    }
+}
+
 .textbox {
     border: 1px solid $border-2;
     padding: 5px 6px;
@@ -146,7 +222,7 @@ textarea {
 
     &__button {
         display: block;
-        padding: 3px 8px;
+        padding: 7px 8px;
         margin: 0;
         border-#{$left}: 1px solid $border-2;
         border-#{$right}: 1px solid transparent;
@@ -163,7 +239,7 @@ textarea {
             background: $primary-color;
             color: $invert-font-color;
             margin: -1px;
-            padding: 3px 9px;
+            padding: 7px 9px;
             border: 1px solid $primary-color;
             z-index: 15;
         }
@@ -193,7 +269,7 @@ textarea {
         {
             border: none;
             border-radius: $radius;
-            padding: 3px 8px;
+            padding: 7px 8px;
             margin: side-values(0 4px 4px 0);
         }
     }

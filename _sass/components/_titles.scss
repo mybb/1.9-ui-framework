@@ -4,7 +4,7 @@
     font-size: 1.4em;
     margin: 0;
     padding: 0;
-    
+
     &--block {
         border-bottom: 1px solid $border-1;
     }
@@ -27,6 +27,23 @@
         a:visited,
         a:hover {
             color: $invert-font-color;
+        }
+    }
+
+    &--section {
+        margin: side-values(0 0 12px 0);
+        padding: side-values(0 8px 8px 8px);
+        font-family: $alt-font-stack;
+        font-size: 1.1em;
+        border-bottom: 1px dotted $border-2;
+
+        @include bp-medium {
+            border: 0;
+            float: $left;
+            margin: 0;
+            padding: 0;
+            width: 20%;
+            text-align: $right;
         }
     }
 }

@@ -1,19 +1,6 @@
 .block {
     margin-bottom: 30px;
 
-    &__row {
-        padding: 8px 12px;
-        border-bottom: 1px solid $border-1;
-    }
-
-    &__title {
-        font-size: 1em;
-        font-weight: normal;
-        padding: 8px;
-        margin: side-values(-8px -12px 12px -12px);
-        background: $background-1;
-    }
-
     &__content {
         padding: 10px 0;
     }
@@ -35,6 +22,32 @@
 
     &:last-child {
         margin-bottom: 0;
+    }
+}
+
+.section {
+    @include clearfix();
+    padding: 16px 12px;
+    border-bottom: 1px solid $border-1;
+
+    @include bp-medium {
+        padding: 20px 12px;
+    }
+
+    &:last-child {
+        border-bottom: 0;
+    }
+
+    &__container {
+
+        @include bp-medium {
+            float: $left;
+            margin: side-values(0 0 0 3%);
+            padding: side-values(0 0 0 20px);
+            border-#{$left}: 1px dotted $border-2;
+            width: 74%;
+            box-sizing: border-box;
+        }
     }
 }
 
