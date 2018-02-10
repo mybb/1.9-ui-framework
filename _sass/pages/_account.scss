@@ -36,20 +36,17 @@
     }
 }
 
-.dashboard__account {
-    padding: side-values(20px 20px 20px 140px);
-    border: 1px solid $border-1;
-    border-radius: 4px;
-    @include clearfix();
+.account {
 
-    .avatar-profile-link {
-        float: $left;
-        display: block;
-        margin: side-values(0 0 0 -120px);
-        @include avatar(100);
-    }
+    &__dashboard {
+        padding: side-values(20px 20px 20px 140px);
+        @include clearfix();
 
-    .dashboard__account__username {
-        margin: side-values(0 0 6px 0);
+        .avatar-profile-link {
+            float: $left;
+            display: block;
+            margin: side-values(0 0 0 -120px);
+            @include avatar(100);
+        }
     }
 }

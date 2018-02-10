@@ -9,3 +9,20 @@
 .container {
     @include container;
 }
+
+.commas {
+
+    > * {
+        
+        &:after {
+            content: ",";
+        }
+
+        &:last-child {
+
+            &:after {
+                content: "";
+            }
+        }
+    }
+}

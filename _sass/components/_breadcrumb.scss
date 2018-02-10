@@ -17,13 +17,11 @@
 
             .breadcrumb__text {
                 color: $secondary-color;
-
-                // text-decoration: underline;
             }
         }
     }
 
-    &__icon {
+    &__separator {
         margin: side-values(0 8px 0 8px);
     }
 }

@@ -1,154 +1,148 @@
-.forum-list {
+.forum {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-direction: column;
 
-    .forum {
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-        flex-direction: column;
-        padding: 12px;
-        line-height: 1.4;
-        border-bottom: 1px solid $border-2;
+    @include bp-medium {
+        flex-direction: row;
+    }
 
-        @include bp-medium {
-            flex-direction: row;
+    &__info {
+        padding-#{$left}: 26px;
+        width: 100%;
+        box-sizing: border-box;
+    }
+
+    &__status {
+        float: $left;
+        margin-top: 0px;
+        margin-#{$left}: -26px;
+        color: $alt-font-color-3;
+
+        &.forum__status--on {
+            color: $dark-background-2;
         }
 
-        &__info {
-            padding-#{$left}: 26px;
-            width: 100%;
-            box-sizing: border-box;
+        // this will change with the switch to twig
+        .fa-link,
+        .fa-lock {
+            display: none;
         }
 
-        &__status {
-            float: $left;
-            margin-top: 0px;
-            margin-#{$left}: -26px;
-            color: $alt-font-color-3;
-
-            &.forum__status--on {
-                color: $dark-background-2;
-            }
-
-            // this will change with the switch to twig
-            .fa-link,
-            .fa-lock {
+        &--offlock {
+            .fa-circle {
                 display: none;
             }
 
-            &--offlock {
-                .fa-circle {
-                    display: none;
-                }
-
-                .fa-lock {
-                    display: inline-block;
-                }
-            }
-
-            &--offlink {
-                .fa-circle {
-                    display: none;
-                }
-
-                .fa-link {
-                    display: inline-block;
-                }
+            .fa-lock {
+                display: inline-block;
             }
         }
 
-        &__title {
-            margin: side-values(0 0 4px 0);
-            font-size: 1em;
-        }
-
-        &__description {
-            font-size: 0.8em;
-            margin: 0;
-            padding: side-values(2px 0 0 0);
-            color: $alt-font-color-4;
-        }
-
-        &__subforums {
-            list-style: none;
-            margin: side-values(6px 0 0 0);
-            padding: 0;
-            font-size: 0.8em;
-        }
-
-        &__subforum {
-            display: inline-block;
-            margin: side-values(0 15px 0 0);
-
-            &__status {
-                color: $alt-font-color-3;
-                font-size: 10px;
-                margin-#{$right}: 3px;
-
-                &.subforum_minion {
-                    color: $dark-background-2;
-                }
+        &--offlink {
+            .fa-circle {
+                display: none;
             }
-        }
 
-        &__latest {
-            width: 100%;
-            margin-top: 6px;
-            padding: side-values(10px 0 0 48px);
-            border-top: 1px dotted $border-1;
-            box-sizing: border-box;
-
-            .avatar-profile-link {
-                float: $left;
-                margin: side-values(0 0 0 -48px);
-                @include avatar(36);
+            .fa-link {
+                display: inline-block;
             }
-        }
-
-        &__subject {
-            display: block;
-            margin: 0;
-            padding: 0;
-            font-weight: normal;
-            font-size: 0.9em;
-        }
-
-        &__date-author {
-            display: block;
-            font-size: 0.8em;
-            color: $alt-font-color-2;
-            margin: 0;
-
-            a {
-                color: $alt-font-color-1;
-            }
-        }
-
-        &.forum--highlight {
-            background-color: $status-highlight;
-            border-color: $status-highlight-border;
         }
     }
 
-    &--full-width {
+    &__title {
+        margin: side-values(0 0 4px 0);
+        font-size: 1em;
+    }
 
-        @include bp-medium {
+    &__description {
+        font-size: 0.8em;
+        margin: 0;
+        padding: side-values(2px 0 0 0);
+        color: $alt-font-color-4;
+    }
 
-            .forum {
+    &__subforums {
+        list-style: none;
+        margin: side-values(6px 0 0 0);
+        padding: 0;
+        font-size: 0.8em;
+    }
 
-                &__info {
-                    width: 60%;
-                }
+    &__subforum {
+        display: inline-block;
+        margin: side-values(0 15px 0 0);
 
-                &__latest {
-                    width: 35%;
-                    border: none;
-                    margin: 0;
-                    padding: side-values(4px 0 0 48px);
-                    box-sizing: border-box;
-                }
+        &__status {
+            color: $alt-font-color-3;
+            font-size: 10px;
+            margin-#{$right}: 3px;
+
+            &.subforum_minion {
+                color: $dark-background-2;
+            }
+        }
+    }
+
+    &__latest {
+        width: 100%;
+        margin-top: 6px;
+        padding: side-values(10px 0 0 48px);
+        border-top: 1px dotted $border-1;
+        box-sizing: border-box;
+
+        .avatar-profile-link {
+            float: $left;
+            margin: side-values(0 0 0 -48px);
+            @include avatar(36);
+        }
+    }
+
+    &__subject {
+        display: block;
+        margin: 0;
+        padding: 0;
+        font-weight: normal;
+        font-size: 0.9em;
+    }
+
+    &__date-author {
+        display: block;
+        font-size: 0.8em;
+        color: $alt-font-color-2;
+        margin: 0;
+
+        a {
+            color: $alt-font-color-1;
+        }
+    }
+
+    &.forum--highlight {
+        background-color: $status-highlight;
+        border-color: $status-highlight-border;
+    }
+}
+
+.forum-list--full-width {
+
+    @include bp-medium {
+
+        .forum {
+
+            &__info {
+                width: 60%;
             }
 
+            &__latest {
+                width: 35%;
+                border: none;
+                margin: 0;
+                padding: side-values(4px 0 0 48px);
+                box-sizing: border-box;
+            }
         }
+
     }
 }
 

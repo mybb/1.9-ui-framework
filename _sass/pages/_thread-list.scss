@@ -116,216 +116,214 @@
             }
         }
     }
+}
 
-    .thread {
-        display: flex;
-        justify-content: flex-start;
-        align-items: flex-start;
-        padding: side-values(10px 12px 10px 66px);
-        line-height: 1.4;
-        border-bottom: 1px solid $border-1;
-        flex-direction: column;
-        position: relative;
+.thread {
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    padding-#{$left}: 66px;
+    flex-direction: column;
+    position: relative;
 
-        &:last-child {
-            border-bottom: none;
+    &:last-child {
+        border-bottom: none;
+    }
+
+    @include bp-small {
+        flex-direction: row;
+        align-items: center;
+        padding-#{$left}: 40px;
+    }
+
+    &__column {
+        // Column widths handled above
+
+        &--primary,
+        &--latest {
+
+            @include bp-small-max {
+                width: 100%;
+            }
         }
+
+        &--moderation {
+
+            @include bp-small-max {
+                position: absolute;
+                top: 12px;
+                right: 12px;
+            }
+        }
+    }
+
+    &.trow_selected { // &--selected
+        background-color: $status-highlight;
+        // border-color: $status-highlight-border;
+    }
+
+    &--soft-deleted {
+        background-color: $status-deleted;
+        border-color: $status-deleted-border;
+    }
+
+    &--pending-approval {
+        background-color: $status-pending;
+        border-color: $status-pending-border;
+    }
+
+    &__status {
+        vertical-align: top;
+        display: inline-block;
+        color: $dark-background-1;
+        font-size: 0.8em;
+        margin-top: 5px;
+        margin-#{$left}: 6px;
 
         @include bp-small {
-            flex-direction: row;
-            align-items: center;
-            padding: side-values(10px 12px 10px 40px);
+            float: $left;
+            margin-top: 6px;
+            margin-#{$left}: -28px;
         }
+    }
 
-        &__column {
-            // Column widths handled above
+    &__title {
+        margin: 0;
+        font-size: 1em;
+        font-weight: normal;
+    }
 
-            &--primary,
-            &--latest {
+    &--announcement {
 
-                @include bp-small-max {
-                    width: 100%;
-                }
-            }
-
-            &--moderation {
-
-                @include bp-small-max {
-                    position: absolute;
-                    top: 12px;
-                    right: 12px;
-                }
-            }
-        }
-
-        &.trow_selected { // &--selected
-            background-color: $status-highlight;
-            // border-color: $status-highlight-border;
-        }
-
-        &--soft-deleted {
-            background-color: $status-deleted;
-            border-color: $status-deleted-border;
-        }
-
-        &--pending-approval {
-            background-color: $status-pending;
-            border-color: $status-pending-border;
-        }
-
-        &__status {
-            vertical-align: top;
+        .thread__title,
+        .thread__author {
             display: inline-block;
-            color: $dark-background-1;
-            font-size: 0.8em;
-            margin-top: 5px;
-            margin-#{$left}: 6px;
+        }
+
+        .thread__status {
+            float: $left;
+            margin-top: 12px;
+            margin-#{$left}: -42px;
 
             @include bp-small {
-                float: $left;
-                margin-top: 6px;
+                margin-top: 0;
                 margin-#{$left}: -28px;
             }
         }
+    }
 
-        &__title {
-            margin: 0;
-            font-size: 1em;
-            font-weight: normal;
+    &__author {
+        display: none;
+        margin: side-values(3px 0 0 0);
+        margin-top: 3px;
+        font-size: 0.8em;
+        color: $alt-font-color-2;
+
+        @include bp-small {
+            display: block;
         }
 
-        &--announcement {
-
-            .thread__title,
-            .thread__author {
-                display: inline-block;
-            }
-
-            .thread__status {
-                float: $left;
-                margin-top: 12px;
-                margin-#{$left}: -42px;
-
-                @include bp-small {
-                    margin-top: 0;
-                    margin-#{$left}: -28px;
-                }
-            }
+        a:link,
+        a:visited {
+            color: $alt-font-color-1;
         }
+    }
 
-        &__author {
+    &__icons {
+        float: $right;
+        color: $alt-font-color-1;
+        font-size: 14px;
+        margin-#{$left}: 16px;
+        margin-top: 4px;
+    }
+
+    &__icon {
+        display: inline-block;
+        margin-#{$left}: 8px;
+
+        &--sticky {
             display: none;
-            margin: side-values(3px 0 0 0);
-            margin-top: 3px;
+            color: $secondary-color;
+        }
+    }
+
+    &.forumdisplay_sticky {
+
+        .thread__icon--sticky {
+            display: inline-block;
+        }
+    }
+
+    &__replies {
+        margin: 0;
+
+        &__count {
+            color: $alt-font-color-1;
+        }
+
+        &__text {
+            // @include visually-hidden;
+            display: block;
+            color: $alt-font-color-3;
+            font-size: 0.7em;
+            text-transform: lowercase;
+        }
+    }
+
+    &__latest-post {
+        margin: 0;
+        display: inline-block;
+
+        @include bp-small {
+            display: block;
+        }
+
+        .avatar-profile-link {
+            position: absolute;
+            top: 12px;
+            left: 8px;
+            @include avatar(44);
+
+            @include bp-small {
+                position: static;
+                float: $left;
+                display: inline-block;
+                margin: side-values(0 12px 0 0);
+            }
+        }
+
+        &__text {
+            display: inline;
             font-size: 0.8em;
             color: $alt-font-color-2;
 
             @include bp-small {
-                display: block;
-            }
-
-            a:link,
-            a:visited {
-                color: $alt-font-color-1;
+                @include visually-hidden;
             }
         }
 
-        &__icons {
-            float: $right;
-            color: $alt-font-color-1;
-            font-size: 14px;
-            margin-#{$left}: 16px;
-            margin-top: 4px;
-        }
-
-        &__icon {
+        &__author {
             display: inline-block;
-            margin-#{$left}: 8px;
+            font-size: 0.8em;
 
-            &--sticky {
-                display: none;
-                color: $secondary-color;
+            @include bp-small-max {
+
+                a:link,
+                a:visited {
+                    color: $alt-font-color-1;
+                }
             }
-        }
-
-        &.forumdisplay_sticky {
-
-            .thread__icon--sticky {
-                display: inline-block;
-            }
-        }
-
-        &__replies {
-            margin: 0;
-
-            &__count {
-                color: $alt-font-color-1;
-            }
-
-            &__text {
-                // @include visually-hidden;
-                display: block;
-                color: $alt-font-color-3;
-                font-size: 0.7em;
-                text-transform: lowercase;
-            }
-        }
-
-        &__latest-post {
-            margin: 0;
-            display: inline-block;
 
             @include bp-small {
                 display: block;
+                font-size: 1em;
             }
+        }
 
-            .avatar-profile-link {
-                position: absolute;
-                top: 12px;
-                left: 8px;
-                @include avatar(44);
-
-                @include bp-small {
-                    position: static;
-                    float: $left;
-                    display: inline-block;
-                    margin: side-values(0 12px 0 0);
-                }
-            }
-
-            &__text {
-                display: inline;
-                font-size: 0.8em;
-                color: $alt-font-color-2;
-
-                @include bp-small {
-                    @include visually-hidden;
-                }
-            }
-
-            &__author {
-                display: inline-block;
-                font-size: 0.8em;
-
-                @include bp-small-max {
-
-                    a:link,
-                    a:visited {
-                        color: $alt-font-color-1;
-                    }
-                }
-
-                @include bp-small {
-                    display: block;
-                    font-size: 1em;
-                }
-            }
-
-            &__date {
-                display: block;
-                font-size: 0.8em;
-                color: $alt-font-color-1;
-            }
+        &__date {
+            display: block;
+            font-size: 0.8em;
+            color: $alt-font-color-1;
         }
     }
 }

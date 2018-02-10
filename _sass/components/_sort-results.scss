@@ -1,0 +1,26 @@
+.sort-results {
+    text-align: center;
+    padding: 8px 12px;
+    clear: both;
+    background-color: $background-2;
+    border-radius: $radius;
+    margin-bottom: 20px;
+
+    .select-field,
+    .button {
+        margin: 3px;
+    }
+
+    &__title {
+        display: inline-block;
+        margin: side-values(0 10px 0 0);
+        padding: 0;
+        font-weight: normal;
+        color: $alt-font-color-1;
+        font-size: 0.9em;
+
+        &:after {
+            content: ":";
+        }
+    }
+}

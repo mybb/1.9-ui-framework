@@ -145,6 +145,13 @@
         }
     }
 
+    &--small {
+        padding: 0 8px;
+        font-size: 0.9em;
+        margin: side-values(0 5px 0 0);
+        vertical-align: top;
+    }
+
     &--medium {
         font-size: 1em;
 		padding: 6px 12px;

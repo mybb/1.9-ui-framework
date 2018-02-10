@@ -3,10 +3,6 @@
     min-height: 50px;
     background: $background-2;
 
-    .wrapper {
-        padding: 0;
-    }
-
     &__links {
         margin: 0;
         padding: 0;
@@ -119,6 +115,10 @@
             display: none;
         }
     }
+}
+
+.wrapper--user-bar {
+    padding: 0;
 }
 
 #show-user-dropdown:checked ~ .user-bar__item--active-user {

@@ -3,7 +3,7 @@ $avatar-margin-small: 80px;
 $avatar-margin-medium: 110px;
 $post-spacing: 25px;
 
-.thread {
+.post-list {
     clear: both;
 }
 
@@ -303,6 +303,7 @@ $post-spacing: 25px;
     }
 
     &--online {
+        color: $success-color;
 
         .user-status__link {
             color: $success-color;
@@ -310,6 +311,7 @@ $post-spacing: 25px;
     }
 
     &--away {
+        color: $danger-color;
 
         .user-status__link {
             color: $danger-color;

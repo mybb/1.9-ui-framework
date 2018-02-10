@@ -1,5 +1,4 @@
 .user-list {
-    padding-top: 20px;
     display: flex;
     flex-wrap: wrap;
     flex-direction: column;
@@ -8,6 +7,10 @@
 
     @include bp-medium {
         flex-direction: row;
+    }
+
+    &--has-title {
+        padding-top: 15px;
     }
 
     &__user {
@@ -46,20 +49,19 @@
         font-size: 0.8em;
         color: $alt-font-color-2;
 
-        // would prefer to be .user-list__data__link, though currently not supported by templates
         a {
             color: $alt-font-color-1;
         }
+    }
+
+    &__buttons {
+        margin-top: 5px;
     }
 
     .team-badge {
         float: right;
         position: relative;
         margin: side-values(-48px 0 0 0);
-    }
-
-    .stats {
-        font-size: 0.8em;
     }
 
     &--online-now {
@@ -100,10 +102,11 @@
     }
 }
 
+.list--user {
+    font-size: 0.8em;
+}
+
 .user-alphabet {
-    background: $background-1;
-    border-radius: $radius;
-    padding: 12px;
 
     &__letter {
         padding: 5px;

@@ -1,29 +1,6 @@
 .block {
     margin-bottom: 30px;
 
-    &__header {
-        font-size: 1.2em;
-        font-family: $alt-font-stack;
-        border-bottom: 1px solid $border-1;
-        padding: 8px;
-        margin: side-values(0 0 5px 0);
-
-        &--major {
-            background: $primary-color;
-            color: $invert-font-color;
-            border: 0;
-            padding: 8px 12px;
-            margin-bottom: 0;
-            border-radius: 4px;
-
-            a:link,
-            a:visited,
-            a:hover {
-                color: $invert-font-color;
-            }
-        }
-    }
-
     &__row {
         padding: 8px 12px;
         border-bottom: 1px solid $border-1;
@@ -61,32 +38,6 @@
     }
 }
 
-.sort-results {
-    text-align: center;
-    padding: 8px 12px;
-    clear: both;
-    background-color: $background-2;
-    border-radius: $radius;
-    margin-bottom: 20px;
-
-    .select-field,
-    .button {
-        margin: 3px;
-    }
-
-    &__title {
-        display: inline-block;
-        margin: side-values(0 10px 0 0);
-        padding: 0;
-        font-weight: normal;
-        color: $alt-font-color-1;
-        font-size: 0.9em;
-
-        &:after {
-            content: ":";
-        }
-    }
-}
 
 dl.stats {
     line-height: 1.6;
@@ -109,13 +60,6 @@ dl.stats {
         margin: 0;
         display: table-cell;
     }
-}
-
-.error-no-results {
-    text-align: center;
-    padding: 30px;
-    font-size: 1.2em;
-    color: $alt-font-color-1;
 }
 
 .page-controls {

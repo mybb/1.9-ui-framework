@@ -27,17 +27,6 @@
         }
     }
 
-    .wrapper {
-        position: relative;
-        display: flex;
-        flex-direction: column;
-        justify-content: space-between;
-
-        @include bp-medium {
-            flex-direction: row;
-        }
-    }
-
     .menu-button,
     .menu-close-button {
         display: block;
@@ -64,6 +53,17 @@
     /* Checkboxes for show/hide of menu & site search */
     &__checkbox {
         display: none;
+    }
+}
+
+.wrapper--header {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    @include bp-medium {
+        flex-direction: row;
     }
 }
 

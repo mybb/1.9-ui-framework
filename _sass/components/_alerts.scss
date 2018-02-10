@@ -69,4 +69,15 @@
             color: $invert-font-color;
         }
     }
+
+    &--no-results {
+        background: none;
+        text-align: center;
+        padding: 30px;
+        font-size: 1.2em;
+        color: $alt-font-color-1;
+        margin: 0;
+        display: block;
+        width: 100%;
+    }
 }
