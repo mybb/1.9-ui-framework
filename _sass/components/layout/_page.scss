@@ -107,14 +107,6 @@ textarea {
         border-bottom: 1px solid $border-3;
         padding-bottom: 0;
 
-        .page-title {
-            font-size: 2.2em;
-            font-weight: normal;
-            font-family: $alt-font-stack;
-            margin: side-values(0 0 20px 0);
-            padding: 0;
-        }
-
         .page-description {
             color: $alt-font-color-1;
             font-size: 0.9em;
@@ -126,12 +118,5 @@ textarea {
     .page-sidebar {
         padding-bottom: 10px;
         font-size: 0.9em;
-
-        .block {
-            border: 1px solid $border-1;
-            padding: 12px 15px;
-            margin-bottom: 30px;
-            border-radius: 4px;
-        }
     }
 }

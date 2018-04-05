@@ -26,6 +26,12 @@
             padding: side-values(8px 12px 8px 40px);
         }
 
+        &--alt {
+            background: none;
+            border-bottom: 1px solid $border-1;
+            border-radius: 0;
+        }
+
         &__link {
 
             &:link,
@@ -106,7 +112,7 @@
             }
         }
 
-        &--moderation {
+        &--checkbox {
             width: 8%;
             text-align: right;
 
@@ -147,7 +153,7 @@
             }
         }
 
-        &--moderation {
+        &--checkbox {
 
             @include bp-small-max {
                 position: absolute;
@@ -172,17 +178,17 @@
         border-color: $status-pending-border;
     }
 
-    &__status {
+    a.thread__status {
         vertical-align: top;
         display: inline-block;
         color: $dark-background-1;
         font-size: 0.8em;
-        margin-top: 5px;
+        margin-top: 1px;
         margin-#{$left}: 6px;
 
         @include bp-small {
             float: $left;
-            margin-top: 6px;
+            // margin-top: 2px;
             margin-#{$left}: -28px;
         }
     }
@@ -227,6 +233,11 @@
         a:visited {
             color: $alt-font-color-1;
         }
+    }
+
+    &__notification {
+        margin: side-values(3px 0 0 0);
+        font-size: 0.8em;
     }
 
     &__icons {
@@ -320,7 +331,7 @@
             }
         }
 
-        &__date {
+        a.thread__latest-post__date {
             display: block;
             font-size: 0.8em;
             color: $alt-font-color-1;

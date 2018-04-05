@@ -12,9 +12,9 @@
             color: $alt-font-color-2;
             margin-#{$right}: 6px;
 
-            &:after {
-                content: ":";
-            }
+            // &:after {
+            //     content: ":";
+            // }
         }
     }
 
@@ -22,6 +22,7 @@
         list-style: none;
         margin: 0;
         padding: 0;
+        display: block;
 
         .list__item {
             padding: 6px 0;

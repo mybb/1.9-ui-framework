@@ -6,14 +6,10 @@
     @include visually-hidden;
 }
 
-.container {
-    @include container;
-}
-
 .commas {
 
     > * {
-        
+
         &:after {
             content: ",";
         }

@@ -31,19 +31,3 @@
         padding: 10px 0;
     }
 }
-
-.row--form {
-
-    &--form {
-        padding: 12px 8px;
-
-        &:first-child {
-            padding-top: 0;
-        }
-
-        &:last-child {
-            border-bottom: 0;
-            padding-bottom: 6px;
-        }
-    }
-}

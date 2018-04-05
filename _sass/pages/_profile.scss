@@ -13,53 +13,32 @@
         }
     }
 
-    &__content {
-        margin-top: 20px;
-    }
-
-    &__sidebar {
-        margin-top: 20px;
-    }
-
-    .page-controls {
-
-        @include bp-medium {
-            position: relative;
-            margin-top: -95px;
-            right: 0;
-        }
-    }
+    // .page-controls {
+    //
+    //     @include bp-medium {
+    //         position: relative;
+    //         margin-top: -95px;
+    //         right: 0;
+    //     }
+    // }
 
     &__username,
     &__usertitle {
         margin: 5px 0;
     }
+}
 
-    &__field-group {
+.profile-field {
+    font-size: 0.9em;
 
-        &__title {
-            margin-bottom: 0;
-        }
+    &__name {
+        margin: 0;
+        padding: 0;
+        font-weight: 600;
     }
 
-    &__field {
-        padding: 8px;
-        border-bottom: 1px solid $border-1;
-        font-size: 0.9em;
-
-        &__title {
-            margin: 0;
-            padding: 0;
-            font-weight: 600;
-        }
-
-        &__data {
-            margin: 0;
-            padding: 0;
-        }
-
-        &:last-child {
-            border-bottom: none;
-        }
+    &__value {
+        margin: 0;
+        padding: 0;
     }
 }
