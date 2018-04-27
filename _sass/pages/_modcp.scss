@@ -1,0 +1,19 @@
+.modcp {
+
+    .page-header {
+        margin-bottom: 20px;
+    }
+
+    // these probably won't be necessary with twig -- just add --active class directly
+    &--home .section-menu__item--home,
+    &--announcements .section-menu__item--announcements,
+    &--mod-queue .section-menu__item--mod-queue,
+    &--reports .section-menu__item--reports,
+    &--mod-logs .section-menu__item--mod-logs,
+    &--edit-profile .section-menu__item--edit-profile,
+    &--banning .section-menu__item--banning,
+    &--warning-logs .section-menu__item--warning-logs,
+    &--ip-search .section-menu__item--ip-search {
+        @extend .section-menu__item--active;
+    }
+}

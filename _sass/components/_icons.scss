@@ -1,0 +1,19 @@
+.icon {
+
+    &--primary {
+        color: $primary-color;
+    }
+
+    &--secondary {
+        color: $secondary-color;
+    }
+
+    &--subdued {
+        color: $alt-font-color-3;
+    }
+
+    &--small {
+        font-size: 0.8em;
+        margin: 3px;
+    }
+}

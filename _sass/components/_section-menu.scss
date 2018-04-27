@@ -2,7 +2,7 @@
 
     @include bp-medium {
         float: $left;
-        width: 19%;
+        width: 22%;
         margin-#{$right}: 3%;
     }
 
@@ -42,11 +42,17 @@
     &__link {
         background: $background-1;
         display: block;
-        padding: 2px 8px;
+        padding: side-values(12px 8px 8px 8px);
         border-radius: 3px;
         display: flex;
         align-items: center;
         justify-content: flex-start;
+        flex-direction: column;
+
+        @include bp-medium {
+            padding: 2px 8px;
+            flex-direction: row;
+        }
 
         &:link,
         &:visited {
@@ -61,7 +67,14 @@
     }
 
     &__icon {
-        margin-#{$right}: 8px;
+        font-size: 1.5em;
+        margin-bottom: 5px;
+
+        @include bp-medium {
+            font-size: 1em;
+            margin-bottom: 0;
+            margin-#{$right}: 8px;
+        }
     }
 
     &__text {

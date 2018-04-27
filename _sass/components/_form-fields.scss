@@ -52,6 +52,10 @@
         @extend .field__description;
     }
 
+    &__field {
+
+    }
+
     label {
         cursor: pointer;
     }
@@ -94,6 +98,11 @@
 
     &--small {
         width: 60px;
+        margin-#{$right}: 6px;
+    }
+
+    &--medium {
+        width: 100px;
         margin-#{$right}: 6px;
     }
 
