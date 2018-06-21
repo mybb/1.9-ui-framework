@@ -77,6 +77,13 @@ $post-spacing: 25px;
         }
     }
 
+    &__messenger-meta {
+        color: $alt-font-color-1;
+        border-bottom: 1px solid $border-3;
+        font-size: 0.9em;
+        padding: side-values(0 0 5px 0);
+    }
+
     &__inline-mod {
         float: $right;
         margin: side-values(-20px 0 0 10px);

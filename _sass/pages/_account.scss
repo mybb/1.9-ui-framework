@@ -4,6 +4,13 @@
         margin-bottom: 20px;
     }
 
+    .section-menu__item--messenger-compose,
+    .section-menu__item--messenger-folder,
+    .section-menu__item--messenger-tracking,
+    .section-menu__item--messenger-edit-folders {
+        display: none;
+    }
+
     // these probably won't be necessary with twig -- just add --active class directly
     &--dashboard .section-menu__item--dashboard,
     &--profile .section-menu__item--profile,

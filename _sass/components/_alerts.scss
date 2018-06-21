@@ -44,6 +44,10 @@
         margin: 0;
     }
 
+    &__description {
+        margin: 0;
+    }
+
     &__list {
         margin: 10px 0;
     }
@@ -79,5 +83,6 @@
         margin: 0;
         display: block;
         width: 100%;
+        box-sizing: border-box;
     }
 }

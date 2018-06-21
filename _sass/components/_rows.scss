@@ -16,6 +16,10 @@
         }
     }
 
+    &--no-border {
+        border-bottom: none;
+    }
+
     &--simple-columns {
         display: flex;
         flex-direction: row;

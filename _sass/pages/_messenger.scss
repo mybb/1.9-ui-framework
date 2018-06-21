@@ -1,0 +1,388 @@
+.messenger {
+
+    .page-header {
+        margin-bottom: 20px;
+    }
+
+    // these probably won't be necessary with twig -- just add --active class directly
+    .section-menu__item--dashboard,
+    .section-menu__item--profile,
+    .section-menu__item--preferences,
+    .section-menu__item--groups,
+    .section-menu__item--buddy-ignore,
+    .section-menu__item--attachments,
+    .section-menu__item--drafts,
+    .section-menu__item--subscriptions {
+        display: none;
+    }
+
+    // these probably won't be necessary with twig -- just add --active class directly
+    &--compose .section-menu__item--messenger-compose,
+    &--tracking .section-menu__item--messenger-tracking,
+    &--edit-folders .section-menu__item--messenger-edit-folders,
+    &--folder-1 .section-menu__item--folder-1,
+    &--folder-2 .section-menu__item--folder-2,
+    &--folder-3 .section-menu__item--folder-3,
+    &--folder-4 .section-menu__item--folder-4 {
+        @extend .section-menu__item--active;
+    }
+
+    // this mess should also be fixed with twig
+    .section-menu__icon--folder-1,
+    .section-menu__icon--folder-2,
+    .section-menu__icon--folder-3,
+    .section-menu__icon--folder-4 {
+        display: none;
+    }
+
+    .section-menu__item--folder-1 {
+
+        .section-menu__icon--folder-1 {
+            display: block;
+        }
+    }
+
+    .section-menu__item--folder-2 {
+
+        .section-menu__icon--folder-2 {
+            display: block;
+        }
+    }
+
+    .section-menu__item--folder-3 {
+
+        .section-menu__icon--folder-3 {
+            display: block;
+        }
+    }
+
+    .section-menu__item--folder-4 {
+
+        .section-menu__icon--folder-4 {
+            display: block;
+        }
+    }
+
+    .section-menu__item--folder-1,
+    .section-menu__item--folder-2,
+    .section-menu__item--folder-3,
+    .section-menu__item--folder-4 {
+
+        .section-menu__icon--folder-0 {
+            display: none;
+        }
+    }
+
+    &__search {
+        padding-bottom: 12px;
+
+        .textbox--large {
+
+            @include bp-small-max {
+                margin-bottom: 8px;
+                width: 100%;
+            }
+        }
+
+        .button {
+            margin-#{$left}: 0;
+        }
+    }
+
+    &__advanced-search {
+
+        @include bp-large {
+            float: $right;
+        }
+    }
+
+    &__space {
+        margin-bottom: 10px;
+
+        .messenger-space {
+            display: flex;
+            background-color: $background-1;
+            border-radius: $radius;
+
+            &__used {
+                border-radius: $radius;
+
+                &--low {
+                    background: $success-color;
+                }
+
+                &--medium {
+                    background: $moderate-color;
+                }
+
+                &--high {
+                    background: $danger-color;
+                }
+            }
+
+            &__unused {
+
+            }
+
+            &__text {
+                display: inline-block;
+                padding: 4px 10px;
+
+                &--over-half {
+                    color: $invert-font-color;
+                }
+            }
+        }
+    }
+}
+
+.sort-messages {
+    padding: 8px 12px;
+    font-size: 0.9em;
+    color: $alt-font-color-2;
+    background: $background-3;
+    border-radius: $radius;
+    position: relative;
+
+    @include bp-small {
+        display: flex;
+        justify-content: flex-start;
+        align-items: center;
+        padding: side-values(8px 12px 8px 70px);
+
+        &--no-avatar {
+            padding-#{$left}: 12px;
+        }
+    }
+
+    &--alt {
+        background: none;
+        border-bottom: 1px solid $border-1;
+        border-radius: 0;
+    }
+
+    &__link {
+
+        &:link,
+        &:visited {
+            color: $alt-font-color-1;
+        }
+
+        &:hover {
+            color: $secondary-color;
+            text-decoration: none;
+        }
+    }
+
+    &__column {
+
+        &--primary {
+
+            @include bp-small {
+                width: 67%;
+            }
+        }
+
+        &--date {
+
+            @include bp-small {
+                width: 28%;
+                text-align: $right;
+            }
+        }
+
+        &--checkbox {
+            width: 5%;
+            text-align: $right;
+
+            @include bp-small-max {
+                position: absolute;
+                top: 12px;
+                right: 12px;
+            }
+        }
+    }
+}
+
+.message-list {
+
+	&__actions {
+		border-bottom: 1px solid $border-2;
+		padding: 12px;
+		text-align: center;
+	}
+
+    .messages__sort-arrow {
+    	padding: 0 5px;
+    	display: inline-block;
+    }
+
+    .message {
+        display: flex;
+        justify-content: flex-start;
+        align-items: flex-start;
+        flex-direction: column;
+        position: relative;
+        padding-#{$left}: 70px;
+
+        @include bp-small {
+            flex-direction: row;
+            align-items: center;
+            // padding-#{$left}: 40px;
+        }
+
+        &:last-child {
+            border-bottom: 0;
+        }
+
+        &--new_pm {
+
+            .message__subject {
+                font-weight: bold;
+            }
+        }
+
+    	&--no-avatar {
+    		padding-#{$left}: 12px;
+    	}
+
+        .avatar-profile-link {
+    		float: $left;
+    		margin: side-values(0 0 0 -60px);
+            @include avatar(44);
+    	}
+
+        &__column {
+
+            &--primary {
+                width: 67%;
+            }
+
+            &--date {
+                width: 28%;
+                text-align: $right;
+            }
+
+            &--checkbox {
+                width: 5%;
+                text-align: center;
+            }
+
+            &--primary,
+            &--date {
+
+                @include bp-small-max {
+                    width: 100%;
+                    text-align: $left;
+                }
+            }
+
+            &--checkbox {
+                text-align: $right;
+
+                @include bp-small-max {
+                    position: absolute;
+                    top: 12px;
+                    right: 12px;
+                }
+            }
+        }
+
+        &__subject {
+            margin: 0;
+            font-size: 1em;
+            font-weight: normal;
+        }
+
+        &__label {
+
+            &--to {
+                display: none;
+            }
+        }
+
+        &__username,
+        &__folder {
+            margin: 0;
+            font-size: 0.8em;
+            color: $alt-font-color-2;
+
+            a:link,
+            a:visited {
+                color: $alt-font-color-1;
+            }
+
+            @include bp-small {
+                display: inline-block;
+            }
+        }
+
+        &__message {
+            margin: side-values(10px 0 0 0);
+            font-size: 0.9em;
+        }
+
+        &__deny-receipt {
+            font-size: 0.8em;
+    		color: $alt-font-color-2;
+    		margin-#{$left}: 5px;
+            font-weight: normal;
+
+            a:link,
+            a:visited {
+                color: $alt-font-color-1;
+            }
+    	}
+
+        &__icons {
+            float: $right;
+        }
+
+        &__icon {
+            color: $alt-font-color-2;
+            display: none;
+        }
+
+        &--new_pm {
+
+            .message__icon--new_pm {
+                color: $primary-color;
+                display: inline-block;
+            }
+        }
+
+        &--re_pm {
+
+            .message__icon--re_pm {
+                display: inline-block;
+            }
+        }
+
+        &--fw_pm {
+
+            .message__icon--fw_pm {
+                display: inline-block;
+            }
+        }
+
+    	&__date {
+    		color: $alt-font-color-2;
+    		font-size: 0.9em;
+    	}
+    }
+}
+
+.row .message {
+    padding: 0;
+}
+
+.messenger--folder-2 {
+
+    .message__label--from {
+        display: none;
+    }
+
+    .message__label--to {
+        display: inline;
+    }
+}

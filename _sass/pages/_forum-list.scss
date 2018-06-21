@@ -63,6 +63,30 @@
         color: $alt-font-color-4;
     }
 
+    &__stats {
+        font-weight: normal;
+        font-size: 0.8em;
+        color: $alt-font-color-2;
+        margin-#{$left}: 8px;
+        opacity: 0;
+        transition-property: opacity;
+        transition-duration: $transition-speed;
+
+        @include bp-small-max {
+            display: none;
+        }
+    }
+
+    &:hover {
+
+        .forum__stats {
+            opacity: 1;
+        }
+    }
+
+    &__count {
+    }
+
     &__subforums {
         list-style: none;
         margin: side-values(6px 0 0 0);

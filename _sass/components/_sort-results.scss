@@ -1,10 +1,13 @@
 .sort-results {
-    text-align: center;
     padding: 8px 12px;
     clear: both;
     background-color: $background-2;
     border-radius: $radius;
     margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
 
     .select-field,
     .button {
@@ -22,5 +25,11 @@
         // &:after {
         //     content: ":";
         // }
+    }
+
+    &__text {
+        margin: 0 8px;
+        font-size: 0.9em;
+        color: $alt-font-color-1;
     }
 }

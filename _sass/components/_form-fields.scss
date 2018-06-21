@@ -11,6 +11,10 @@
         line-height: 1.4;
         color: $alt-font-color-1;
         margin: side-values(-4px 0 4px 0);
+
+        &--below {
+            margin-top: 8px;
+        }
     }
 
     &__value {
@@ -45,11 +49,21 @@
 
     &__name {
         font-size: 1em;
-        margin: side-values(0 0 5px 0);
+        margin: 0;
+
+        &--inline {
+            display: inline-block;
+        }
     }
 
     &__description {
         @extend .field__description;
+        margin-top: 1px;
+
+        &--inline {
+            display: inline-block;
+            margin-#{$left}: 3px;
+        }
     }
 
     &__field {
@@ -106,6 +120,11 @@
         margin-#{$right}: 6px;
     }
 
+    &--large {
+        width: 250px;
+        margin-#{$right}: 6px;
+    }
+
     &--subject {
         font-size: 1.4em;
     }
@@ -116,6 +135,12 @@ select {
     &[multiple="multiple"] {
         width: 100%;
         height: 200px;
+        border: 1px solid $border-2;
+        border-radius: $radius;
+
+        &:focus {
+            outline: none;
+        }
     }
 }
 
