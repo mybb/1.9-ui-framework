@@ -68,9 +68,10 @@
         font-size: 0.8em;
         color: $alt-font-color-2;
         margin-#{$left}: 8px;
-        opacity: 0;
-        transition-property: opacity;
-        transition-duration: $transition-speed;
+        float: $right;
+        // opacity: 0;
+        // transition-property: opacity;
+        // transition-duration: $transition-speed;
 
         @include bp-small-max {
             display: none;

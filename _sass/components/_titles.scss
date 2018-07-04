@@ -36,6 +36,12 @@
         }
     }
 
+    &--minor {
+        border-bottom: 1px solid $border-1;
+        font-size: 1em;
+        padding: 8px 0;
+    }
+
     &--section {
         margin: side-values(0 0 12px 0);
         padding: side-values(0 8px 8px 8px);

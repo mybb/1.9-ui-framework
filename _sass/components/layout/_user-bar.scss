@@ -99,7 +99,7 @@
 
         .avatar-profile-link {
             float: $right;
-            margin: side-values(6px 0 0 0);
+            margin: side-values(6px 0 0 10px);
             @include avatar(80);
         }
     }
@@ -146,6 +146,7 @@
     margin: 0;
     padding: 0;
     list-style: none;
+    overflow: hidden;
 
     &__item {
         float: none;
