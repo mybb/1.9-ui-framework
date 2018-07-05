@@ -53,6 +53,11 @@
             }
         }
 
+        &--information {
+            font-size: 0.9em;
+            color: $alt-font-color-1;
+        }
+
         &:last-child {
             border-bottom: none;
         }
