@@ -63,6 +63,11 @@
         }
     }
 
+    &__your-vote {
+        margin-#{$left}: 5px;
+        color: $primary-color;
+    }
+
     &__option {
         float: $left;
         margin-bottom: 8px;
