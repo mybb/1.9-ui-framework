@@ -33,29 +33,6 @@
         }
     }
 
-    &__smilie-inserter {
-        background: $background-1;
-        border-radius: $radius;
-        text-align: center;
-        padding: 10px;
-
-        &__title {
-            font-weight: normal;
-            font-size: 0.9em;
-            color: $alt-font-color-1;
-            border-bottom: 1px solid $border-1;
-            padding-bottom: 5px;
-            margin: side-values(0 0 10px 0);
-        }
-
-        &__more {
-            margin-top: 10px;
-            padding-top: 5px;
-            border-top: 1px solid $border-1;
-            font-size: 0.9em;
-        }
-    }
-
     &__option-buttons {
         margin-top: 5px;
 
@@ -70,6 +47,45 @@
 
     &__checkbox {
         display: none;
+    }
+}
+
+.smilie-inserter {
+    background: $background-1;
+    border-radius: $radius;
+    text-align: center;
+    padding: 10px;
+
+    &__title {
+        font-weight: normal;
+        font-size: 0.9em;
+        color: $alt-font-color-1;
+        border-bottom: 1px solid $border-1;
+        padding-bottom: 5px;
+        margin: side-values(0 0 10px 0);
+    }
+
+    &__grid {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+    }
+
+    &__smilie {
+        width: 25%;
+        padding: 5px;
+        box-sizing: border-box;
+
+        img {
+            cursor: pointer;
+        }
+    }
+
+    &__more {
+        margin-top: 10px;
+        padding-top: 5px;
+        border-top: 1px solid $border-1;
+        font-size: 0.9em;
     }
 }
 
