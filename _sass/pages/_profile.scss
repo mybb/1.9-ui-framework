@@ -10,17 +10,18 @@
             width: 100px;
             height: 100px;
             margin-#{$right}: 16px;
+            margin-bottom: 16px;
         }
     }
 
-    // .page-controls {
-    //
-    //     @include bp-medium {
-    //         position: relative;
-    //         margin-top: -95px;
-    //         right: 0;
-    //     }
-    // }
+    .page-controls {
+        margin-top: -10px;
+
+        @include bp-medium-max {
+            margin-#{$left}: -5px;
+            margin-#{$right}: -5px;
+        }
+    }
 
     &__username,
     &__usertitle {

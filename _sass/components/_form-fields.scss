@@ -353,3 +353,24 @@ textarea {
         }
     }
 }
+
+.date-field {
+    display: flex;
+    flex-direction: row;
+    background: $background-1;
+    padding: 12px;
+    border-radius: $radius;
+
+    &__item {
+        margin-right: 8px;
+    }
+
+    &__name {
+        display: block;
+        font-weight: normal;
+        font-size: 0.9em;
+        color: $alt-font-color-1;
+        margin: side-values(0 0 3px 0);
+        padding: 0;
+    }
+}

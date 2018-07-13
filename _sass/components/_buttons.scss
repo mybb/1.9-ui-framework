@@ -47,6 +47,11 @@
 
     &__icon {
         margin-#{$right}: 8px;
+
+        &.button__icon--after {
+            margin-#{$right}: 0;
+            margin-#{$left}: 8px;
+        }
     }
 
     $theme-secondary: (
