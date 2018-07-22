@@ -1,0 +1,32 @@
+.post-control {
+    color: $alt-font-color-2;
+    padding: 0 7px;
+    background-color: transparent;
+    border: none;
+    font-size: 0.8em;
+
+    &__icon {
+        margin-#{$right}: 6px;
+    }
+
+    &:link,
+    &:visited {
+        color: $alt-font-color-2;
+    }
+
+    &:hover {
+        color: $secondary-color;
+        text-decoration: none;
+        cursor: pointer;
+    }
+
+    &.postbit_multiquote_on {
+        color: $secondary-color;
+        background: $background-default;
+        border-radius: $radius;
+        margin-top: -1px;
+        margin-bottom: -1px;
+        padding-top: 1px;
+        padding-bottom: 1px;
+    }
+}

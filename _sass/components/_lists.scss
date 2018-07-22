@@ -12,9 +12,9 @@
             color: $alt-font-color-2;
             margin-#{$right}: 6px;
 
-            // &:after {
-            //     content: ":";
-            // }
+            &:after {
+                content: ":";
+            }
         }
     }
 
