@@ -22,6 +22,14 @@
         border-radius: $radius;
     }
 
+    &--modal {
+        margin-bottom: 0;
+
+        .block__content {
+            padding: 12px;
+        }
+    }
+
     &__body {
         padding: 12px;
     }

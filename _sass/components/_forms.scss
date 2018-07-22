@@ -8,6 +8,11 @@
         background-color: $background-2;
     }
 
+    &--modal {
+        border: none;
+        margin-bottom: 0;
+    }
+
     &--delete {
         padding: 16px 12px;
         display: flex;
