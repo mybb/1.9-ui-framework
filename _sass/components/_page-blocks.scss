@@ -39,6 +39,7 @@
     }
 
     &__footer-link {
+        @extend .container;
         text-align: center;
         padding: 8px;
 
