@@ -24,36 +24,30 @@
     }
 }
 
-.form {
+.change-avatar {
 
-    .form__section__container.change-avatar {
+    .avatar-container {
+        float: $right;
+        margin: side-values(0 0 20px 20px);
+        @include avatar(100);
+    }
 
-        .avatar-profile-link {
-            float: $right;
-            margin: side-values(0 0 20px 20px);
-            @include avatar(100);
-        }
-
-        .change-avatar__description {
-            padding: side-values(0 0 0 5px);
-            margin: side-values(0 0 10px 0);
-            font-size: 0.9em;
-            color: $alt-font-color-1;
-        }
+    .change-avatar__description {
+        padding: side-values(0 0 0 5px);
+        margin: side-values(0 0 10px 0);
+        font-size: 0.9em;
+        color: $alt-font-color-1;
     }
 }
 
-.account {
+.account-dashboard {
+    padding: side-values(20px 20px 20px 140px);
+    @include clearfix();
 
-    &__dashboard {
-        padding: side-values(20px 20px 20px 140px);
-        @include clearfix();
-
-        .avatar-profile-link {
-            float: $left;
-            display: block;
-            margin: side-values(0 0 0 -120px);
-            @include avatar(100);
-        }
+    .avatar-profile-link {
+        float: $left;
+        display: block;
+        margin: side-values(0 0 0 -120px);
+        @include avatar(100);
     }
 }
