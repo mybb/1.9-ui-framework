@@ -85,4 +85,8 @@
         width: 100%;
         box-sizing: border-box;
     }
+
+    &--aligned-block {
+        text-align: $left;
+    }
 }
