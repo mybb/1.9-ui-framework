@@ -45,6 +45,20 @@
             }
         }
 
+        &__order {
+            margin-#{$left}: 2px;
+
+            a:link,
+            a:visited {
+                color: $alt-font-color-1;
+            }
+
+            a:hover,
+            a:active {
+                color: $secondary-color;
+            }
+        }
+
         &__column {
 
             &--latest {
@@ -188,7 +202,7 @@
             @include bp-small {
                 float: $left;
                 // margin-top: 2px;
-                margin-#{$left}: -28px;
+                margin-#{$left}: -25px;
             }
         }
 
@@ -196,6 +210,13 @@
             margin: 0;
             font-size: 1em;
             font-weight: normal;
+        }
+
+        &--unread {
+
+            .thread__title {
+                font-weight: bold;
+            }
         }
 
         &--announcement {
@@ -241,43 +262,69 @@
 
         &__icons {
             float: $right;
-            color: $alt-font-color-1;
+            color: $alt-font-color-2;
             font-size: 14px;
             margin-#{$left}: 16px;
-            margin-top: 4px;
         }
 
         &__icon {
             display: inline-block;
-            margin-#{$left}: 8px;
+            margin-#{$left}: 2px;
 
             &--sticky {
-                display: none;
                 color: $secondary-color;
             }
         }
 
-        &.forumdisplay_sticky {
+        &__pages {
+            float: $right;
+            margin-top: 3px;
+            font-size: 0.8em;
+        }
 
-            .thread__icon--sticky {
-                display: inline-block;
+        &__page-legend {
+            color: $alt-font-color-1;
+            margin-#{$right}: 2px;
+        }
+
+        &__page-link {
+            background: $background-1;
+            border-radius: $radius - 1;
+            text-decoration: none;
+            padding: 1px 5px;
+            margin: 0 1px;
+            display: inline-block;
+
+            &:hover,
+            &:active {
+                background: $secondary-color;
+                color: $invert-font-color;
             }
         }
 
         &__replies {
             margin: 0;
+        }
 
-            &__count {
-                color: $alt-font-color-1;
-            }
+        &__reply-legend {
+            display: block;
+            color: $alt-font-color-3;
+            font-size: 0.7em;
+            text-transform: lowercase;
+        }
 
-            &__text {
-                // @include visually-hidden;
-                display: block;
-                color: $alt-font-color-3;
-                font-size: 0.7em;
-                text-transform: lowercase;
-            }
+        &__reply-count {
+            color: $alt-font-color-1;
+        }
+
+        &__unapproved-replies {
+            background: $danger-color;
+            color: $invert-font-color;
+            border-radius: 2px;
+            padding: 1px 4px;
+            font-weight: normal;
+            font-size: 0.7em;
+            text-decoration: none;
         }
 
         &__latest-post {
