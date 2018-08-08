@@ -9,7 +9,7 @@
     }
 
     &__info {
-        padding-#{$left}: 26px;
+        padding-#{$left}: 38px;
         width: 100%;
         box-sizing: border-box;
     }
@@ -17,7 +17,7 @@
     &__status {
         float: $left;
         margin-top: 0px;
-        margin-#{$left}: -26px;
+        margin-#{$left}: -32px;
         color: $alt-font-color-3;
 
         &.forum__status--on {
