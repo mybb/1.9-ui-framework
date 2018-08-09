@@ -82,13 +82,15 @@
 
     &--section {
         margin: side-values(0 0 12px 0);
-        padding: side-values(0 8px 8px 8px);
+        padding: 8px 12px;
         font-family: $alt-font-stack;
         font-size: 1.1em;
-        border-bottom: 1px dotted $border-2;
+        background: $background-3;
+        border-radius: $radius;
 
         @include bp-medium {
             border: 0;
+            background: none;
             float: $left;
             margin: 0;
             padding: 0;
