@@ -374,3 +374,21 @@ textarea {
         padding: 0;
     }
 }
+
+.inline-text-field {
+    display: flex;
+
+    &__field {
+        margin-#{$right}: 5px;
+        flex-grow: 1;
+        width: auto;
+    }
+
+    &__submit {
+        flex-shrink: 0;
+    }
+}
+
+.user-select-field {
+    width: 100%;
+}

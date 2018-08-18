@@ -30,3 +30,21 @@
         padding-bottom: 1px;
     }
 }
+
+.post-controls {
+    display: flex;
+
+    &--secondary {
+
+        @include bp-large-max {
+
+            .post-control__icon {
+                margin-#{$right}: 0;
+            }
+
+            .post-control__text {
+                display: none;
+            }
+        }
+    }
+}

@@ -51,3 +51,36 @@
         @include avatar(100);
     }
 }
+
+.buddy-request {
+
+    &__username {
+        margin: 0;
+        font-size: 1em;
+    }
+
+    &__date {
+        font-size: 0.9em;
+        color: $alt-font-color-2;
+    }
+}
+
+.draft {
+
+    &__subject {
+        margin: 0;
+        font-size: 1em;
+    }
+
+    &__location,
+    &__date {
+        margin: 0;
+        font-size: 0.9em;
+        color: $alt-font-color-2;
+
+        a:link,
+        a:visited {
+            color: $alt-font-color-1;
+        }
+    }
+}

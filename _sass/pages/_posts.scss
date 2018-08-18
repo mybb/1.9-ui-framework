@@ -129,6 +129,10 @@ $post-spacing: 25px;
         img {
             max-width: 100%;
         }
+
+        &--message {
+            color: $alt-font-color-1;
+        }
     }
 
     &__quote {
@@ -171,24 +175,6 @@ $post-spacing: 25px;
         }
     }
 
-    &__controls {
-        display: flex;
-
-        &--secondary {
-
-            @include bp-large-max {
-
-                .post__control__icon {
-                    margin-#{$right}: 0;
-                }
-
-                .post__control__text {
-                    display: none;
-                }
-            }
-        }
-    }
-
     &--highlight,
     &--soft-deleted,
     &--pending-approval {
@@ -214,6 +200,16 @@ $post-spacing: 25px;
 
     &--pending-approval {
         border-color: $pending-color;
+    }
+
+    &--message {
+        border: none;
+        background: $background-1;
+
+        &__button {
+            margin: side-values(5px -5px 0 -5px);
+            display: none;
+        }
     }
 
     // TO DO: change classes in code

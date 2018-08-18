@@ -37,6 +37,10 @@
         }
     }
 
+    &--form {
+        margin-bottom: 12px;
+    }
+
     &--modal {
         padding: 12px;
         font-size: 1.4em;
@@ -76,7 +80,7 @@
 
     &--minor {
         border-bottom: 1px solid $border-1;
-        font-size: 1em;
+        font-size: 1.2em;
         padding: 8px 0;
     }
 
