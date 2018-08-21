@@ -54,6 +54,10 @@
         &--inline {
             display: inline-block;
         }
+
+        &--light {
+            font-weight: normal;
+        }
     }
 
     &__description {

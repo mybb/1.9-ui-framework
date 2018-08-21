@@ -87,9 +87,14 @@
     &__latest {
         width: 100%;
         margin-top: 6px;
-        padding: side-values(10px 0 0 48px);
-        border-top: 1px dotted $border-1;
+        padding: side-values(8px 10px 8px 56px);
+        background: $background-1;
+        border-radius: $radius;
         box-sizing: border-box;
+
+        &--never {
+            padding-#{$left}: 10px;
+        }
 
         .avatar-profile-link {
             float: $left;
@@ -137,8 +142,13 @@
                 width: 35%;
                 border: none;
                 margin: 0;
+                background: transparent;
                 padding: side-values(4px 0 0 48px);
                 box-sizing: border-box;
+
+                &--never {
+                    padding-#{$left}: 0;
+                }
             }
         }
 
