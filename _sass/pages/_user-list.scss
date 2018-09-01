@@ -26,6 +26,13 @@
         }
     }
 
+    &--single-column {
+
+        .user-list__user {
+            width: 100%;
+        }
+    }
+
     .avatar-profile-link {
         float: $left;
         margin: side-values(0 16px 0 0);
@@ -35,6 +42,10 @@
     &__username {
         margin: 0;
         font-size: 1.2em;
+    }
+
+    &__shortcut {
+        float: $right;
     }
 
     &__user-title {
@@ -64,38 +75,26 @@
         margin: side-values(-48px 0 0 0);
     }
 
-    &--online-now {
-
-        .user-list__user {
-
-            .avatar-profile-link {
-                @include avatar(50);
-            }
-
-            &__date {
-                float: right;
-            }
-        }
-    }
-
     .sort-results {
         margin: side-values(0 -12px 0 -12px);
     }
 
     &--compact {
 
-        &__user {
-            display: inline-block;
-            margin: side-values(0 12px 10px 0);
+        .user-list__user {
+            padding: 8px;
 
-            .avatar {
-                width: 24px;
-                height: 24px;
-                margin: side-values(-2px 8px 0 0);
+            .avatar-profile-link {
+                margin-#{$right}: 12px;
+                @include avatar(48);
             }
         }
 
-        .error-no-results {
+        .user-list__username {
+            font-size: 1em;
+        }
+
+        .alert--no-results {
             padding: 10px 0;
             font-size: 1em;
         }
