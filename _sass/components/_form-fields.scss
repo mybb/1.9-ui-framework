@@ -381,15 +381,26 @@ textarea {
 
 .inline-text-field {
     display: flex;
+    flex-direction: column;
 
-    &__field {
-        margin-#{$right}: 5px;
-        flex-grow: 1;
-        width: auto;
+    @include bp-medium {
+        flex-direction: row;
     }
 
-    &__submit {
+    &__field {
+        margin-bottom: 10px;
+        flex-grow: 1;
+        width: auto;
+
+        @include bp-medium {
+            margin-bottom: 0;
+            margin-#{$right}: 5px;
+        }
+    }
+
+    &__button {
         flex-shrink: 0;
+        margin: 0;
     }
 }
 

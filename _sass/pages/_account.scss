@@ -52,6 +52,66 @@
     }
 }
 
+.buddy-ignore-list {
+    margin: 0;
+    padding: 0;
+    list-style: none;
+
+    @include bp-small {
+        display: flex;
+        flex-wrap: wrap;
+    }
+
+    &__user {
+        padding: 10px 8px;
+        border-bottom: 1px solid $border-1;
+        box-sizing: border-box;
+
+        &:last-child {
+            border: none;
+        }
+
+        @include bp-small {
+            border: none;
+            width: 50%;
+        }
+
+        @include bp-large {
+            width: 33%;
+        }
+    }
+
+    &__delete-link {
+        float: $right;
+
+        @include bp-small {
+            float: none;
+            margin-#{$left}: 8px;
+        }
+
+        &:link,
+        &:visited {
+            color: $alt-font-color-1;
+        }
+
+        &:hover {
+            color: $danger-color;
+        }
+    }
+
+    &__delete-icon {
+
+    }
+
+    &__username {
+
+    }
+
+    &__user-status {
+
+    }
+}
+
 .buddy-request {
 
     &__username {
