@@ -20,6 +20,18 @@
         border: 1px solid $border-1;
         padding: 12px 15px;
         border-radius: $radius;
+
+        &.block--form {
+            padding: side-values(12px 0 0 0);
+
+            .title--sidebar {
+                margin: 0 15px;
+            }
+
+            .section--form {
+                padding: 15px;
+            }
+        }
     }
 
     &--modal {
