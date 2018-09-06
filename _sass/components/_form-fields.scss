@@ -97,6 +97,7 @@
 }
 
 .textbox {
+    background-color: $background-default;
     border: 1px solid $border-2;
     padding: 5px 6px;
     width: 100%;
@@ -207,6 +208,7 @@ label.error {
 }
 
 textarea {
+    background-color: $background-default;
     border: 1px solid $border-2;
     padding: 6px;
     width: 100%;
@@ -274,11 +276,11 @@ textarea {
         visibility: hidden;
 
         &:checked + .segmented-control__button {
-            background: $primary-color;
+            background: $button-default;
             color: $invert-font-color;
             margin: -1px;
             padding: 7px 9px;
-            border: 1px solid $primary-color;
+            border: 1px solid $button-default;
             z-index: 15;
         }
     }

@@ -104,7 +104,7 @@
 #show-post-options:checked ~ .compose__primary-section .compose__option-button--options,
 #show-post-poll:checked ~ .compose__primary-section .compose__option-button--poll,
 #show-attachments:checked ~ .compose__primary-section .compose__option-button--attachments {
-    color: $secondary-color;
+    color: $link-hover;
 }
 
 .quick-reply {

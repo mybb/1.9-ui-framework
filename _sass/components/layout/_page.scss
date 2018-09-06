@@ -21,13 +21,13 @@ input, select, textarea, button {
 
 a:link,
 a:visited {
-    color: $primary-color;
+    color: $link-default;
     text-decoration: none;
 }
 
 a:hover,
 a:active {
-    color: $secondary-color;
+    color: $link-hover;
     text-decoration: underline;
 }
 

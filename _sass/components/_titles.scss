@@ -23,7 +23,7 @@
 
     &--major,
     &--modal {
-        background: $primary-color;
+        background: $major-heading-background;
         color: $invert-font-color;
         border: 0;
         padding: 8px 12px;
@@ -46,7 +46,7 @@
         padding: 12px;
         font-size: 1.4em;
         border-radius: corner-values($radius $radius 0 0);
-        border-bottom: 2px solid $primary-color-border;
+        border-bottom: 2px solid $major-heading-border;
     }
 
     &--success {

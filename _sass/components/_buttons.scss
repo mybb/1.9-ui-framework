@@ -2,7 +2,7 @@
     $color, // background color
     $color-text: $invert-font-color, // text color
     $color-border: $color, // border color
-    $color-hover: $secondary-color, // hover background color
+    $color-hover: $button-hover, // hover background color
     $color-text-hover: $invert-font-color, // hover text color
     $color-border-hover: $color-hover) { // hover border color
 
@@ -43,7 +43,7 @@
         cursor: pointer;
     }
 
-    @include button-theme($primary-color);
+    @include button-theme($button-default);
 
     &__icon {
         margin-#{$right}: 8px;
@@ -56,10 +56,10 @@
 
     $theme-secondary: (
         'color': $background-default,
-        'color-text': $primary-color,
+        'color-text': $link-default,
         'color-border': $border-1,
         'color-hover': $background-default,
-        'color-text-hover': $secondary-color,
+        'color-text-hover': $link-hover,
         'color-border-hover': $border-1
     );
 
@@ -69,10 +69,10 @@
 
     $theme-invert: (
         'color': $background-default,
-        'color-text': $primary-color,
+        'color-text': $link-default,
         'color-border': $background-default,
         'color-hover': $background-default,
-        'color-text-hover': $secondary-color,
+        'color-text-hover': $link-hover,
         'color-border-hover': $background-default
     );
 
@@ -107,7 +107,7 @@
         'color-text': $alt-font-color-1,
         'color-border': transparent,
         'color-hover': transparent,
-        'color-text-hover': $secondary-color
+        'color-text-hover': $link-hover
     );
 
     &--basic {

@@ -15,13 +15,13 @@
     }
 
     &:hover {
-        color: $secondary-color;
+        color: $link-hover;
         text-decoration: none;
         cursor: pointer;
     }
 
     &.postbit_multiquote_on {
-        color: $secondary-color;
+        color: $link-hover;
         background: $background-default;
         border-radius: $radius;
         margin-top: -1px;

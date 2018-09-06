@@ -40,7 +40,7 @@
             }
 
             &:hover {
-                color: $secondary-color;
+                color: $link-hover;
                 text-decoration: none;
             }
         }
@@ -55,7 +55,7 @@
 
             a:hover,
             a:active {
-                color: $secondary-color;
+                color: $link-hover;
             }
         }
 
@@ -297,7 +297,7 @@
 
             &:hover,
             &:active {
-                background: $secondary-color;
+                background: $button-hover;
                 color: $invert-font-color;
             }
         }

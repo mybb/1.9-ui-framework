@@ -14,7 +14,7 @@
             .page-tabs__link {
                 color: $invert-font-color;
                 font-weight: bold;
-                background: $primary-color;
+                background: $button-default;
                 text-decoration: none;
             }
         }
@@ -28,7 +28,7 @@
 
         &:hover {
             text-decoration: none;
-            background: $secondary-color;
+            background: $link-hover;
             color: $invert-font-color;
         }
     }

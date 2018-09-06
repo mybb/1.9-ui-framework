@@ -60,8 +60,8 @@
         }
 
         &:hover {
-            background-color: $secondary-color;
-            border-color: $secondary-color;
+            background-color: $button-hover;
+            border-color: $button-hover;
             color: $invert-font-color;
         }
     }

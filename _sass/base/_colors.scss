@@ -44,6 +44,7 @@ $status-pending: #f2dede;
 $status-pending-border: #f2aaab;
 $pending-color: #f2aaab;
 
+
 // Success / danger colors
 $success-color: #68c000;
 $success-color-border: #5dac00;
@@ -51,3 +52,18 @@ $moderate-color: #d7611e;
 $moderate-color-border: #c1571b;
 $danger-color: #eb5257;
 $danger-color-border: #d3494e;
+
+
+// Link colors
+$link-default: $primary-color;
+$link-hover: $secondary-color;
+
+
+// Button colors
+$button-default: $primary-color;
+$button-hover: $secondary-color;
+
+
+// Heading colors
+$major-heading-background: $primary-color;
+$major-heading-border: $primary-color-border;

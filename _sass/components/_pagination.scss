@@ -19,17 +19,17 @@
         border-radius: $radius;
 
         &:hover {
-            background: $secondary-color;
+            background: $link-hover;
             color: $invert-font-color;
             text-decoration: none;
         }
 
         &--active {
-            background: $primary-color;
+            background: $button-default;
             color: $invert-font-color;
 
             &:hover {
-                background: $primary-color;
+                background: $button-default;
             }
         }
     }
