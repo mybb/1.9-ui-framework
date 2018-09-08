@@ -64,6 +64,7 @@
         box-sizing: border-box;
         flex-grow: 1;
         min-width: 0;
+        background-color: $background-default;
     }
 
     &__controls {

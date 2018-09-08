@@ -238,7 +238,8 @@
             }
         }
 
-        &__author {
+        &__author,
+        &__forum {
             display: none;
             margin: side-values(3px 0 0 0);
             margin-top: 3px;
@@ -253,6 +254,11 @@
             a:visited {
                 color: $alt-font-color-1;
             }
+        }
+
+        &__message {
+            margin-top: 3px;
+            font-size: 0.9em;
         }
 
         &__notification {
