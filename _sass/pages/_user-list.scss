@@ -4,6 +4,7 @@
     flex-direction: column;
     justify-content: space-between;
     align-items: stretch;
+    margin-bottom: 30px;
 
     @include bp-medium {
         flex-direction: row;

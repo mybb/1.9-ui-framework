@@ -84,6 +84,11 @@
         display: block;
         width: 100%;
         box-sizing: border-box;
+
+        &.alert--no-results-container {
+            background: $background-1;
+            padding: 30px;
+        }
     }
 
     &--aligned-block {

@@ -1,19 +1,39 @@
-.modcp {
+.ban-duration {
+    font-size: 0.9em;
+    margin-#{$left}: 4px;
+    color: $alt-font-color-1;
 
-    .page-header {
-        margin-bottom: 20px;
+    &--imminent {
+        color: $danger-color;
+        font-weight: bold;
     }
 
-    // these probably won't be necessary with twig -- just add --active class directly
-    &--home .section-menu__item--home,
-    &--announcements .section-menu__item--announcements,
-    &--mod-queue .section-menu__item--mod-queue,
-    &--reports .section-menu__item--reports,
-    &--mod-logs .section-menu__item--mod-logs,
-    &--edit-profile .section-menu__item--edit-profile,
-    &--banning .section-menu__item--banning,
-    &--warning-logs .section-menu__item--warning-logs,
-    &--ip-search .section-menu__item--ip-search {
-        @extend .section-menu__item--active;
+    &--high {
+        color: $danger-color;
     }
+
+    &--moderate {
+        color: $moderate-color;
+    }
+
+    &--low {
+        color: $success-color;
+    }
+}
+
+
+.imminent_banned {
+    color: #800
+}
+
+.high_banned {
+    color: #F00
+}
+
+.moderate_banned {
+    color: #F60
+}
+
+.low_banned {
+    color: #008000
 }

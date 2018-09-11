@@ -91,6 +91,17 @@
         @include button-theme($theme-danger...);
     }
 
+    $theme-danger-secondary: (
+        'color': $background-default,
+        'color-text': $link-default,
+        'color-border': $border-1,
+        'color-hover': $danger-color
+    );
+
+    &--danger.button--secondary {
+        @include button-theme($theme-danger-secondary...);
+    }
+
     $theme-success: (
         'color': $background-default,
         'color-text': $success-color,
@@ -100,6 +111,17 @@
 
     &--success {
         @include button-theme($theme-success...);
+    }
+
+    $theme-success-secondary: (
+        'color': $background-default,
+        'color-text': $link-default,
+        'color-border': $border-1,
+        'color-hover': $success-color
+    );
+
+    &--success.button--secondary {
+        @include button-theme($theme-success-secondary...);
     }
 
     $theme-basic: (
