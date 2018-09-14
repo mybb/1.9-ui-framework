@@ -44,7 +44,7 @@
     input[type="radio"],
     input[type="checkbox"] {
         float: $left;
-        margin: side-values(6px 0 0 -26px);
+        margin: side-values(4px 0 0 -26px);
     }
 
     &__name {
@@ -71,7 +71,7 @@
     }
 
     &__field {
-
+        margin-top: 5px;
     }
 
     label {
@@ -159,6 +159,7 @@ select {
     overflow: hidden;
     background-color: $background-default;
     position: relative;
+    margin-#{$right}: 6px;
 
     select {
         padding: side-values(5px 30px 5px 8px);
