@@ -81,9 +81,15 @@
     width: #{$size}px;
     height: #{$size}px;
 
+    $icon-size: $size/2;
+
     .avatar {
         width: #{$size}px;
         height: #{$size}px;
+
+        &__icon {
+            font-size: #{$icon-size}px;
+        }
     }
 }
 
