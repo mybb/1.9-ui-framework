@@ -21,19 +21,8 @@
     }
 }
 
-
-.imminent_banned {
-    color: #800
-}
-
-.high_banned {
-    color: #F00
-}
-
-.moderate_banned {
-    color: #F60
-}
-
-.low_banned {
-    color: #008000
+.icon--announcement {
+    font-size: 0.8em;
+    vertical-align: middle;
+    margin-#{$right}: 8px;
 }
