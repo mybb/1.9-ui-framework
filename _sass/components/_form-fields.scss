@@ -160,6 +160,7 @@ select {
     background-color: $background-default;
     position: relative;
     margin-#{$right}: 6px;
+    max-width: 100%;
 
     select {
         padding: side-values(5px 30px 5px 8px);
@@ -172,6 +173,7 @@ select {
                 appearance: none;
         position: relative;
         z-index: 100;
+        max-width: 100%;
 
         &:focus {
             outline: none;
