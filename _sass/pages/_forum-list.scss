@@ -1,8 +1,9 @@
 .forum {
     display: flex;
     justify-content: space-between;
-    align-items: center;
+    align-items: top;
     flex-direction: column;
+    padding: 12px;
 
     @include bp-medium {
         flex-direction: row;
@@ -62,6 +63,16 @@
     &__count {
     }
 
+    &__moderators {
+        font-size: 0.8em;
+        color: $alt-font-color-2;
+        margin: side-values(6px 0 0 0);
+
+        a {
+            color: $alt-font-color-1;
+        }
+    }
+
     &__subforums {
         list-style: none;
         margin: side-values(6px 0 0 0);
@@ -87,7 +98,7 @@
     &__latest {
         width: 100%;
         margin-top: 6px;
-        padding: side-values(8px 10px 8px 56px);
+        padding: side-values(0 10px 0 56px);
         background: $background-1;
         border-radius: $radius;
         box-sizing: border-box;
@@ -143,7 +154,7 @@
                 border: none;
                 margin: 0;
                 background: transparent;
-                padding: side-values(4px 0 0 48px);
+                padding: side-values(0 0 0 48px);
                 box-sizing: border-box;
 
                 &--never {
