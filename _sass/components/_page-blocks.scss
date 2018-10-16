@@ -120,6 +120,11 @@
         }
     }
 
+    &--bottom {
+        margin-top: -5px;
+        margin-bottom: 20px;
+    }
+
     .page-buttons {
         // margin-#{$left}: 0;
         // margin-#{$right}: 0;

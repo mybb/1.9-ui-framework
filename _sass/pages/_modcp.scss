@@ -26,3 +26,36 @@
     vertical-align: middle;
     margin-#{$right}: 8px;
 }
+
+.report {
+
+    .row__primary,
+    .row__secondary {
+
+        @include bp-small {
+            width: 45%;
+        }
+    }
+
+    &__reason {
+        color: $alt-font-color-1;
+        font-size: 0.9em;
+    }
+
+    &__count {
+        font-size: 0.9em;
+    }
+
+    &__last-reporter {
+        color: $alt-font-color-2;
+        font-size: 0.9em;
+
+        a {
+            color: $alt-font-color-1;
+        }
+    }
+
+    &__last-report-date {
+        display: block;
+    }
+}

@@ -245,7 +245,6 @@ $post-spacing: 25px;
 .thread-pagination {
 
     &--bottom {
-        margin: side-values(0 0 25px 0);
 
         @include bp-medium {
             padding-#{$left}: 110px;
@@ -253,6 +252,7 @@ $post-spacing: 25px;
 
         .pagination {
             float: none;
+            margin-bottom: 0;
         }
     }
 }
@@ -293,24 +293,4 @@ $post-spacing: 25px;
 
 .quick-reply .editor_control_bar {
     margin: side-values(5px 12px 12px 12px);
-}
-
-.thread-closed {
-    color: $danger-color;
-    font-size: 1.2em;
-    padding: side-values(5px 0 30px 30px);
-
-    @include bp-small {
-        padding-#{$left}: $avatar-margin-small;
-    }
-
-    @include bp-medium {
-        padding-#{$left}: $avatar-margin-medium;
-    }
-
-    &__icon {
-        float: $left;
-        margin-#{$left}: -30px;
-        margin-top: 2px;
-    }
 }
