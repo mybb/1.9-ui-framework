@@ -4,6 +4,7 @@
     background-color: transparent;
     border: none;
     font-size: 0.8em;
+    display: inline-block;
 
     &__icon {
         margin-#{$right}: 6px;
@@ -32,11 +33,11 @@
 }
 
 .post-controls {
-    display: flex;
-    justify-content: space-between;
+    // display: flex;
+    flex-grow: 1;
 
     &--secondary {
-        flex-grow: 2;
+        text-align: $right;
 
         // @include bp-large-max {
         //
@@ -55,9 +56,9 @@
     position: relative;
 
     &__control {
-        position: absolute;
-        right: 0;
-
+        // position: absolute;
+        // right: 0;
+        //
         .post-control__icon {
             margin-#{$right}: 0;
         }
@@ -85,6 +86,7 @@
             display: block;
             border-bottom: 1px solid $border-1;
             padding-#{$right}: 20px;
+            text-align: $left;
 
             &:last-child {
                 border-bottom: none;
