@@ -294,6 +294,7 @@ $post-spacing: 25px;
         font-weight: normal;
         color: $alt-font-color-1;
         font-size: 0.9em;
+        margin: side-values(0 0 5px 0);
 
         @include bp-medium {
             margin: 0;
