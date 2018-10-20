@@ -274,6 +274,11 @@ textarea {
         cursor: pointer;
     }
 
+    &__icon {
+        color: $alt-font-color-2;
+        margin-#{$right}: 4px;
+    }
+
     &__input {
         position: absolute;
         visibility: hidden;
@@ -285,6 +290,10 @@ textarea {
             padding: 7px 9px;
             border: 1px solid $button-default;
             z-index: 15;
+
+            .segmented-control__icon {
+                color: $invert-font-color;
+            }
         }
     }
 

@@ -123,3 +123,52 @@
         color: $moderate-color;
     }
 }
+
+.mod-queue {
+
+    &__mass-controls {
+        text-align: center;
+    }
+
+    &__header {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    &__subject {
+        margin: 0;
+        font-size: 1em;
+        font-weight: normal;
+        color: $alt-font-color-1;
+    }
+
+    &__author,
+    &__date,
+    &__forum,
+    &__post {
+        color: $alt-font-color-2;
+        font-size: 0.9em;
+
+        a {
+            color: $alt-font-color-1;
+        }
+    }
+
+    &__author,
+    &__date {
+        display: inline-block;
+    }
+
+    &__author {
+        margin-top: 3px;
+
+        &:after {
+            content: ",";
+        }
+    }
+
+    &__message {
+        margin-top: 3px;
+        font-size: 0.9em;
+    }
+}
