@@ -60,7 +60,7 @@
     }
 }
 
-.mod-logs {
+.mod-log {
 
     .row__primary,
     .row__secondary {
@@ -75,8 +75,51 @@
         font-size: 0.9em;
     }
 
-    .list--mod-logs {
+    .list--mod-log {
         line-height: 1.4em;
     }
 
+}
+
+.warning-log {
+
+    .row__primary,
+    .row__secondary {
+
+        @include bp-small {
+            width: 45%;
+        }
+    }
+
+    &__warning {
+        font-size: 0.9em;
+    }
+
+    &__issued_by {
+        color: $alt-font-color-1;
+        font-size: 0.9em;
+    }
+
+    &__issued-date,
+    &__expiry-date,
+    &__revoked-date {
+        color: $alt-font-color-2;
+        font-size: 0.9em;
+    }
+
+    &__expiry-date--expired {
+        color: $success-color;
+    }
+
+    &__details {
+        float: $right;
+
+        .button {
+            margin: 0;
+        }
+    }
+
+    &__revoked {
+        color: $moderate-color;
+    }
 }
