@@ -59,3 +59,24 @@
         display: block;
     }
 }
+
+.mod-logs {
+
+    .row__primary,
+    .row__secondary {
+
+        @include bp-small {
+            width: 45%;
+        }
+    }
+
+    &__date {
+        color: $alt-font-color-2;
+        font-size: 0.9em;
+    }
+
+    .list--mod-logs {
+        line-height: 1.4em;
+    }
+
+}
