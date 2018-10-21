@@ -133,6 +133,19 @@
     &__header {
         display: flex;
         justify-content: space-between;
+        flex-direction: column;
+
+        @include bp-medium {
+            flex-direction: row;
+        }
+    }
+
+    &__header-section {
+        margin-bottom: 8px;
+
+        @include bp-medium {
+            margin: 0;
+        }
     }
 
     &__subject {
