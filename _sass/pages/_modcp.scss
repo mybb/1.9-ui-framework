@@ -1,3 +1,40 @@
+.awaiting-moderation {
+
+    &__type {
+
+        @include bp-medium {
+            width: 45%;
+        }
+    }
+
+    &__title {
+        margin: 0;
+        font-size: 1em;
+    }
+
+    &__count {
+        margin: 0;
+        color: $alt-font-color-1;
+    }
+
+    &__latest {
+        font-size: 0.9em;
+        color: $alt-font-color-2;
+
+        @include bp-medium {
+            width: 45%;
+        }
+    }
+
+    &__latest-title {
+        color: $alt-font-color-1;
+
+        &:after {
+            content: ":";
+        }
+    }
+}
+
 .ban-duration {
     font-size: 0.9em;
     margin-#{$left}: 4px;
