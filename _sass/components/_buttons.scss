@@ -135,6 +135,7 @@
     &--basic {
         @include button-theme($theme-basic...) {
             padding: 4px 4px;
+            margin: 0 5px;
         }
     }
 
