@@ -125,6 +125,33 @@
     }
 }
 
+.attachment {
+
+    &__file,
+    &__post {
+
+        @include bp-medium {
+            width: 45%;
+        }
+    }
+
+    &__file-name {
+        margin: 0;
+        font-size: 1em;
+    }
+
+    &__size-downloads,
+    &__date {
+        font-size: 0.9em;
+        color: $alt-font-color-2;
+    }
+
+    &__post {
+        font-size: 0.9em;
+        color: $alt-font-color-2;
+    }
+}
+
 .draft {
 
     &__subject {

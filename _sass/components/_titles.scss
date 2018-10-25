@@ -16,8 +16,10 @@
         border-bottom: 1px solid $border-1;
     }
 
-    &--sidebar {
+    &--sidebar,
+    &--minor {
         border-bottom: 1px solid $border-1;
+        padding-top: 4px;
         padding-bottom: 8px;
     }
 
@@ -77,12 +79,6 @@
             padding: 0;
             font-size: 0.8em;
         }
-    }
-
-    &--minor {
-        border-bottom: 1px solid $border-1;
-        font-size: 1.2em;
-        padding: 8px 0;
     }
 
     &--section {
