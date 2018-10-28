@@ -223,3 +223,31 @@
         font-size: 0.9em;
     }
 }
+
+.warning-level {
+    clear: both;
+    position: relative;
+    background: $background-1;
+    height: 24px;
+    box-sizing: border-box;
+    border-radius: 4px;
+    margin: 8px 0;
+
+    &__bar {
+        position: absolute;
+        top: 0;
+        #{$left}: 0;
+        bottom: 0;
+        z-index: 1;
+        border-radius: 3px;
+        box-sizing: border-box;
+
+        &--current {
+            background: $major-heading-background;
+        }
+
+        &--total {
+            background: $background-4;
+        }
+    }
+}

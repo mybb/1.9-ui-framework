@@ -1,0 +1,28 @@
+.tag {
+    background: $background-3;
+    text-transform: uppercase;
+    border-radius: $radius;
+    display: inline-block;
+    padding: 2px 8px;
+    font-size: 0.9rem;
+    color: $alt-font-color-1;
+
+    &--float {
+        float: $right;
+    }
+
+    &--good {
+        background-color: $success-color;
+        color: $invert-font-color;
+    }
+
+    &--medium {
+        background-color: $moderate-color;
+        color: $invert-font-color;
+    }
+
+    &--bad {
+        background-color: $danger-color;
+        color: $invert-font-color;
+    }
+}
