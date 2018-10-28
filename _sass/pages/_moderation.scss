@@ -139,7 +139,8 @@
 
     &__issued-date,
     &__expiry-date,
-    &__revoked-date {
+    &__revoked-date,
+    &__post {
         color: $alt-font-color-2;
         font-size: 0.9em;
     }
