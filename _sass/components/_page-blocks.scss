@@ -39,6 +39,10 @@
 
         .block__content {
             padding: 8px 12px;
+
+            &--text {
+                padding: 16px 12px;
+            }
         }
     }
 
