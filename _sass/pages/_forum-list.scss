@@ -1,17 +1,16 @@
 .forum {
-    display: flex;
-    justify-content: space-between;
-    align-items: top;
-    flex-direction: column;
+
     padding: 16px 12px;
 
     @include bp-medium {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
         flex-direction: row;
     }
 
     &__info {
         padding-#{$left}: 38px;
-        width: 100%;
         box-sizing: border-box;
     }
 
@@ -36,31 +35,6 @@
         margin: 0;
         padding: side-values(6px 0 0 0);
         color: $alt-font-color-4;
-    }
-
-    &__stats {
-        font-weight: normal;
-        font-size: 0.8em;
-        color: $alt-font-color-2;
-        margin-#{$left}: 8px;
-        float: $right;
-        // opacity: 0;
-        // transition-property: opacity;
-        // transition-duration: $transition-speed;
-
-        @include bp-small-max {
-            display: none;
-        }
-    }
-
-    &:hover {
-
-        .forum__stats {
-            opacity: 1;
-        }
-    }
-
-    &__count {
     }
 
     &__moderators {
@@ -95,10 +69,35 @@
         }
     }
 
+    &__stat {
+        display: none;
+    }
+
+    &__count-legend {
+        display: block;
+        color: $alt-font-color-3;
+        font-size: 0.7em;
+        text-transform: lowercase;
+    }
+
+    &__count {
+        color: $alt-font-color-1;
+    }
+
+    &__unapproved-count {
+        background: $danger-color;
+        color: $invert-font-color;
+        border-radius: 2px;
+        padding: 1px 4px;
+        font-weight: normal;
+        font-size: 0.7em;
+        text-decoration: none;
+    }
+
     &__latest {
-        width: 100%;
         margin-top: 6px;
-        padding: side-values(8px 10px 8px 56px);
+        margin-#{$left}: 28px;
+        padding: 8px 10px;
         background: $background-1;
         border-radius: $radius;
         box-sizing: border-box;
@@ -108,9 +107,8 @@
         }
 
         .avatar-profile-link {
-            float: $left;
-            margin: side-values(0 0 0 -48px);
-            @include avatar(36);
+            float: $right;
+            @include avatar(40);
         }
     }
 
@@ -122,7 +120,8 @@
         font-size: 0.9em;
     }
 
-    &__date-author {
+    &__date,
+    &__author {
         display: block;
         font-size: 0.8em;
         color: $alt-font-color-2;
@@ -144,25 +143,44 @@
     @include bp-medium {
 
         .forum {
+            flex-direction: row;
 
             &__info {
-                width: 60%;
+                flex: 1 0 40%;
+            }
+
+            &__stat {
+                display: block;
+                text-align: center;
+                flex: 0 0 6%;
+                min-width: 90px;
             }
 
             &__latest {
-                width: 35%;
-                border: none;
-                margin: 0;
                 background: transparent;
-                padding: side-values(0 0 0 48px);
+                flex: 0 0 20%;
+                min-width: 210px;
+                margin: side-values(0 0 0 20px);
+                padding: side-values(0 0 0 52px);
                 box-sizing: border-box;
+
+                .avatar-profile-link {
+                    float: $left;
+                    margin: side-values(8px 0 0 -52px);
+                }
 
                 &--never {
                     padding-#{$left}: 0;
                 }
             }
-        }
 
+            &--offlink {
+
+                .forum__info {
+                    width: 100%;
+                }
+            }
+        }
     }
 }
 
