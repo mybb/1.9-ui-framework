@@ -9,7 +9,7 @@
     }
 
     &__info {
-        padding-#{$left}: 38px;
+        padding: side-values(5px 0 5px 38px);
         box-sizing: border-box;
     }
 
