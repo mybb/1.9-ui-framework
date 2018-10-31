@@ -1,11 +1,10 @@
 .forum {
-
-    padding: 16px 12px;
+    padding: 12px 12px;
 
     @include bp-medium {
         display: flex;
         justify-content: space-between;
-        align-items: center;
+        align-items: top;
         flex-direction: row;
     }
 
@@ -154,6 +153,7 @@
                 text-align: center;
                 flex: 0 0 6%;
                 min-width: 90px;
+                padding-top: 10px;
             }
 
             &__latest {
