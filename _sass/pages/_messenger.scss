@@ -294,13 +294,6 @@
             font-weight: normal;
         }
 
-        &__label {
-
-            &--to {
-                display: none;
-            }
-        }
-
         &__username,
         &__folder {
             margin: 0;
@@ -336,32 +329,15 @@
 
         &__icons {
             float: $right;
+            color: $alt-font-color-2;
+            margin-#{$left}: 16px;
         }
 
         &__icon {
-            color: $alt-font-color-2;
-            display: none;
-        }
+            margin-#{$left}: 2px;
 
-        &--new_pm {
-
-            .message__icon--new_pm {
+            &--new_pm {
                 color: $primary-color;
-                display: inline-block;
-            }
-        }
-
-        &--re_pm {
-
-            .message__icon--re_pm {
-                display: inline-block;
-            }
-        }
-
-        &--fw_pm {
-
-            .message__icon--fw_pm {
-                display: inline-block;
             }
         }
 
@@ -374,15 +350,4 @@
 
 .row .message {
     padding: 0;
-}
-
-.messenger--folder-2 {
-
-    .message__label--from {
-        display: none;
-    }
-
-    .message__label--to {
-        display: inline;
-    }
 }
