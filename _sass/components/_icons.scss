@@ -12,6 +12,10 @@
         color: $alt-font-color-3;
     }
 
+    &--link:hover {
+        color: $secondary-color;
+    }
+
     &--small {
         font-size: 0.8em;
         margin: 3px;

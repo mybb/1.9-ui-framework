@@ -130,13 +130,18 @@ $post-spacing: 25px;
         }
     }
 
-    &__quote {
-        border: 1px solid $border-3;
+    .quote,
+    .codeblock,
+    blockquote {
+        // border: 1px solid $border-3;
         border-radius: $radius;
+        background: $background-1;
         padding: 10px 18px;
         margin: 5px 0;
         font-size: 0.9rem;
 
+        &__cite,
+        &__title,
         cite {
             font-style: normal;
             font-weight: normal;
@@ -145,7 +150,11 @@ $post-spacing: 25px;
             margin-bottom: 4px;
         }
 
-        span {
+        &__jump {
+            margin-#{$left}: 3px;
+        }
+
+        &__date {
             float: $right;
         }
     }
