@@ -107,4 +107,11 @@
     &--adjacent {
         margin-bottom: 0;
     }
+
+    &--modal {
+        margin: -8px -14px 0 -14px;
+        padding: 8px 24px;
+        border-radius: 0;
+        border-bottom: 1px solid $border-1;
+    }
 }

@@ -109,4 +109,12 @@
         font-size: 1.1em;
         font-weight: bold;
     }
+
+    &--container {
+        font-size: 1.2em;
+        margin-top: 0;
+        margin-bottom: 10px;
+        padding-bottom: 5px;
+        border-bottom: 1px solid $border-1;
+    }
 }
