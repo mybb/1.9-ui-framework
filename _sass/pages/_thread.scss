@@ -1,0 +1,121 @@
+.thread-pagination {
+
+    &--bottom {
+
+        @include bp-medium {
+            padding-#{$left}: 110px;
+        }
+
+        .pagination {
+            float: none;
+            margin-bottom: 0;
+        }
+    }
+}
+
+.editor_control_bar {
+    display: none;
+    @include container;
+    font-size: 0.9em;
+    margin: 5px;
+
+    &__title {
+        font-weight: normal;
+        color: $alt-font-color-1;
+        font-size: 0.9em;
+        margin: side-values(0 0 5px 0);
+
+        @include bp-medium {
+            margin: 0;
+        }
+    }
+
+    &__icon {
+        color: $alt-font-color-3;
+        margin-#{$right}: 10px;
+        font-size: 0.9em;
+
+        @include bp-small-max {
+            display: none;
+        }
+    }
+
+    &__buttons {
+        margin: side-values(0 -5px 0 -5px);
+    }
+
+    &--quick-reply {
+        // margin: side-values(5px 12px 12px 12px);
+        background: $background-default;
+        padding: side-values(12px 16px 12px 16px);
+        position: relative;
+        position: -webkit-sticky;
+        position: sticky;
+        bottom: -5px;
+        border: 1px solid $border-3;
+        border-top: 3px solid $primary-color;
+        margin: side-values(0 0 20px 0);
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        flex-direction: column;
+
+        @include bp-small {
+            margin-#{$left}: $avatar-margin-small;
+
+        }
+
+        @include bp-medium {
+            margin-#{$left}: $avatar-margin-medium;
+            flex-direction: row;
+        }
+    }
+}
+
+.thread-actions {
+    flex-direction: column;
+
+    @include bp-medium {
+        flex-direction: row;
+    }
+}
+
+.thread-nav {
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @include bp-medium {
+        margin-top: 0;
+        justify-content: flex-end;
+    }
+}
+
+.thread-moderation {
+    flex-direction: column;
+    justify-content: center;
+
+    @include bp-large {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .thread-moderation__item {
+        box-sizing: border-box;
+        width: 100%;
+        margin: 0;
+
+        &--thread {
+            margin-bottom: 15px;
+
+            @include bp-large {
+                margin-bottom: 0;
+            }
+        }
+
+        @include bp-large {
+            width: auto;
+        }
+    }
+}

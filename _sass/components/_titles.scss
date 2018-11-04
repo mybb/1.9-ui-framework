@@ -117,4 +117,11 @@
         padding-bottom: 5px;
         border-bottom: 1px solid $border-1;
     }
+
+    &--legend {
+        font-size: 1em;
+        font-weight: normal;
+        color: $alt-font-color-1;
+        margin-bottom: 10px;
+    }
 }

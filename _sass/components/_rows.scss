@@ -17,10 +17,10 @@
         }
     }
 
-    &--form.row--no-border {
+    &--no-border {
         border-bottom: none;
     }
-
+    
     &--form.row--border-top {
         border-top: 1px solid $border-1;
         padding-top: 12px;
