@@ -140,6 +140,12 @@ $post-spacing: 25px;
         margin: 5px 0;
         font-size: 0.9rem;
 
+        .quote,
+        .codeblock,
+        blockquote {
+            border: 1px solid $border-1;
+        }
+
         &__cite,
         &__title,
         cite {
