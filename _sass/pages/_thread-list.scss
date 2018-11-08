@@ -14,7 +14,7 @@
 
     .sort-threads {
         display: flex;
-        justify-content: flex-start;
+        justify-content: space-between;
         align-items: center;
         padding: 8px 12px;
         font-size: 0.9em;
@@ -63,7 +63,9 @@
 
             &--latest {
 
-                @include bp-medium-max {
+                @include bp-small-max {
+                    flex: 1 0 40%;
+                    margin-#{$right}: 10px;
                     text-align: $right;
                 }
             }
@@ -84,54 +86,40 @@
         box-sizing: border-box;
 
         &--primary {
-            // background: red;
-            width: 50%; // width overridden under .thread below
 
             @include bp-small {
-                width: 53%;
+                flex: 1 1 50%;
                 padding-#{$right}: 12px;
-            }
-
-            @include bp-large {
-                width: 58%;
             }
         }
 
         &--replies {
-            // background: green;
             display: none;
 
             @include bp-medium {
+                min-width: 90px;
+                flex: 0 0 10%;
                 display: block;
-                width: 12%;
                 text-align: center;
             }
         }
 
         &--latest {
-            // background: blue;
-            width: 42%; // width overridden under .thread below
 
             @include bp-small {
-                width: 45%;
                 padding-#{$left}: 12px;
-            }
-
-            @include bp-medium {
-                width: 33%;
-            }
-
-            @include bp-large {
-                width: 27%;
+                min-width: 220px;
+                max-width: 280px;
+                flex: 0 0 28%;
             }
         }
 
         &--checkbox {
-            width: 8%;
-            text-align: right;
+            text-align: $right;
 
             @include bp-small {
-                width: 3%;
+                flex: 0 0 auto;
+                min-width: 20px;
                 text-align: center;
             }
         }
@@ -139,7 +127,7 @@
 
     .thread {
         display: flex;
-        justify-content: flex-start;
+        justify-content: space-between;
         align-items: flex-start;
         padding-#{$left}: 66px;
         flex-direction: column;
@@ -162,7 +150,7 @@
             &--latest {
 
                 @include bp-small-max {
-                    width: 100%;
+                    width: 100%; // width override for small screens
                 }
             }
 
@@ -178,7 +166,6 @@
 
         &.trow_selected { // &--selected
             background-color: $status-highlight;
-            // border-color: $status-highlight-border;
         }
 
         &--soft-deleted {
@@ -223,16 +210,18 @@
 
             .thread__title,
             .thread__author {
-                display: inline-block;
+                display: block;
+
+                @include bp-small {
+                    display: inline-block;
+                }
             }
 
             .thread__status {
                 float: $left;
-                margin-top: 12px;
                 margin-#{$left}: -42px;
 
                 @include bp-small {
-                    margin-top: 0;
                     margin-#{$left}: -28px;
                 }
             }
@@ -283,9 +272,12 @@
         }
 
         &__pages {
-            float: $right;
             margin-top: 3px;
             font-size: 0.8em;
+
+            @include bp-medium {
+                float: $right;
+            }
         }
 
         &__page-legend {
@@ -387,6 +379,16 @@
                 display: block;
                 font-size: 0.8em;
                 color: $alt-font-color-1;
+            }
+        }
+
+        &--moderator {
+
+            .thread__icons {
+
+                @include bp-small-max {
+                    margin-#{$right}: 24px;
+                }
             }
         }
     }
