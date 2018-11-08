@@ -178,6 +178,10 @@
             border-color: $status-pending-border;
         }
 
+        &--sticky:last-of-type {
+            border-bottom-width: 3px;
+        }
+
         a.thread__status {
             vertical-align: top;
             display: inline-block;

@@ -190,6 +190,19 @@ select {
         color: $alt-font-color-2;
         font-size: 14px;
     }
+
+    &--subject {
+        padding: 4px 0;
+        margin-bottom: 10px;
+
+        .select-field__icon {
+            top: 13px;
+        }
+
+        @include bp-small {
+            margin-bottom: 0;
+        }
+    }
 }
 
 // registration error/success colors

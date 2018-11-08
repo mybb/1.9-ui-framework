@@ -9,6 +9,22 @@
         }
     }
 
+    &__subject {
+
+        @include bp-medium {
+            display: flex;
+            align-items: center;
+        }
+
+        .select-field {
+            flex: 0 0 auto;
+        }
+
+        .textbox--subject {
+            flex: 1 1 100%;
+        }
+    }
+
     &__container {
 
         @include bp-large {
