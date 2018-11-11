@@ -195,31 +195,3 @@
         }
     }
 }
-
-.forum-tools {
-    flex-direction: column;
-    justify-content: center;
-
-    @include bp-large {
-        flex-direction: row;
-        justify-content: space-between;
-    }
-
-    &__item {
-        box-sizing: border-box;
-        width: 100%;
-        margin: 0;
-
-        &.forum-search {
-            margin-bottom: 15px;
-
-            @include bp-large {
-                margin-bottom: 0;
-            }
-        }
-
-        @include bp-large {
-            width: auto;
-        }
-    }
-}

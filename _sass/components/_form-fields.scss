@@ -135,6 +135,11 @@
     &--subject {
         font-size: 1.4em;
     }
+
+    &--inline {
+        margin-#{$left}: 6px;
+        margin-#{$right}: 6px;
+    }
 }
 
 select {
@@ -202,6 +207,22 @@ select {
         @include bp-small {
             margin-bottom: 0;
         }
+    }
+
+    &--short {
+        padding: 0;
+
+        .select-field__icon {
+            top: 6px;
+        }
+
+        select {
+            font-size: 12px;
+        }
+    }
+
+    &--inline {
+        margin-#{$left}: 6px;
     }
 }
 
@@ -389,13 +410,26 @@ textarea {
 
 .date-field {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
     background: $background-1;
     padding: 12px;
     border-radius: $radius;
 
+    @include bp-medium {
+        flex-direction: row;
+    }
+
     &__item {
-        margin-right: 8px;
+        margin-bottom: 8px;
+
+        @include bp-medium {
+            margin-bottom: 0;
+            margin-#{$right}: 8px;
+        }
+
+        &:last-child {
+            margin-bottom: 0;
+        }
     }
 
     &__name {

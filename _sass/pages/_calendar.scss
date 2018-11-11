@@ -1,0 +1,175 @@
+.calendar-nav {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    @include bp-medium {
+        justify-content: flex-start;
+    }
+}
+
+.calendar {
+
+    &__days-of-week {
+        background: $background-1;
+        border-radius: $radius;
+        display: flex;
+        padding: 8px 10px;
+        margin-bottom: 10px;
+
+        @include bp-large-max {
+            display: none;
+        }
+    }
+
+    &__day-of-week-heading {
+        flex: 1 1 14%;
+        text-align: center;
+        color: $alt-font-color-1;
+    }
+
+    &__week {
+        padding: 10px 0;
+        display: flex;
+        border-bottom: 2px solid $border-1;
+        flex-direction: column;
+
+        &:last-child {
+            border-bottom: 0;
+        }
+    }
+
+    &__week-shortcut {
+        border-bottom: 1px solid $border-1;
+
+        @include bp-large {
+            border-bottom: 0;
+            width: 24px;
+            padding-#{$right}: 14px;
+            display: flex;
+            align-items: center;
+
+            .button {
+
+                &__icon {
+                    margin: 0;
+                }
+
+                &__text {
+                    display: none;
+                }
+            }
+        }
+    }
+
+    &__day {
+        padding: 20px 12px;
+        border-bottom: 1px solid $border-1;
+
+        &:last-child {
+            border-bottom: 0;
+        }
+
+        // TO DO : Change class in calendar.php
+        &.trow1 {
+
+            .calendar__day-heading {
+                font-weight: normal;
+                font-size: 1.2em;
+            }
+
+            .calendar__day-link {
+                color: $alt-font-color-1;
+            }
+        }
+
+        &.trow_sep {
+            background: $background-2;
+        }
+    }
+
+    &__day-of-week {
+        font-size: 0.9em;
+        color: $alt-font-color-2;
+        float: $right;
+    }
+
+    &__day-heading {
+        margin: side-values(0 0 5px 0);
+        font-size: 1.4em;
+        font-family: $alt-font-stack;
+
+        .calendar__month {
+            font-weight: normal;
+            font-size: 0.9em;
+        }
+    }
+
+    &__event {
+        line-height: 1.4;
+        font-size: 0.9em;
+        margin: side-values(0 0 3px 0);
+    }
+
+    &__event-link {
+        background: $background-1;
+        display: block;
+        padding: 2px 4px;
+        border-radius: $radius - 1;
+
+        &:hover {
+            background: $secondary-color;
+            color: $invert-font-color;
+            text-decoration: none;
+
+            .calendar__event-icon,
+            .calendar__event-time-period {
+                color: $invert-font-color;
+            }
+        }
+    }
+
+    &__event-time-period {
+        color: $alt-font-color-1;
+        font-size: 0.9em;
+    }
+
+    &__event-icon {
+        float: $right;
+        color: $alt-font-color-2;
+        margin: side-values(2px 2px 0 8px);
+    }
+
+    &--month {
+
+        @include bp-large {
+
+            .calendar__week {
+                padding: 10px;
+                flex-direction: row;
+                align-items: stretch;
+                border-bottom-width: 1px;
+            }
+
+            .calendar__day {
+                padding: 8px 12px;
+                box-sizing: border-box;
+                flex: 1 1 14%;
+                min-height: 120px;
+                border-bottom: 0;
+                border-#{$left}: 1px solid $border-1;
+            }
+
+            .calendar__day-of-week {
+                display: none;
+            }
+
+            .calendar__day-heading {
+
+                .calendar__month {
+                    display: none;
+                }
+            }
+        }
+    }
+}

@@ -21,6 +21,10 @@ $post-spacing: 25px;
         margin-#{$left}: $avatar-margin-medium;
     }
 
+    &--no-avatar {
+        margin-#{$left}: 0;
+    }
+
     &__meta {
         padding: side-values(12px 18px 4px 18px);
     }
