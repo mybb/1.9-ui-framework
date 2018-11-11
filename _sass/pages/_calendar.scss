@@ -172,4 +172,78 @@
             }
         }
     }
+
+    &--week {
+
+        .calendar__week {
+            padding: 0;
+            margin-bottom: 20px;
+        }
+    }
+}
+
+.mini-calendar {
+
+    &__days-of-week {
+        display: flex;
+        border-bottom: 1px solid $border-1;
+        padding: 2px 0;
+    }
+
+    &__day-of-week-heading {
+        flex: 1 1 14%;
+        text-align: center;
+        color: $alt-font-color-1;
+    }
+
+    &__week {
+        padding: 0;
+        display: flex;
+        border-bottom: 1px solid $border-1;
+
+        &:last-child {
+            border-bottom: 0;
+        }
+    }
+
+    &__week-shortcut {
+        text-align: center;
+        width: 20px;
+        padding: 2px 4px;
+
+        .button {
+            padding: 0;
+            margin: 0;
+
+            &__icon {
+                margin: 0;
+            }
+
+            &__text {
+                display: none;
+            }
+        }
+    }
+
+    &__day {
+        padding: 2px 0;
+        flex: 1 1 14%;
+        text-align: center;
+
+        &.trow1 {
+
+            &,
+            .mini-calendar__day-link {
+                color: $alt-font-color-2;
+            }
+        }
+
+        &.trow_sep {
+            background: $background-2;
+        }
+    }
+
+    &__day-link {
+        display: block;
+    }
 }
