@@ -20,7 +20,7 @@
     &--no-border {
         border-bottom: none;
     }
-    
+
     &--form.row--border-top {
         border-top: 1px solid $border-1;
         padding-top: 12px;
@@ -48,9 +48,14 @@
     }
 
     &__controls {
+        flex-shrink: 0;
 
         @include bp-small-max {
             margin-top: 6px;
+        }
+
+        @include bp-small {
+            margin-#{$left}: 10px;
         }
     }
 

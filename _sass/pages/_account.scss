@@ -181,3 +181,46 @@
         }
     }
 }
+
+.user-group {
+
+    &__name {
+        margin: 0;
+        font-size: 1em;
+        display: inline-block;
+    }
+
+    &__display-group {
+        font-size: 0.9em;
+        color: $alt-font-color-2;
+        margin-#{$left}: 6px;
+    }
+
+    &__user-title,
+    &__description,
+    &__leaders {
+        margin: side-values(3px 0 0 0);
+        font-size: 0.9em;
+        color: $alt-font-color-1;
+    }
+
+    &__message {
+        margin: side-values(3px 0 0 0);
+        font-size: 0.9em;
+        color: $alt-font-color-2;
+    }
+}
+
+.join-request {
+
+    &__username {
+        margin: 0;
+        font-size: 1em;
+    }
+
+    &__reason {
+        margin: 0;
+        color: $alt-font-color-1;
+        font-size: 0.9em;
+    }
+}
