@@ -2,8 +2,8 @@ $dark: false !default;
 
 @if $dark {
     // Theme colors
-    $primary-color: #007fd0;
-    $secondary-color: #ff7500;
+    $primary-color: #005084;
+    $secondary-color: #d05100;
 
 
     // Font colors
@@ -22,7 +22,7 @@ $dark: false !default;
     $dark-border-1: #222;
     $dark-border-2: #999;
     $dark-border-3: #666;
-    $primary-color-border: #0065a6;
+    $primary-color-border: #003151;
 
 
     // Background colors
@@ -39,6 +39,7 @@ $dark: false !default;
 
 
     // Status background & border colors
+    $new-icon-color: $primary-color;
     // $status-highlight: #ebf4fb;
     // $status-highlight-border: #afd9fa;
     // $status-deleted: #ece3fa;
