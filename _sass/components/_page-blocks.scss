@@ -219,6 +219,7 @@
 
 
 .page-tools {
+    display: flex;
     flex-direction: column;
     justify-content: center;
 
@@ -231,6 +232,8 @@
         box-sizing: border-box;
         width: 100%;
         margin: 0;
+
+        @extend .inline-form;
 
         &:first-child {
             margin-bottom: 15px;

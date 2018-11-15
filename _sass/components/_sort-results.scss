@@ -11,10 +11,7 @@
     align-items: center;
     flex-wrap: wrap;
 
-    .select-field,
-    .button {
-        margin: 3px;
-    }
+    @extend .inline-form;
 
     &__title {
         display: inline-block;

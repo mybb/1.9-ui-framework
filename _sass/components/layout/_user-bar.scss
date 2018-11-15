@@ -110,6 +110,7 @@
         font-size: 1.1em;
         border-bottom: 1px solid $border-1;
         padding: 8px 4px;
+        overflow: hidden;
 
         @include bp-small {
             display: none;
