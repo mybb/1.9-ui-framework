@@ -26,6 +26,10 @@
         color: $invert-font-color;
     }
 
+    &--thread-prefix {
+        margin-#{$right}: 5px;
+    }
+
     &--thread-status {
         margin-#{$left}: 5px;
         font-size: 0.75rem;
