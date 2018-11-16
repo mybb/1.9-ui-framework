@@ -191,7 +191,7 @@ $post-spacing: 25px;
 
     &--highlight,
     &--soft-deleted,
-    &--pending-approval {
+    &--awaiting-approval {
         border-width: 2px;
         margin: side-values(-1px -1px ($post-spacing - 1) -1px);
 
@@ -208,12 +208,12 @@ $post-spacing: 25px;
         border-color: $secondary-color;
     }
 
-    &--soft-deleted {
-        border-color: $danger-color;
+    &--deleted {
+        border-color: $status-deleted-border;
     }
 
-    &--pending-approval {
-        border-color: $pending-color;
+    &--awaiting-approval {
+        border-color: $status-pending-border;
     }
 
     &--message {
@@ -232,12 +232,12 @@ $post-spacing: 25px;
     }
 
     &.unapproved_post {
-        @extend .post--pending-approval;
+        @extend .post--awaiting-approval;
     }
 
     &.deleted_post,
     &.unapproved_post.deleted_post {
-        @extend .post--soft-deleted;
+        @extend .post--deleted;
     }
 
     &--hidden {

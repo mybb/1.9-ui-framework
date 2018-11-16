@@ -164,18 +164,13 @@
             }
         }
 
-        &.trow_selected { // &--selected
+        &--selected {
             background-color: $status-highlight;
         }
 
-        &--soft-deleted {
-            background-color: $status-deleted;
-            border-color: $status-deleted-border;
-        }
-
-        &--pending-approval {
-            background-color: $status-pending;
-            border-color: $status-pending-border;
+        // TO DO: change class in code to thread--selected
+        &.trow_selected {
+            @extend .thread--selected;
         }
 
         &--sticky:last-of-type {

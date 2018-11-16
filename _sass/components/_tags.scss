@@ -25,4 +25,23 @@
         background-color: $danger-color;
         color: $invert-font-color;
     }
+
+    &--thread-status {
+        margin-#{$left}: 5px;
+        font-size: 0.75rem;
+    }
+
+    &--post-status {
+        margin-bottom: 10px;
+    }
+
+    &--deleted {
+        background-color: $status-deleted;
+        color: $status-deleted-font-color;
+    }
+
+    &--awaiting-approval {
+        background-color: $status-pending;
+        color: $status-pending-font-color;
+    }
 }
