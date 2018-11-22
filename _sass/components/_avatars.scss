@@ -1,34 +1,45 @@
-// not currently used, likely will adopt soon
-.avatar-profile-link,
-.avatar {
-    &--smallest {
-        width: 40px;
-        height: 40px;
+@mixin avatar-size($size) {
+    width: #{$size}px;
+    height: #{$size}px;
+
+    .avatar__image {
+        width: #{$size}px;
+        height: #{$size}px;
     }
 
-    &--small {
-        width: 50px;
-        height: 50px;
-    }
+    $icon-size: $size/2;
 
-    &--medium {
-        width: 80px;
-        height: 80px;
+    .avatar__icon {
+        font-size: #{$icon-size}px;
     }
+}
 
-    &--large {
-        width: 100px;
-        height: 100px;
-    }
-
-    &--largest {
-        width: 200px;
-        height: 200px;
-    }
+.avatar-profile-link {
+    display: inline-block;
 }
 
 .avatar {
     border-radius: $radius;
+
+    &--smallest {
+        @include avatar-size(40);
+    }
+
+    &--small {
+        @include avatar-size(50);
+    }
+
+    &--medium {
+        @include avatar-size(80);
+    }
+
+    &--large {
+        @include avatar-size(100);
+    }
+
+    &--largest {
+        @include avatar-size(160);
+    }
 
     &--default {
         background: $background-3;
@@ -40,5 +51,9 @@
     &__icon {
         // font-size: 3em;
         color: $alt-font-color-3;
+    }
+
+    &__image {
+        border-radius: $radius;
     }
 }

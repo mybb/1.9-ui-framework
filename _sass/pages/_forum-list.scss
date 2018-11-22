@@ -107,7 +107,6 @@
 
         .avatar-profile-link {
             float: $right;
-            @include avatar(40);
         }
     }
 
@@ -162,12 +161,12 @@
                 max-width: 280px;
                 flex: 0 0 28%;
                 margin: side-values(0 0 0 20px);
-                padding: side-values(0 0 0 52px);
+                padding: side-values(0 0 0 62px);
                 box-sizing: border-box;
 
                 .avatar-profile-link {
                     float: $left;
-                    margin: side-values(8px 0 0 -52px);
+                    margin: side-values(4px 0 0 -62px);
                 }
 
                 &--never {

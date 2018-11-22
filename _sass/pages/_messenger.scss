@@ -4,75 +4,6 @@
         margin-bottom: 20px;
     }
 
-    // these probably won't be necessary with twig -- just add --active class directly
-    .section-menu__item--dashboard,
-    .section-menu__item--profile,
-    .section-menu__item--preferences,
-    .section-menu__item--groups,
-    .section-menu__item--buddy-ignore,
-    .section-menu__item--attachments,
-    .section-menu__item--drafts,
-    .section-menu__item--subscriptions {
-        display: none;
-    }
-
-    // these probably won't be necessary with twig -- just add --active class directly
-    &--compose .section-menu__item--messenger-compose,
-    &--tracking .section-menu__item--messenger-tracking,
-    &--edit-folders .section-menu__item--messenger-edit-folders,
-    &--folder-1 .section-menu__item--folder-1,
-    &--folder-2 .section-menu__item--folder-2,
-    &--folder-3 .section-menu__item--folder-3,
-    &--folder-4 .section-menu__item--folder-4 {
-        @extend .section-menu__item--active;
-    }
-
-    // this mess should also be fixed with twig
-    .section-menu__icon--folder-1,
-    .section-menu__icon--folder-2,
-    .section-menu__icon--folder-3,
-    .section-menu__icon--folder-4 {
-        display: none;
-    }
-
-    .section-menu__item--folder-1 {
-
-        .section-menu__icon--folder-1 {
-            display: block;
-        }
-    }
-
-    .section-menu__item--folder-2 {
-
-        .section-menu__icon--folder-2 {
-            display: block;
-        }
-    }
-
-    .section-menu__item--folder-3 {
-
-        .section-menu__icon--folder-3 {
-            display: block;
-        }
-    }
-
-    .section-menu__item--folder-4 {
-
-        .section-menu__icon--folder-4 {
-            display: block;
-        }
-    }
-
-    .section-menu__item--folder-1,
-    .section-menu__item--folder-2,
-    .section-menu__item--folder-3,
-    .section-menu__item--folder-4 {
-
-        .section-menu__icon--folder-0 {
-            display: none;
-        }
-    }
-
     &__search {
         padding-bottom: 12px;
 
@@ -223,7 +154,7 @@
         align-items: flex-start;
         flex-direction: column;
         position: relative;
-        padding-#{$left}: 70px;
+        padding-#{$left}: 66px;
 
         @include bp-small {
             flex-direction: row;
@@ -248,8 +179,7 @@
 
         .avatar-profile-link {
     		float: $left;
-    		margin: side-values(0 0 0 -60px);
-            @include avatar(44);
+    		margin: side-values(2px 0 0 -52px);
     	}
 
         &__column {

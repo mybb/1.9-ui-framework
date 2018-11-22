@@ -336,7 +336,6 @@
                 position: absolute;
                 top: 12px;
                 left: 8px;
-                @include avatar(44);
 
                 @include bp-small {
                     position: static;

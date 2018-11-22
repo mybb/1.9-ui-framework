@@ -100,7 +100,6 @@
         .avatar-profile-link {
             float: $right;
             margin: side-values(6px 0 0 10px);
-            @include avatar(80);
         }
     }
 
