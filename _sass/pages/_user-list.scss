@@ -42,7 +42,6 @@
     .avatar-profile-link {
         float: $left;
         margin: side-values(0 16px 0 0);
-        @include avatar(80);
     }
 
     &__checkbox {
