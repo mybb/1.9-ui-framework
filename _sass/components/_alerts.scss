@@ -63,6 +63,17 @@
         }
     }
 
+    &--pending {
+        background-color: $status-pending;
+        color: $status-pending-font-color;
+
+        :link,
+        :visited,
+        .alert__icon {
+            color: $status-pending-font-color;
+        }
+    }
+
     &--success {
         background-color: $success-color;
         color: $invert-font-color;
