@@ -410,26 +410,15 @@ textarea {
 
 .date-field {
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
+    flex-wrap: wrap;
     background: $background-1;
-    padding: 12px;
+    padding: side-values(12px 12px 4px 12px);
     border-radius: $radius;
-
-    @include bp-medium {
-        flex-direction: row;
-    }
-
+    
     &__item {
         margin-bottom: 8px;
-
-        @include bp-medium {
-            margin-bottom: 0;
-            margin-#{$right}: 8px;
-        }
-
-        &:last-child {
-            margin-bottom: 0;
-        }
+        margin-#{$right}: 8px;
     }
 
     &__name {
