@@ -1,0 +1,30 @@
+.user-group--guests {
+
+}
+
+.user-group--registered {
+
+}
+
+.user-group--super-moderators {
+    color: #b37fdc;
+    font-weight: bold;
+}
+
+.user-group--administrator {
+    color: #ff7500;
+    font-weight: bold;
+}
+
+.user-group--awaiting-activation {
+
+}
+
+.user-group--moderators {
+    color: #99ccff;
+    font-weight: bold;
+}
+
+.user-group--banned {
+    text-decoration: line-through;
+}
