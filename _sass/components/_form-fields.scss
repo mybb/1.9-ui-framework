@@ -140,6 +140,10 @@
         margin-#{$left}: 6px;
         margin-#{$right}: 6px;
     }
+
+    &--no-margin {
+        margin: 0;
+    }
 }
 
 select {
@@ -415,7 +419,7 @@ textarea {
     background: $background-1;
     padding: side-values(12px 12px 4px 12px);
     border-radius: $radius;
-    
+
     &__item {
         margin-bottom: 8px;
         margin-#{$right}: 8px;
@@ -428,6 +432,10 @@ textarea {
         color: $alt-font-color-1;
         margin: side-values(0 0 3px 0);
         padding: 0;
+    }
+
+    .select-field {
+        margin-#{$right}: 0;
     }
 }
 
