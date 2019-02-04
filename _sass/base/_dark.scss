@@ -42,11 +42,12 @@ $dark: false !default;
     $new-icon-color: $primary-color;
     // $status-highlight: #ebf4fb;
     // $status-highlight-border: #afd9fa;
-    // $status-deleted: #ece3fa;
-    // $status-deleted-border: #ddcafa;
-    // $status-pending: #f2dede;
-    // $status-pending-border: #f2aaab;
-    // $pending-color: #f2aaab;
+    $status-deleted: #864ddf;
+    $status-deleted-border: #864ddf;
+    $status-deleted-font-color: #fff;
+    $status-pending: #c00;
+    $status-pending-border: #c00;
+    $status-pending-font-color: #fff;
 
     // Success / danger colors
     // $success-color: #68c000;
