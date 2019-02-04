@@ -91,3 +91,28 @@
         justify-content: flex-end;
     }
 }
+
+.threaded-mode {
+
+    &__post {
+        padding: 8px;
+        border-bottom: 1px solid $border-3;
+
+        &--active {
+
+            .threaded-mode__date {
+                font-weight: bold;
+            }
+        }
+    }
+
+    &__author {
+        margin-#{$left}: 8px;
+        font-size: 0.9em;
+        color: $alt-font-color-2;
+
+        a {
+            color: $alt-font-color-1;
+        }
+    }
+}

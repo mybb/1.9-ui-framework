@@ -1,5 +1,9 @@
 .thread-list {
 
+    &--no-footer {
+        border-bottom: 1px solid $border-1;
+    }
+
     &__announcements,
     &__sticky-threads {
         border-bottom: 3px solid $border-1;
