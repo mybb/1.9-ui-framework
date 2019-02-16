@@ -259,15 +259,26 @@
         }
 
         &__icons {
-            float: $right;
             color: $alt-font-color-2;
             font-size: 14px;
-            margin-#{$left}: 16px;
+            display: block;
+            margin-top: 2px;
+            margin-bottom: 2px;
+
+            @include bp-medium {
+                float: $right;
+                margin: side-values(0 0 0 16px);
+            }
         }
 
         &__icon {
             display: inline-block;
-            margin-#{$left}: 2px;
+            margin-#{$right}: 2px;
+
+            @include bp-medium {
+                margin-#{$right}: 0;
+                margin-#{$left}: 2px;
+            }
 
             &--sticky {
                 color: $secondary-color;
