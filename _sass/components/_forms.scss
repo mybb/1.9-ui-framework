@@ -1,23 +1,23 @@
 .form {
-    border: 1px solid $border-1;
     margin-bottom: 40px;
+    border: 1px solid $border-1;
     border-radius: 4px;
 
     &--alt {
-        border: none;
         background-color: $background-2;
+        border: none;
     }
 
     &--modal {
-        border: none;
         margin-bottom: 0;
+        border: none;
     }
 
     &--delete {
-        padding: 16px 12px;
         display: flex;
-        justify-content: space-between;
         align-items: center;
+        justify-content: space-between;
+        padding: 16px 12px;
         margin-bottom: 30px;
 
         .form__submit {
@@ -30,10 +30,10 @@
     }
 
     &__submit {
-        border-radius: corner-values(0 0 $radius $radius);
-        background: $background-1;
-        text-align: center;
         padding: 10px 0;
+        text-align: center;
+        background: $background-1;
+        border-radius: corner-values(0 0 $radius $radius);
 
         &:first-child {
             border-radius: $radius;
@@ -42,7 +42,7 @@
 }
 
 .inline-form {
-    
+
     .textbox,
     .select-field,
     .button {

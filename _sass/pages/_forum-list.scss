@@ -3,14 +3,14 @@
 
     @include bp-medium {
         display: flex;
-        justify-content: space-between;
-        align-items: top;
         flex-direction: row;
+        align-items: top;
+        justify-content: space-between;
     }
 
     &__info {
-        padding: side-values(5px 0 5px 38px);
         box-sizing: border-box;
+        padding: side-values(5px 0 5px 38px);
     }
 
     &__status {
@@ -30,16 +30,16 @@
     }
 
     &__description {
-        font-size: 0.8em;
-        margin: 0;
         padding: side-values(6px 0 0 0);
+        margin: 0;
+        font-size: 0.8em;
         color: $alt-font-color-4;
     }
 
     &__moderators {
+        margin: side-values(6px 0 0 0);
         font-size: 0.8em;
         color: $alt-font-color-2;
-        margin: side-values(6px 0 0 0);
 
         a {
             color: $alt-font-color-1;
@@ -47,11 +47,11 @@
     }
 
     &__subforums {
+        padding: 0;
+        margin: side-values(6px 0 0 0);
+        font-size: 0.8em;
         color: $alt-font-color-1;
         list-style: none;
-        margin: side-values(6px 0 0 0);
-        padding: 0;
-        font-size: 0.8em;
     }
 
     &__subforum {
@@ -59,9 +59,9 @@
         margin: side-values(0 15px 0 0);
 
         &__status {
-            color: $alt-font-color-3;
-            font-size: 10px;
             margin-#{$right}: 3px;
+            font-size: 10px;
+            color: $alt-font-color-3;
 
             &.subforum_minion {
                 color: $dark-background-2;
@@ -75,8 +75,8 @@
 
     &__count-legend {
         display: block;
-        color: $alt-font-color-3;
         font-size: 0.7em;
+        color: $alt-font-color-3;
         text-transform: lowercase;
     }
 
@@ -85,22 +85,22 @@
     }
 
     &__unapproved-count {
-        background: $status-pending;
-        color: $status-pending-font-color;
-        border-radius: 2px;
         padding: 1px 4px;
-        font-weight: normal;
         font-size: 0.7em;
+        font-weight: normal;
+        color: $status-pending-font-color;
         text-decoration: none;
+        background: $status-pending;
+        border-radius: 2px;
     }
 
     &__latest {
+        box-sizing: border-box;
+        padding: 8px 10px;
         margin-top: 6px;
         margin-#{$left}: 28px;
-        padding: 8px 10px;
         background: $background-1;
         border-radius: $radius;
-        box-sizing: border-box;
 
         &--never {
             padding-#{$left}: 10px;
@@ -113,18 +113,18 @@
 
     &__subject {
         display: block;
-        margin: 0;
         padding: 0;
-        font-weight: normal;
+        margin: 0;
         font-size: 0.9em;
+        font-weight: normal;
     }
 
     &__date,
     &__author {
         display: block;
+        margin: 0;
         font-size: 0.8em;
         color: $alt-font-color-2;
-        margin: 0;
 
         a {
             color: $alt-font-color-1;
@@ -150,20 +150,20 @@
 
             &__stat {
                 display: block;
-                text-align: center;
                 flex: 0 0 6%;
                 min-width: 90px;
                 padding: 10px 0;
+                text-align: center;
             }
 
             &__latest {
-                background: transparent;
+                box-sizing: border-box;
+                flex: 0 0 28%;
                 min-width: 220px;
                 max-width: 280px;
-                flex: 0 0 28%;
-                margin: side-values(0 0 0 20px);
                 padding: side-values(0 0 0 62px);
-                box-sizing: border-box;
+                margin: side-values(0 0 0 20px);
+                background: transparent;
 
                 .avatar-profile-link {
                     float: $left;

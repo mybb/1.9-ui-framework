@@ -9,14 +9,14 @@
 
     &__item {
         .smilie-list__smilie {
+            flex: 0 0 50px;
             min-width: 50px;
             text-align: center;
-            flex: 0 0 50px;
         }
 
         .smilie-list__name {
-            margin-#{$left}: 14px;
             flex: 1 0 auto;
+            margin-#{$left}: 14px;
         }
 
         .smilie-list__replace {
@@ -24,8 +24,8 @@
             text-align: $right;
 
             &--no-name {
-                text-align: $left;
                 margin-#{$left}: 14px;
+                text-align: $left;
             }
         }
     }

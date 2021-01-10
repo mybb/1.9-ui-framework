@@ -8,9 +8,9 @@ $post-spacing: 25px;
 }
 
 .post {
+    margin-bottom: $post-spacing;
     background-color: $background-default;
     border: 1px solid $border-1;
-    margin-bottom: $post-spacing;
     border-radius: $radius;
 
     @include bp-small {
@@ -30,8 +30,8 @@ $post-spacing: 25px;
     }
 
     &__author {
-        font-size: 1em;
         margin: 0;
+        font-size: 1em;
 
         @include bp-small {
             display: inline-block;
@@ -54,8 +54,8 @@ $post-spacing: 25px;
     }
 
     &__edit-log {
-        font-size: 0.8em;
         margin-#{$left}: 4px;
+        font-size: 0.8em;
 
         &:link,
         &:visited {
@@ -68,8 +68,8 @@ $post-spacing: 25px;
     }
 
     &__ip-address {
-        font-size: 0.8em;
         float: $right;
+        font-size: 0.8em;
 
         &:link,
         &:visited {
@@ -82,10 +82,10 @@ $post-spacing: 25px;
     }
 
     &__messenger-meta {
+        padding: side-values(0 0 5px 0);
+        font-size: 0.9em;
         color: $alt-font-color-1;
         border-bottom: 1px solid $border-3;
-        font-size: 0.9em;
-        padding: side-values(0 0 5px 0);
     }
 
     &__inline-mod {
@@ -137,12 +137,11 @@ $post-spacing: 25px;
     .quote,
     .codeblock,
     blockquote {
-        // border: 1px solid $border-3;
-        border-radius: $radius;
-        background: $background-1;
         padding: 10px 18px;
         margin: 5px 0;
         font-size: 0.9rem;
+        background: $background-1;
+        border-radius: $radius;
 
         .quote,
         .codeblock,
@@ -153,11 +152,11 @@ $post-spacing: 25px;
         &__cite,
         &__title,
         cite {
+            display: block;
+            margin-bottom: 4px;
             font-style: normal;
             font-weight: normal;
             color: $alt-font-color-1;
-            display: block;
-            margin-bottom: 4px;
         }
 
         &__jump {
@@ -170,17 +169,17 @@ $post-spacing: 25px;
     }
 
     &__signature {
-        border-top: 1px dotted $border-2;
         padding: side-values(6px 0 0 0);
         margin-top: 20px;
         font-size: 0.8em;
+        border-top: 1px dotted $border-2;
     }
 
     &__foot {
-        background: $background-1;
-        list-style: none;
-        margin: 0;
         padding: 6px 12px;
+        margin: 0;
+        list-style: none;
+        background: $background-1;
         border-radius: corner-values(0 0 $radius $radius);
 
         &--controls {
@@ -192,8 +191,8 @@ $post-spacing: 25px;
     &--highlight,
     &--soft-deleted,
     &--awaiting-approval {
-        border-width: 2px;
         margin: side-values(-1px -1px ($post-spacing - 1) -1px);
+        border-width: 2px;
 
         @include bp-small {
             margin-#{$left}: $avatar-margin-small - 1;
@@ -217,16 +216,16 @@ $post-spacing: 25px;
     }
 
     &--message {
-        border: none;
         background: $background-1;
+        border: none;
 
         &__button {
-            margin: side-values(5px -5px 0 -5px);
             display: none;
+            margin: side-values(5px -5px 0 -5px);
         }
     }
 
-    // TO DO: change classes in code
+    // TODO: change classes in code
     &.trow_selected {
         @extend .post--highlight;
     }
@@ -263,9 +262,9 @@ $post-spacing: 25px;
 
 .user-status {
     display: inline-block;
+    margin-#{$left}: 2px;
     font-size: 10px;
     vertical-align: middle;
-    margin-#{$left}: 2px;
 
     &--offline {
         color: $alt-font-color-3;

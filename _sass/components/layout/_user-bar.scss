@@ -1,22 +1,22 @@
 .user-bar {
-    clear: both;
     min-height: 50px;
+    clear: both;
     background: $background-2;
 
     &__links {
-        margin: 0;
         padding: 0;
+        margin: 0;
         list-style: none;
     }
 
     &__item {
+        position: relative;
         float: $left;
         margin: 0;
-        position: relative;
 
         &--active-user {
-            border-left: 1px solid transparent;
             border-right: 1px solid transparent;
+            border-left: 1px solid transparent;
         }
     }
 
@@ -25,9 +25,9 @@
         &,
         &:link,
         &:visited {
-            color: $alt-font-color-1;
-            padding: 12px 12px;
             display: inline-block;
+            padding: 12px 12px;
+            color: $alt-font-color-1;
             border-radius: 4px;
         }
 
@@ -40,8 +40,8 @@
 
     &__icon {
         margin-#{$right}: 4px;
-        font-size: 1.2em;
         margin-bottom: -2px;
+        font-size: 1.2em;
     }
 
     &__text {
@@ -69,15 +69,15 @@
     }
 
     &__unread-count {
-        background: $unread-count;
-        color: $invert-font-color;
-        border-radius: 2px;
         padding: side-values(1px 5px 2px 5px);
         margin: side-values(0 0 0 3px);
-        font-weight: normal;
         font-size: 0.7em;
+        font-weight: normal;
+        color: $invert-font-color;
         text-decoration: none;
         vertical-align: middle;
+        background: $unread-count;
+        border-radius: 2px;
     }
 
     &__checkbox {
@@ -85,17 +85,17 @@
     }
 
     &__dropdown {
-        display: none;
-        background: $background-1;
-        border-radius: corner-values(0 0 4px 4px);
-        padding: side-values(6px 12px 6px 12px);
-        border: 1px solid $border-1;
-        border-top: none;
-        font-size: 0.9em;
+        position: absolute;
         top: 50px;
         #{$left}: -1px;
+        display: none;
         width: 250px;
-        position: absolute;
+        padding: side-values(6px 12px 6px 12px);
+        font-size: 0.9em;
+        background: $background-1;
+        border: 1px solid $border-1;
+        border-top: none;
+        border-radius: corner-values(0 0 4px 4px);
 
         .avatar-profile-link {
             float: $right;
@@ -104,12 +104,12 @@
     }
 
     &__username {
-        font-weight: bold;
+        padding: 8px 4px;
         margin: 0;
+        overflow: hidden;
+        font-weight: bold;
         font-size: 1.1em;
         border-bottom: 1px solid $border-1;
-        padding: 8px 4px;
-        overflow: hidden;
 
         @include bp-small {
             display: none;
@@ -144,16 +144,16 @@
 }
 
 .account-links {
-    margin: 0;
     padding: 0;
-    list-style: none;
+    margin: 0;
     overflow: hidden;
+    list-style: none;
 
     &__item {
-        float: none;
-        margin: 0;
-        padding: 0;
         display: block;
+        float: none;
+        padding: 0;
+        margin: 0;
         border-bottom: 1px solid $border-1;
 
         &:last-child {
@@ -163,12 +163,12 @@
 
     &__link {
         display: block;
-        margin: 0;
-        padding: 4px;
         float: none;
-        border-#{$left}: 0;
+        padding: 4px;
+        margin: 0;
         text-align: $left;
         background: transparent;
+        border-#{$left}: 0;
 
         &:hover {
             text-decoration: none;

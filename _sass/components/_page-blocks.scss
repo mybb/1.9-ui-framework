@@ -6,9 +6,9 @@
     }
 
     &--container {
+        padding: 16px;
         border: 1px solid $border-1;
         border-radius: $radius;
-        padding: 16px;
 
         .sort-results {
             border-width: 0;
@@ -17,8 +17,8 @@
     }
 
     &--sidebar {
-        border: 1px solid $border-1;
         padding: 12px 15px;
+        border: 1px solid $border-1;
         border-radius: $radius;
 
         &.block--form {
@@ -56,8 +56,8 @@
 
     &__footer-link {
         @extend .container;
-        text-align: center;
         padding: 8px;
+        text-align: center;
 
         a:link,
         a:hover,
@@ -88,19 +88,19 @@
 
         @include bp-medium {
             float: $left;
-            margin: side-values(0 0 0 3%);
-            padding: side-values(0 0 0 20px);
-            border-#{$left}: 1px dotted $border-2;
-            width: 74%;
             box-sizing: border-box;
+            width: 74%;
+            padding: side-values(0 0 0 20px);
+            margin: side-values(0 0 0 3%);
+            border-#{$left}: 1px dotted $border-2;
         }
     }
 
     &--inline {
-        border-bottom: 0;
-        border-left: 2px solid $border-1;
         padding: side-values(5px 0 5px 16px);
         margin-top: 10px;
+        border-bottom: 0;
+        border-left: 2px solid $border-1;
     }
 }
 
@@ -109,8 +109,8 @@
 
     &--simple-columns {
         display: flex;
-        justify-content: space-between;
         flex-direction: column;
+        justify-content: space-between;
 
         @include bp-small {
             flex-direction: row;
@@ -121,11 +121,11 @@
 
 .page-controls {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
     align-content: center;
+    justify-content: space-between;
     margin-top: 5px;
     margin-bottom: 10px;
-    flex-direction: column;
 
     &--top {
         margin-top: -10px;
@@ -138,11 +138,6 @@
     &--bottom {
         margin-top: -5px;
         margin-bottom: 20px;
-    }
-
-    .page-buttons {
-        // margin-#{$left}: 0;
-        // margin-#{$right}: 0;
     }
 
     @include bp-medium {
@@ -161,8 +156,8 @@
     border-radius: $radius;
 
     &__section {
-        border-bottom: 1px solid $border-1;
         padding: side-values(20px 12px 20px 50px);
+        border-bottom: 1px solid $border-1;
 
         &:last-child {
             border-bottom: none;
@@ -170,34 +165,34 @@
     }
 
     &__title {
-        font-weight: normal;
-        font-family: $alt-font-stack;
-        margin: 0;
         padding: side-values(0 0 4px 0);
+        margin: 0;
+        font-family: $alt-font-stack;
+        font-weight: normal;
         border-bottom: 1px solid $border-3;
     }
 
     &__icon {
-        color: $alt-font-color-2;
         float: $left;
-        margin-#{$left}: -36px;
         margin-top: 4px;
+        margin-#{$left}: -36px;
+        color: $alt-font-color-2;
     }
 
     &__body {
-        font-size: 0.9em;
         margin-top: 10px;
         margin-bottom: 0;
+        font-size: 0.9em;
 
         &--active-note {
-            color: $alt-font-color-1;
-            border-bottom: 1px solid $border-3;
             padding-bottom: 10px;
             margin-bottom: 10px;
+            color: $alt-font-color-1;
+            border-bottom: 1px solid $border-3;
 
             &:last-child {
-                margin-bottom: 0;
                 padding-bottom: 0;
+                margin-bottom: 0;
                 border-bottom: none;
             }
         }

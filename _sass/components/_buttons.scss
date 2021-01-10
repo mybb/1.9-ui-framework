@@ -25,10 +25,10 @@
 
 .button {
     display: inline-flex;
-    justify-content: center;
     align-items: center;
-    margin: 5px;
+    justify-content: center;
     padding: 4px 10px;
+    margin: 5px;
     font-size: 0.9em;
     line-height: 26px;
     border: 1px solid;
@@ -38,9 +38,9 @@
             appearance: none;
 
     &:hover {
+        cursor: pointer;
         text-decoration: none;
         outline: none;
-        cursor: pointer;
     }
 
     @include button-theme($button-default);
@@ -141,25 +141,25 @@
 
     &--inline {
         padding: 3px 10px;
-        font-size: 0.9em;
         margin: side-values(0 0 0 5px);
+        font-size: 0.9em;
         vertical-align: top;
     }
 
     @include bp-medium-max {
 
         &--full-width {
-            padding: 8px 10px;
-            width: 100%;
-            margin: 5px 0;
             box-sizing: border-box;
+            width: 100%;
+            padding: 8px 10px;
+            margin: 5px 0;
         }
 
         &--half-width {
-            padding: 8px 10px;
-            width: 49%;
-            float: $left;
             box-sizing: border-box;
+            float: $left;
+            width: 49%;
+            padding: 8px 10px;
 
             &:nth-child(odd) {
                 margin-#{$left}: 0;
@@ -175,19 +175,19 @@
 
     &--small {
         padding: 0 8px;
-        font-size: 0.9em;
         margin: side-values(0 5px 0 0);
+        font-size: 0.9em;
         vertical-align: top;
     }
 
     &--medium {
+        padding: 6px 12px;
         font-size: 1em;
-		padding: 6px 12px;
     }
 
     &--big {
+        padding: 8px 16px;
         font-size: 1.1em;
-		padding: 8px 16px;
 
         .button__icon {
             margin-#{$right}: 12px;

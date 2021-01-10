@@ -11,11 +11,11 @@
 .calendar {
 
     &__days-of-week {
-        background: $background-1;
-        border-radius: $radius;
         display: flex;
         padding: 8px 10px;
         margin-bottom: 10px;
+        background: $background-1;
+        border-radius: $radius;
 
         @include bp-large-max {
             display: none;
@@ -24,15 +24,15 @@
 
     &__day-of-week-heading {
         flex: 1 1 14%;
-        text-align: center;
         color: $alt-font-color-1;
+        text-align: center;
     }
 
     &__week {
-        padding: 10px 0;
         display: flex;
-        border-bottom: 2px solid $border-1;
         flex-direction: column;
+        padding: 10px 0;
+        border-bottom: 2px solid $border-1;
 
         &:last-child {
             border-bottom: 0;
@@ -43,11 +43,11 @@
         border-bottom: 1px solid $border-1;
 
         @include bp-large {
-            border-bottom: 0;
-            width: 24px;
-            padding-#{$right}: 14px;
             display: flex;
             align-items: center;
+            width: 24px;
+            padding-#{$right}: 14px;
+            border-bottom: 0;
 
             .button {
 
@@ -70,12 +70,12 @@
             border-bottom: 0;
         }
 
-        // TO DO : Change class in calendar.php
+        // TODO : Change class in calendar.php
         &.trow1 {
 
             .calendar__day-heading {
-                font-weight: normal;
                 font-size: 1.2em;
+                font-weight: normal;
             }
 
             .calendar__day-link {
@@ -89,38 +89,38 @@
     }
 
     &__day-of-week {
+        float: $right;
         font-size: 0.9em;
         color: $alt-font-color-2;
-        float: $right;
     }
 
     &__day-heading {
         margin: side-values(0 0 5px 0);
-        font-size: 1.4em;
         font-family: $alt-font-stack;
+        font-size: 1.4em;
 
         .calendar__month {
-            font-weight: normal;
             font-size: 0.9em;
+            font-weight: normal;
         }
     }
 
     &__event {
-        line-height: 1.4;
-        font-size: 0.9em;
         margin: side-values(0 0 3px 0);
+        font-size: 0.9em;
+        line-height: 1.4;
     }
 
     &__event-link {
-        background: $background-1;
         display: block;
         padding: 2px 4px;
+        background: $background-1;
         border-radius: $radius - 1;
 
         &:hover {
-            background: $secondary-color;
             color: $invert-font-color;
             text-decoration: none;
+            background: $secondary-color;
 
             .calendar__event-icon,
             .calendar__event-time-period {
@@ -130,14 +130,14 @@
     }
 
     &__event-time-period {
-        color: $alt-font-color-1;
         font-size: 0.9em;
+        color: $alt-font-color-1;
     }
 
     &__event-icon {
         float: $right;
-        color: $alt-font-color-2;
         margin: side-values(2px 2px 0 8px);
+        color: $alt-font-color-2;
     }
 
     &--month {
@@ -145,17 +145,17 @@
         @include bp-large {
 
             .calendar__week {
-                padding: 10px;
                 flex-direction: row;
                 align-items: stretch;
+                padding: 10px;
                 border-bottom-width: 1px;
             }
 
             .calendar__day {
-                padding: 8px 12px;
                 box-sizing: border-box;
                 flex: 1 1 14%;
                 min-height: 120px;
+                padding: 8px 12px;
                 border-bottom: 0;
                 border-#{$left}: 1px solid $border-1;
             }
@@ -186,19 +186,19 @@
 
     &__days-of-week {
         display: flex;
-        border-bottom: 1px solid $border-1;
         padding: 2px 0;
+        border-bottom: 1px solid $border-1;
     }
 
     &__day-of-week-heading {
         flex: 1 1 14%;
-        text-align: center;
         color: $alt-font-color-1;
+        text-align: center;
     }
 
     &__week {
-        padding: 0;
         display: flex;
+        padding: 0;
         border-bottom: 1px solid $border-1;
 
         &:last-child {
@@ -207,9 +207,9 @@
     }
 
     &__week-shortcut {
-        text-align: center;
         width: 20px;
         padding: 2px 4px;
+        text-align: center;
 
         .button {
             padding: 0;
@@ -226,10 +226,11 @@
     }
 
     &__day {
-        padding: 2px 0;
         flex: 1 1 14%;
+        padding: 2px 0;
         text-align: center;
 
+        // TODO: change class in calendar.php
         &.trow1 {
 
             &,

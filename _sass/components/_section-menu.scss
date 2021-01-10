@@ -7,13 +7,13 @@
     }
 
     &__links {
-        margin: side-values(0 0 15px 0);
-        padding: 0;
-        list-style: none;
         display: flex;
         flex-direction: row;
         flex-wrap: wrap;
         justify-content: space-between;
+        padding: 0;
+        margin: side-values(0 0 15px 0);
+        list-style: none;
 
         @include bp-medium {
             margin: 0;
@@ -32,26 +32,25 @@
         &--active {
 
             .section-menu__link {
+                color: $invert-font-color;
                 background-color: $primary-color;
                 border-color: $primary-color;
-                color: $invert-font-color;
             }
         }
     }
 
     &__link {
-        background: $background-1;
-        display: block;
-        padding: side-values(12px 8px 8px 8px);
-        border-radius: 3px;
         display: flex;
+        flex-direction: column;
         align-items: center;
         justify-content: flex-start;
-        flex-direction: column;
+        padding: side-values(12px 8px 8px 8px);
+        background: $background-1;
+        border-radius: 3px;
 
         @include bp-medium {
-            padding: 2px 8px;
             flex-direction: row;
+            padding: 2px 8px;
         }
 
         &:link,
@@ -60,20 +59,20 @@
         }
 
         &:hover {
+            color: $invert-font-color;
             background-color: $button-hover;
             border-color: $button-hover;
-            color: $invert-font-color;
         }
     }
 
     &__icon {
-        font-size: 1.5em;
         margin-bottom: 5px;
+        font-size: 1.5em;
 
         @include bp-medium {
-            font-size: 1em;
-            margin-bottom: 0;
             margin-#{$right}: 8px;
+            margin-bottom: 0;
+            font-size: 1em;
         }
     }
 

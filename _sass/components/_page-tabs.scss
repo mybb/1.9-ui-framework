@@ -1,9 +1,9 @@
 .page-tabs {
-    list-style: none;
-    margin: side-values(0 0 20px 0);
-    border-radius: 4px;
-    background: $background-1;
     padding: side-values(8px 8px 0 8px);
+    margin: side-values(0 0 20px 0);
+    list-style: none;
+    background: $background-1;
+    border-radius: 4px;
 
     &__item {
         display: inline-block;
@@ -12,24 +12,24 @@
         &--active {
 
             .page-tabs__link {
-                color: $invert-font-color;
                 font-weight: bold;
-                background: $button-default;
+                color: $invert-font-color;
                 text-decoration: none;
+                background: $button-default;
             }
         }
     }
 
     &__link {
-        padding: 4px 8px;
         display: inline-block;
+        padding: 4px 8px;
         background: $background-1;
         border-radius: 3px;
 
         &:hover {
+            color: $invert-font-color;
             text-decoration: none;
             background: $link-hover;
-            color: $invert-font-color;
         }
     }
 

@@ -1,29 +1,25 @@
 // this needs cleaned up / generalized (not always used for sorting results)
 
 .sort-results {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
     padding: 8px 12px;
+    margin-bottom: 20px;
     clear: both;
     background-color: $background-2;
     border-radius: $radius;
-    margin-bottom: 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-wrap: wrap;
 
     @extend .inline-form;
 
     &__title {
         display: inline-block;
-        margin: side-values(0 10px 0 0);
         padding: 0;
+        margin: side-values(0 10px 0 0);
+        font-size: 0.9em;
         font-weight: normal;
         color: $alt-font-color-1;
-        font-size: 0.9em;
-
-        // &:after {
-        //     content: ":";
-        // }
     }
 
     &__text {

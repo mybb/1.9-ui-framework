@@ -1,10 +1,10 @@
 .post-control {
-    color: $alt-font-color-2;
+    display: inline-block;
     padding: 0 7px;
+    font-size: 0.8em;
+    color: $alt-font-color-2;
     background-color: transparent;
     border: none;
-    font-size: 0.8em;
-    display: inline-block;
 
     &__icon {
         margin-#{$right}: 6px;
@@ -21,34 +21,23 @@
         cursor: pointer;
     }
 
+    // TODO: Convert to BEM syntax
     &.postbit_multiquote_on {
+        padding-top: 1px;
+        padding-bottom: 1px;
+        margin-top: -1px;
+        margin-bottom: -1px;
         color: $link-hover;
         background: $background-default;
         border-radius: $radius;
-        margin-top: -1px;
-        margin-bottom: -1px;
-        padding-top: 1px;
-        padding-bottom: 1px;
     }
 }
 
 .post-controls {
-    // display: flex;
     flex-grow: 1;
 
     &--secondary {
         text-align: $right;
-
-        // @include bp-large-max {
-        //
-        //     .post-control__icon {
-        //         margin-#{$right}: 0;
-        //     }
-        //
-        //     .post-control__text {
-        //         display: none;
-        //     }
-        // }
     }
 }
 
@@ -56,9 +45,7 @@
     position: relative;
 
     &__control {
-        // position: absolute;
-        // right: 0;
-        //
+
         .post-control__icon {
             margin-#{$right}: 0;
         }
@@ -73,20 +60,20 @@
     }
 
     .post-options__checkbox:checked ~ .post-options__list {
-        display: block;
         position: absolute;
         top: 30px;
         right: 0px;
+        z-index: 10;
+        display: block;
+        background: $background-1;
         border: 1px solid $border-1;
         border-radius: $radius;
-        background: $background-1;
-        z-index: 10;
 
         .post-control {
             display: block;
-            border-bottom: 1px solid $border-1;
             padding-#{$right}: 20px;
             text-align: $left;
+            border-bottom: 1px solid $border-1;
 
             &:last-child {
                 border-bottom: none;

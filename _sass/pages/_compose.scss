@@ -67,18 +67,18 @@
 }
 
 .smilie-inserter {
+    padding: 10px;
+    text-align: center;
     background: $background-1;
     border-radius: $radius;
-    text-align: center;
-    padding: 10px;
 
     &__title {
-        font-weight: normal;
-        font-size: 0.9em;
-        color: $alt-font-color-1;
-        border-bottom: 1px solid $border-1;
         padding-bottom: 5px;
         margin: side-values(0 0 10px 0);
+        font-size: 0.9em;
+        font-weight: normal;
+        color: $alt-font-color-1;
+        border-bottom: 1px solid $border-1;
     }
 
     &__grid {
@@ -88,9 +88,9 @@
     }
 
     &__smilie {
+        box-sizing: border-box;
         width: 25%;
         padding: 5px;
-        box-sizing: border-box;
 
         img {
             cursor: pointer;
@@ -100,15 +100,15 @@
     &__more {
         margin-top: 10px;
         padding-top: 5px;
-        border-top: 1px solid $border-1;
         font-size: 0.9em;
+        border-top: 1px solid $border-1;
     }
 }
 
 #multiquote_unloaded {
     @include container;
-    font-size: 0.9em;
     margin-top: 8px;
+    font-size: 0.9em;
 }
 
 #show-post-options:checked ~ .compose__hidden-section--options,
@@ -126,15 +126,15 @@
 .quick-reply {
 
     &__options {
-        display: none;
         @include container;
+        display: none;
         margin: side-values(5px 12px 12px 12px);
         font-size: 0.9em;
     }
 
     &__option {
-        cursor: pointer;
         margin-#{$right}: 12px;
+        cursor: pointer;
     }
 
     &__checkbox {
@@ -142,8 +142,8 @@
     }
 
     textarea {
-        border: none;
         padding: 0;
+        border: none;
     }
 }
 

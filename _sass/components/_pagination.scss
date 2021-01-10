@@ -1,27 +1,27 @@
 
 .pagination {
-    list-style: none;
-    margin: 15px 0;
     padding: 0;
+    margin: 15px 0;
     font-size: 0.9em;
     text-align: center;
+    list-style: none;
 
     &__pages {
-        color: $alt-font-color-1;
         margin-#{$right}: 8px;
+        color: $alt-font-color-1;
     }
 
     &__page {
         display: inline-block;
-        margin-#{$right}: 4px;
         padding: 1px 8px;
+        margin-#{$right}: 4px;
         background: $background-1;
         border-radius: $radius;
 
         &:hover {
-            background: $link-hover;
             color: $invert-font-color;
             text-decoration: none;
+            background: $link-hover;
         }
 
         &--active {
@@ -39,8 +39,7 @@
     }
 
     @include bp-medium {
-        // float: $left;
-        text-align: $left;
         margin: side-values(10px 0 20px 0);
+        text-align: $left;
     }
 }

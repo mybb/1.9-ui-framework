@@ -1,3 +1,6 @@
+/**
+ * Global page header
+ */
 .header {
     background: $dark-background-1;
 
@@ -7,6 +10,7 @@
         height: $header-height;
     }
 
+    // Page title
     &__title {
         height: 100%;
         margin: 0;
@@ -15,11 +19,13 @@
             float: $left;
         }
 
+        // Logo wrapper
+        // For styling of logo , see _logo.scss
         .logo {
+            display: flex;
+            align-items: center;
             height: $header-height;
             margin-#{$right}: 50px;
-            align-items: center;
-            display: flex;
 
             @include bp-medium {
                 height: 100%;
@@ -27,20 +33,23 @@
         }
     }
 
+    // Menu and close menu buttons on small screens
     .menu-button,
     .menu-close-button {
-        display: block;
         position: absolute;
         top: 0;
         right: 0;
+        display: block;
         padding: 26px 8px;
         cursor: pointer;
 
+        // Button icon
         &__icon {
             color: $invert-font-color;
             font-size: 24px;
         }
 
+        // Hide if hidden
         &--hide {
             display: none;
         }
@@ -50,12 +59,15 @@
         }
     }
 
-    /* Checkboxes for show/hide of menu & site search */
+    // Hidden checkbox for show/hide of menu on small screens
     &__checkbox {
         display: none;
     }
 }
 
+/**
+ * Page wrapper (header)
+ */
 .wrapper--header {
     position: relative;
     display: flex;
@@ -67,44 +79,50 @@
     }
 }
 
+/**
+ * Main navigation menu
+ */
 .main-menu {
-    height: 100%;
     flex-grow: 1;
+    height: 100%;
 
     @include bp-medium-max {
         display: none;
     }
 
+    // List of links (<ul>)
     &__links {
-        height: 100%;
-        list-style: none;
-        margin: 0;
-        padding: 0;
         display: flex;
         justify-content: flex-end;
+        height: 100%;
+        padding: 0;
+        margin: 0;
+        list-style: none;
 
         @include bp-medium-max {
             flex-wrap: wrap;
-            background: $dark-background-2;
             margin: 0 -6%;
+            background: $dark-background-2;
             border-bottom: 1px solid $dark-border-3;
         }
     }
 
+    // Link item (<li>)
     &__item {
         $module: &;
         flex-shrink: 0;
 
         @include bp-medium-max {
-            width: 100%;
             box-sizing: border-box;
+            width: 100%;
             text-align: left;
             border-top: 1px solid $dark-border-3;
         }
 
+        // Active menu item
         &--active {
-            background: $primary-color;
             color: $invert-font-color;
+            background: $primary-color;
 
             .main-menu__link {
 
@@ -115,24 +133,24 @@
         }
     }
 
+    // Link (<a>)
     &__link {
-        display: block;
-        margin: 0;
-        padding: 0 20px;
-        font-size: 1.1em;
-        height: 100%;
-        font-weight: 300;
         box-sizing: border-box;
         display: flex;
         align-items: center;
         justify-content: center;
+        height: 100%;
+        padding: 0 20px;
+        margin: 0;
+        font-size: 1.1em;
+        font-weight: 300;
         transition: background $transition-speed ease;
 
         @include bp-medium-max {
-            text-align: left;
+            justify-content: flex-start;
             padding: 8px 20px;
             font-size: 1rem;
-            justify-content: flex-start;
+            text-align: left;
         }
 
         &:link,
@@ -146,12 +164,21 @@
         }
     }
 
+    // Link icon (contained within <a>)
     &__icon {
         margin-#{$right}: 8px;
         color: $alt-font-color-2;
     }
+
+    // Link text (contained within <a>)
+    &__text {
+        // unused
+    }
 }
 
+/**
+ * Show menu links if mobile menu button has been clicked
+ */
 #show-mobile-menu:checked ~ .main-menu {
 
     @include bp-medium-max {

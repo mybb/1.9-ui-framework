@@ -42,14 +42,13 @@
     }
 
     &--default {
-        background: $background-3;
         display: flex;
-        justify-content: center;
         align-items: center;
+        justify-content: center;
+        background: $background-3;
     }
 
     &__icon {
-        // font-size: 3em;
         color: $alt-font-color-3;
     }
 

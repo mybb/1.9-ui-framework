@@ -1,14 +1,14 @@
 .title {
-    font-family: $alt-font-stack;
-    font-weight: bold;
-    font-size: 1.4em;
-    margin: 0;
     padding: 0;
+    margin: 0;
+    font-family: $alt-font-stack;
+    font-size: 1.4em;
+    font-weight: bold;
 
     &--page {
+        margin-bottom: 10px;
         font-size: 2.2em;
         font-weight: normal;
-        margin-bottom: 10px;
         line-height: 1.3;
     }
 
@@ -18,20 +18,20 @@
 
     &--sidebar,
     &--minor {
-        border-bottom: 1px solid $border-1;
         padding-top: 4px;
         padding-bottom: 8px;
+        border-bottom: 1px solid $border-1;
     }
 
     &--major,
     &--modal {
-        background: $major-heading-background;
-        color: $invert-font-color;
-        border: 0;
         padding: 8px 12px;
         margin-bottom: 0;
-        border-radius: $radius;
         font-size: 1.2em;
+        color: $invert-font-color;
+        background: $major-heading-background;
+        border: 0;
+        border-radius: $radius;
 
         a:link,
         a:visited,
@@ -47,8 +47,8 @@
     &--modal {
         padding: 12px;
         font-size: 1.4em;
-        border-radius: corner-values($radius $radius 0 0);
         border-bottom: 2px solid $major-heading-border;
+        border-radius: corner-values($radius $radius 0 0);
     }
 
     &--success {
@@ -62,41 +62,41 @@
     }
 
     &--nested {
-        font-size: 1em;
         font-family: $font-stack;
+        font-size: 1em;
         font-weight: normal;
 
         .title__name {
-            font-size: 1.2em;
-            font-family: $alt-font-stack;
-            font-weight: bold;
             padding: 0;
             margin: 0;
+            font-family: $alt-font-stack;
+            font-size: 1.2em;
+            font-weight: bold;
         }
 
         .title__description {
-            margin: 0;
             padding: 0;
+            margin: 0;
             font-size: 0.8em;
         }
     }
 
     &--section {
-        margin: side-values(0 0 12px 0);
         padding: 8px 12px;
+        margin: side-values(0 0 12px 0);
         font-family: $alt-font-stack;
         font-size: 1.1em;
         background: $background-3;
         border-radius: $radius;
 
         @include bp-medium {
-            border: 0;
-            background: none;
             float: $left;
-            margin: 0;
-            padding: 0;
             width: 20%;
+            padding: 0;
+            margin: 0;
             text-align: $right;
+            background: none;
+            border: 0;
         }
     }
 
@@ -111,17 +111,17 @@
     }
 
     &--container {
-        font-size: 1.2em;
+        padding-bottom: 5px;
         margin-top: 0;
         margin-bottom: 10px;
-        padding-bottom: 5px;
+        font-size: 1.2em;
         border-bottom: 1px solid $border-1;
     }
 
     &--legend {
+        margin-bottom: 10px;
         font-size: 1em;
         font-weight: normal;
         color: $alt-font-color-1;
-        margin-bottom: 10px;
     }
 }

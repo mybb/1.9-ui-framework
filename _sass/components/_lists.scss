@@ -2,15 +2,15 @@
 
     &--stats {
         display: table-cell;
-        list-style: none;
-        margin: 0;
         padding: 0;
+        margin: 0;
         font-size: 0.9em;
         line-height: 1.8em;
+        list-style: none;
 
         .list__field {
-            color: $alt-font-color-2;
             margin-#{$right}: 6px;
+            color: $alt-font-color-2;
 
             &:after {
                 content: ":";
@@ -19,10 +19,10 @@
     }
 
     &--divided {
-        list-style: none;
-        margin: 0;
-        padding: 0;
         display: block;
+        padding: 0;
+        margin: 0;
+        list-style: none;
 
         .list__item {
             padding: 6px 0;

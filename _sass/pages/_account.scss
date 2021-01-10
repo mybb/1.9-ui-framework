@@ -45,16 +45,16 @@
     @include clearfix();
 
     .avatar-profile-link {
-        float: $left;
         display: block;
+        float: $left;
         margin: side-values(0 0 0 -120px);
         @include avatar(100);
     }
 }
 
 .buddy-ignore-list {
-    margin: 0;
     padding: 0;
+    margin: 0;
     list-style: none;
 
     @include bp-small {
@@ -63,21 +63,21 @@
     }
 
     &__user {
+        box-sizing: border-box;
         padding: 10px 8px;
         border-bottom: 1px solid $border-1;
-        box-sizing: border-box;
-
-        &:last-child {
-            border: none;
-        }
 
         @include bp-small {
-            border: none;
             width: 50%;
+            border: none;
         }
 
         @include bp-large {
             width: 33%;
+        }
+
+        &:last-child {
+            border: none;
         }
     }
 
@@ -130,10 +130,10 @@
     &__icon {
 
         @include bp-small-max {
-            float: $right;
             position: absolute;
             top: 14px;
             right: 36px;
+            float: $right;
         }
     }
 
@@ -185,15 +185,15 @@
 .user-group {
 
     &__name {
+        display: inline-block;
         margin: 0;
         font-size: 1em;
-        display: inline-block;
     }
 
     &__display-group {
+        margin-#{$left}: 6px;
         font-size: 0.9em;
         color: $alt-font-color-2;
-        margin-#{$left}: 6px;
     }
 
     &__user-title,
@@ -220,7 +220,7 @@
 
     &__reason {
         margin: 0;
-        color: $alt-font-color-1;
         font-size: 0.9em;
+        color: $alt-font-color-1;
     }
 }

@@ -36,13 +36,13 @@
 }
 
 .ban-duration {
-    font-size: 0.9em;
     margin-#{$left}: 4px;
+    font-size: 0.9em;
     color: $alt-font-color-1;
 
     &--imminent {
-        color: $danger-color;
         font-weight: bold;
+        color: $danger-color;
     }
 
     &--high {
@@ -59,9 +59,9 @@
 }
 
 .icon--announcement {
+    margin-#{$right}: 8px;
     font-size: 0.8em;
     vertical-align: middle;
-    margin-#{$right}: 8px;
 }
 
 .report {
@@ -75,8 +75,8 @@
     }
 
     &__reason {
-        color: $alt-font-color-1;
         font-size: 0.9em;
+        color: $alt-font-color-1;
     }
 
     &__count {
@@ -84,8 +84,8 @@
     }
 
     &__last-reporter {
-        color: $alt-font-color-2;
         font-size: 0.9em;
+        color: $alt-font-color-2;
 
         a {
             color: $alt-font-color-1;
@@ -108,8 +108,8 @@
     }
 
     &__date {
-        color: $alt-font-color-2;
         font-size: 0.9em;
+        color: $alt-font-color-2;
     }
 
     .list--mod-log {
@@ -133,16 +133,16 @@
     }
 
     &__issued_by {
-        color: $alt-font-color-1;
         font-size: 0.9em;
+        color: $alt-font-color-1;
     }
 
     &__issued-date,
     &__expiry-date,
     &__revoked-date,
     &__post {
-        color: $alt-font-color-2;
         font-size: 0.9em;
+        color: $alt-font-color-2;
     }
 
     &__expiry-date--expired {
@@ -171,8 +171,8 @@
 
     &__header {
         display: flex;
-        justify-content: space-between;
         flex-direction: column;
+        justify-content: space-between;
 
         @include bp-medium {
             flex-direction: row;
@@ -198,8 +198,8 @@
     &__date,
     &__forum,
     &__post {
-        color: $alt-font-color-2;
         font-size: 0.9em;
+        color: $alt-font-color-2;
 
         a {
             color: $alt-font-color-1;
@@ -226,13 +226,13 @@
 }
 
 .warning-level {
-    clear: both;
     position: relative;
-    background: $background-1;
-    height: 24px;
     box-sizing: border-box;
-    border-radius: 4px;
+    height: 24px;
     margin: 8px 0;
+    clear: both;
+    background: $background-1;
+    border-radius: 4px;
 
     &__bar {
         position: absolute;
@@ -240,8 +240,8 @@
         #{$left}: 0;
         bottom: 0;
         z-index: 1;
-        border-radius: 3px;
         box-sizing: border-box;
+        border-radius: 3px;
 
         &--current {
             background: $major-heading-background;

@@ -10,10 +10,10 @@
     }
 
     &__select-all {
+        display: none;
         padding: 12px;
         text-align: center;
         border-bottom: 3px solid $border-1;
-        display: none;
     }
 
     .sort-threads {
@@ -101,9 +101,9 @@
             display: none;
 
             @include bp-medium {
-                min-width: 90px;
-                flex: 0 0 10%;
                 display: block;
+                flex: 0 0 10%;
+                min-width: 90px;
                 text-align: center;
             }
         }
@@ -111,10 +111,10 @@
         &--latest {
 
             @include bp-small {
-                padding-#{$left}: 12px;
+                flex: 0 0 28%;
                 min-width: 220px;
                 max-width: 280px;
-                flex: 0 0 28%;
+                padding-#{$left}: 12px;
             }
         }
 
@@ -130,12 +130,12 @@
     }
 
     .thread {
-        display: flex;
-        justify-content: space-between;
-        align-items: flex-start;
-        padding-#{$left}: 66px;
-        flex-direction: column;
         position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: space-between;
+        padding-#{$left}: 66px;
 
         &:last-child {
             border-bottom: none;
@@ -172,7 +172,7 @@
             background-color: $status-highlight;
         }
 
-        // TO DO: change class in code to thread--selected
+        // TODO: change class in code to thread--selected
         &.trow_selected {
             @extend .thread--selected;
         }
@@ -182,16 +182,15 @@
         }
 
         a.thread__status {
-            vertical-align: top;
             display: inline-block;
-            color: $new-icon-color;
-            font-size: 0.8em;
             margin-top: 1px;
             margin-#{$left}: 6px;
+            font-size: 0.8em;
+            color: $new-icon-color;
+            vertical-align: top;
 
             @include bp-small {
                 float: $left;
-                // margin-top: 2px;
                 margin-#{$left}: -25px;
             }
         }
@@ -234,7 +233,6 @@
         &__forum {
             display: none;
             margin: side-values(3px 0 0 0);
-            margin-top: 3px;
             font-size: 0.8em;
             color: $alt-font-color-2;
 
@@ -259,11 +257,11 @@
         }
 
         &__icons {
-            color: $alt-font-color-2;
-            font-size: 14px;
             display: block;
             margin-top: 2px;
             margin-bottom: 2px;
+            font-size: 14px;
+            color: $alt-font-color-2;
 
             @include bp-medium {
                 float: $right;
@@ -295,17 +293,17 @@
         }
 
         &__page-legend {
-            color: $alt-font-color-1;
             margin-#{$right}: 2px;
+            color: $alt-font-color-1;
         }
 
         &__page-link {
+            display: inline-block;
+            padding: 1px 5px;
+            margin: 0 1px;
             background: $background-1;
             border-radius: $radius - 1;
             text-decoration: none;
-            padding: 1px 5px;
-            margin: 0 1px;
-            display: inline-block;
 
             &:hover,
             &:active {
@@ -320,8 +318,8 @@
 
         &__reply-legend {
             display: block;
-            color: $alt-font-color-3;
             font-size: 0.7em;
+            color: $alt-font-color-3;
             text-transform: lowercase;
         }
 
@@ -330,18 +328,18 @@
         }
 
         &__unapproved-replies {
-            background: $status-pending;
-            color: $status-pending-font-color;
-            border-radius: 2px;
             padding: 1px 4px;
-            font-weight: normal;
             font-size: 0.7em;
+            font-weight: normal;
+            color: $status-pending-font-color;
             text-decoration: none;
+            background: $status-pending;
+            border-radius: 2px;
         }
 
         &__latest-post {
-            margin: 0;
             display: inline-block;
+            margin: 0;
 
             @include bp-small {
                 display: block;

@@ -4,8 +4,8 @@ html, button, input, select, textarea {
 }
 
 ::selection {
-    background: $secondary-color;
     color: $invert-font-color;
+    background: $secondary-color;
     text-shadow: none;
 }
 
@@ -39,10 +39,10 @@ button:focus {
 hr {
     display: block;
     height: 1px;
+    padding: 0;
+    margin: 1em 0;
     border: 0;
     border-top: 1px solid #ccc;
-    margin: 1em 0;
-    padding: 0;
 }
 
 img {
@@ -50,9 +50,9 @@ img {
 }
 
 fieldset {
-    border: 0;
-    margin: 0;
     padding: 0;
+    margin: 0;
+    border: 0;
 }
 
 textarea {
@@ -75,20 +75,23 @@ textarea {
 
     @include bp-medium {
 
-        .page-content--sidebar {
-            float: $left;
-            width: 62%;
-        }
+        .page-content {
 
-        .page-content--centered {
-            width: 60%;
-            float: none;
-            margin: auto auto;
-        }
+            &--sidebar {
+                float: $left;
+                width: 62%;
+            }
 
-        .page-content--menu {
-            float: $left;
-            width: 75%;
+            &--centered {
+                float: none;
+                width: 60%;
+                margin: auto auto;
+            }
+
+            &--menu {
+                float: $left;
+                width: 75%;
+            }
         }
 
         .page-sidebar {
@@ -99,16 +102,15 @@ textarea {
     }
 
     .page-header {
+        padding-bottom: 0;
         margin-bottom: 20px;
         border-bottom: 2px solid $border-3;
-        padding-bottom: 0;
 
         .page-description {
-            color: $alt-font-color-1;
-            font-size: 0.9em;
             margin: side-values(0 0 10px 0);
+            font-size: 0.9em;
+            color: $alt-font-color-1;
         }
-
     }
 
     .page-footer {

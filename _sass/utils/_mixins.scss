@@ -55,9 +55,9 @@
 
 @mixin clearfix {
     &:after {
-        content: "";
         display: table;
         clear: both;
+        content: "";
     }
 }
 
@@ -67,14 +67,14 @@
 }
 
 @mixin visually-hidden {
-    border: 0;
-    clip: rect(0 0 0 0);
-    height: 1px;
-    margin: -1px;
-    overflow: hidden;
-    padding: 0;
     position: absolute;
     width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    border: 0;
+    clip: rect(0 0 0 0);
 }
 
 @mixin avatar($size) {
@@ -94,10 +94,10 @@
 }
 
 @mixin container {
-    background: $background-1;
     padding: 12px;
-    border-radius: $radius;
     margin-bottom: 20px;
+    background: $background-1;
+    border-radius: $radius;
 
     &--small {
         padding: 8px 12px;
@@ -109,9 +109,9 @@
     }
 
     &--modal {
-        margin: -8px -14px 0 -14px;
         padding: 8px 24px;
-        border-radius: 0;
+        margin: -8px -14px 0 -14px;
         border-bottom: 1px solid $border-1;
+        border-radius: 0;
     }
 }
