@@ -152,6 +152,8 @@
 
             &--primary,
             &--latest {
+                overflow: auto;
+                word-wrap: break-word;
 
                 @include bp-small-max {
                     width: 100%; // width override for small screens
